@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentalPaymentApp", "DentalPaymentApp\DentalPaymentApp.csproj", "{B125082A-9060-4E33-B178-0B88A230F5B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DentalPaymentApp", "DentalPaymentApp\DentalPaymentApp.csproj", "{B125082A-9060-4E33-B178-0B88A230F5B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security Panel device", "Security Panel device\Security Panel device.csproj", "{005AF6D8-3B33-47A9-BD8B-7999125ECBE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{FF8C4237-3323-4D75-A5A6-7B09D38AED55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B125082A-9060-4E33-B178-0B88A230F5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B125082A-9060-4E33-B178-0B88A230F5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B125082A-9060-4E33-B178-0B88A230F5B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005AF6D8-3B33-47A9-BD8B-7999125ECBE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005AF6D8-3B33-47A9-BD8B-7999125ECBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005AF6D8-3B33-47A9-BD8B-7999125ECBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005AF6D8-3B33-47A9-BD8B-7999125ECBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8C4237-3323-4D75-A5A6-7B09D38AED55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8C4237-3323-4D75-A5A6-7B09D38AED55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8C4237-3323-4D75-A5A6-7B09D38AED55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8C4237-3323-4D75-A5A6-7B09D38AED55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\prn211\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj": {}
+    "D:\\code\\c-\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj": {}
   },
   "projects": {
-    "D:\\code\\prn211\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj": {
+    "D:\\code\\c-\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\prn211\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj",
+        "projectUniqueName": "D:\\code\\c-\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj",
         "projectName": "DentalPaymentApp",
-        "projectPath": "D:\\code\\prn211\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj",
+        "projectPath": "D:\\code\\c-\\asm2\\DentalPaymentApp\\DentalPaymentApp.csproj",
         "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\prn211\\asm2\\DentalPaymentApp\\obj\\",
+        "outputPath": "D:\\code\\c-\\asm2\\DentalPaymentApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
