@@ -1,0 +1,15 @@
+D:\code\prn211\asm\les1\bin\Debug\net6.0\les1.exe
+D:\code\prn211\asm\les1\bin\Debug\net6.0\les1.deps.json
+D:\code\prn211\asm\les1\bin\Debug\net6.0\les1.runtimeconfig.json
+D:\code\prn211\asm\les1\bin\Debug\net6.0\les1.dll
+D:\code\prn211\asm\les1\bin\Debug\net6.0\les1.pdb
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.csproj.AssemblyReference.cache
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.AssemblyInfoInputs.cache
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.AssemblyInfo.cs
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.csproj.CoreCompileInputs.cache
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.dll
+D:\code\prn211\asm\les1\obj\Debug\net6.0\refint\les1.dll
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.pdb
+D:\code\prn211\asm\les1\obj\Debug\net6.0\les1.genruntimeconfig.cache
+D:\code\prn211\asm\les1\obj\Debug\net6.0\ref\les1.dll

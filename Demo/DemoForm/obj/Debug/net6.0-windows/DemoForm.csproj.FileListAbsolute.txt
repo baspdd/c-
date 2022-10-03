@@ -1,0 +1,17 @@
+D:\code\prn211\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.exe
+D:\code\prn211\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.deps.json
+D:\code\prn211\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.runtimeconfig.json
+D:\code\prn211\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.dll
+D:\code\prn211\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.pdb
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.csproj.AssemblyReference.cache
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.Form1.resources
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.csproj.GenerateResource.cache
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.AssemblyInfoInputs.cache
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.AssemblyInfo.cs
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.csproj.CoreCompileInputs.cache
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.dll
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\refint\DemoForm.dll
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.pdb
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.genruntimeconfig.cache
+D:\code\prn211\Demo\DemoForm\obj\Debug\net6.0-windows\ref\DemoForm.dll

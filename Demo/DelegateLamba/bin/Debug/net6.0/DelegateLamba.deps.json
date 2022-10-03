@@ -1,0 +1,58 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DelegateLamba/1.0.0": {
+        "dependencies": {
+          "Demo": "1.0.0",
+          "EventDemo": "1.0.0",
+          "OOP": "1.0.0"
+        },
+        "runtime": {
+          "DelegateLamba.dll": {}
+        }
+      },
+      "Demo/1.0.0": {
+        "runtime": {
+          "Demo.dll": {}
+        }
+      },
+      "EventDemo/1.0.0": {
+        "runtime": {
+          "EventDemo.dll": {}
+        }
+      },
+      "OOP/1.0.0": {
+        "runtime": {
+          "OOP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DelegateLamba/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EventDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OOP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

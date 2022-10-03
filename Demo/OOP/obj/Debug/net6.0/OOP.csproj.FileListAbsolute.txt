@@ -1,0 +1,15 @@
+D:\code\prn211\Demo\OOP\bin\Debug\net6.0\OOP.exe
+D:\code\prn211\Demo\OOP\bin\Debug\net6.0\OOP.deps.json
+D:\code\prn211\Demo\OOP\bin\Debug\net6.0\OOP.runtimeconfig.json
+D:\code\prn211\Demo\OOP\bin\Debug\net6.0\OOP.dll
+D:\code\prn211\Demo\OOP\bin\Debug\net6.0\OOP.pdb
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.csproj.AssemblyReference.cache
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.AssemblyInfoInputs.cache
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.AssemblyInfo.cs
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.csproj.CoreCompileInputs.cache
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.dll
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\refint\OOP.dll
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.pdb
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\OOP.genruntimeconfig.cache
+D:\code\prn211\Demo\OOP\obj\Debug\net6.0\ref\OOP.dll
