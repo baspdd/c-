@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateLamba", "DelegateLamba\DelegateLamba.csproj", "{4DAE015E-7588-4ECC-9A63-419B29B1DC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoForm", "DemoForm\DemoForm.csproj", "{E8924A54-810E-4CF5-9E6E-2B5224C0F668}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoForm", "DemoForm\DemoForm.csproj", "{E8924A54-810E-4CF5-9E6E-2B5224C0F668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winADO", "winADO\winADO.csproj", "{37ADA91A-9BB8-400C-91D4-72895CE169AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E8924A54-810E-4CF5-9E6E-2B5224C0F668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8924A54-810E-4CF5-9E6E-2B5224C0F668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8924A54-810E-4CF5-9E6E-2B5224C0F668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37ADA91A-9BB8-400C-91D4-72895CE169AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37ADA91A-9BB8-400C-91D4-72895CE169AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37ADA91A-9BB8-400C-91D4-72895CE169AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37ADA91A-9BB8-400C-91D4-72895CE169AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

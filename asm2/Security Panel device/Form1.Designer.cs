@@ -59,6 +59,7 @@
             // 
             this.txtSecurityCode.Location = new System.Drawing.Point(152, 20);
             this.txtSecurityCode.Name = "txtSecurityCode";
+            this.txtSecurityCode.PasswordChar = '*';
             this.txtSecurityCode.ReadOnly = true;
             this.txtSecurityCode.Size = new System.Drawing.Size(179, 23);
             this.txtSecurityCode.TabIndex = 1;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/yyvDCUq5hSPcUNhZ5aI8OmMtiWQMEFj+uBeDMtR9MBdEwKah2JsFXHu421+BgQ43q+8bBlQyrbkcdusps2gpQ==",
+  "dgSpecHash": "xdYS52jWfpPaW+wgDglNC1WK9BSS99hk/OW2ZD1J1y/CI/SfEUnp86TeW6s/7YkO4yfGoPKwh+DGRmccXPTPmw==",
   "success": true,
-  "projectFilePath": "D:\\code\\prn211\\Demo\\DelegateLamba\\DelegateLamba.csproj",
+  "projectFilePath": "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

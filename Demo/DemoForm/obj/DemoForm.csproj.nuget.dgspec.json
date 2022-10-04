@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\prn211\\Demo\\DemoForm\\DemoForm.csproj": {}
+    "D:\\code\\c-\\Demo\\DemoForm\\DemoForm.csproj": {}
   },
   "projects": {
-    "D:\\code\\prn211\\Demo\\DemoForm\\DemoForm.csproj": {
+    "D:\\code\\c-\\Demo\\DemoForm\\DemoForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\prn211\\Demo\\DemoForm\\DemoForm.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Demo\\DemoForm\\DemoForm.csproj",
         "projectName": "DemoForm",
-        "projectPath": "D:\\code\\prn211\\Demo\\DemoForm\\DemoForm.csproj",
+        "projectPath": "D:\\code\\c-\\Demo\\DemoForm\\DemoForm.csproj",
         "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\prn211\\Demo\\DemoForm\\obj\\",
+        "outputPath": "D:\\code\\c-\\Demo\\DemoForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
