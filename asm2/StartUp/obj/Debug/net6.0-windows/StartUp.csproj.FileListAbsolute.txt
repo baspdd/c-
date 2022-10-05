@@ -4,6 +4,10 @@ D:\code\c-\asm2\StartUp\bin\Debug\net6.0-windows\StartUp.runtimeconfig.json
 D:\code\c-\asm2\StartUp\bin\Debug\net6.0-windows\StartUp.dll
 D:\code\c-\asm2\StartUp\bin\Debug\net6.0-windows\StartUp.pdb
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.csproj.AssemblyReference.cache
+D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.frmMain.resources
+D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.Lunar.resources
+D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.Properties.Resources.resources
+D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.StartUp.resources
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.csproj.GenerateResource.cache
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.GeneratedMSBuildEditorConfig.editorconfig
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.AssemblyInfoInputs.cache
@@ -14,7 +18,3 @@ D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\refint\StartUp.dll
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.pdb
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.genruntimeconfig.cache
 D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\ref\StartUp.dll
-D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.frmMain.resources
-D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.Lunar.resources
-D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.Properties.Resources.resources
-D:\code\c-\asm2\StartUp\obj\Debug\net6.0-windows\StartUp.StartUp.resources
