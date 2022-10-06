@@ -88,26 +88,40 @@ namespace winADO
             }
             return true;
         }
-
-        internal DataTable getUser(string text1, string text2)
+        public DataTable getUser(string acc, string pass)
         {
             DataTable dt = new DataTable();
             try
             {
-                cmd = cnn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from Users " +
-                    "where account = @account  " +
-                    "and password = @password";
-                cmd.Parameters.AddWithValue("@account", text1);
-                cmd.Parameters.AddWithValue("@password", text2);
-                cmd.ExecuteReader();
+                using (SqlConnection cnn = new SqlConnection(getConnectionString()))
+                {
+
+
+                    string query = "select * from Users " +
+                        "where account = @acc " +
+                        "and password = @pass";
+                    cnn.Open();
+                    SqlCommand cmd = new SqlCommand(null, cnn);
+                    cmd.CommandText=query;
+                    SqlParameter accPara = new SqlParameter("@acc", SqlDbType.VarChar,20);
+                    SqlParameter passPara = new SqlParameter("@pass", SqlDbType.VarChar,20);
+                    accPara.Value = acc;
+                    passPara.Value = pass;
+                    cmd.Parameters.Add(accPara);
+                    cmd.Parameters.Add(passPara);
+                    cmd.Prepare();
+                    SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                    dt.Load(sqlDataReader);
+                }
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show("Execute fail:" + ex.Message);
             }
             return dt;
         }
+
+
     }
 }

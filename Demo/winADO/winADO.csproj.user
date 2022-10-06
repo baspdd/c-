@@ -7,5 +7,8 @@
     <Compile Update="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

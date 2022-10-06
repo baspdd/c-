@@ -25,8 +25,10 @@ namespace winADO
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
-            //Application.Exit();
+            FrmProduct f = new FrmProduct();
+            f.Show();
+            this.Hide();
+            
         }
         DataProvider data = new DataProvider();
         private void loadData()
@@ -79,6 +81,33 @@ namespace winADO
             txtAddress.Text = dgCustomer.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
 
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool gender = true;
+                if (rdFemale.Checked) gender = false;
+                String strUp = "UPDATE [Customers]" +
+                    "   SET [CustomerName] = N'" + txtCusName.Text + "'" +
+                    "   ,[Birthdate] = '" + txtDOB.Text + "' " +
+                    "   ,[Gender] = '" + gender + "' " +
+                    "   ,[Address] = N'"+txtAddress.Text+"' " +
+                    "   WHERE [CustomerId] = '" + cbCusID.Text + "'";
+
+                if (data.executeNonQuery(strUp))
+                {
+                    MessageBox.Show("up succcess");
+                    loadData();
+                }
+
+            }
+            catch (Exception exx)
+            {
+
+                MessageBox.Show("add errror : " + exx.Message);
+            }
         }
     }
 }

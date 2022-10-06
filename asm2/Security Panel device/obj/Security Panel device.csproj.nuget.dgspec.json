@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj": {}
+    "D:\\app code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj": {}
   },
   "projects": {
-    "D:\\code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj": {
+    "D:\\app code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj",
+        "projectUniqueName": "D:\\app code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj",
         "projectName": "Security Panel device",
-        "projectPath": "D:\\code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj",
-        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\c-\\asm2\\Security Panel device\\obj\\",
+        "projectPath": "D:\\app code\\c-\\asm2\\Security Panel device\\Security Panel device.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\app code\\c-\\asm2\\Security Panel device\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

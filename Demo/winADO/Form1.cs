@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Data.SqlClient;
 
 namespace winADO
 {
@@ -15,11 +16,11 @@ namespace winADO
             try
             {
                 String strSelect = "select * from Users " +
-                    "where account = '"+ txtAcc.Text+"'" +
-                    "and password = '"+txtPass.Text+"'";
+                    "where account = '" + txtAcc.Text + "'" +
+                    "and password = '" + txtPass.Text + "'";
                 DataTable dt = data.executeQuery(strSelect);
-                DataTable ret = data.getUser(txtAcc.Text,txtPass.Text);
-                if (ret.Rows.Count>0)
+                DataTable ret = data.getUser(txtAcc.Text, txtPass.Text);
+                if (ret.Rows.Count > 0)
                 {
                     frmCustomer f = new frmCustomer(txtAcc.Text);
                     f.Show();
