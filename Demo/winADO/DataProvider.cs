@@ -70,6 +70,29 @@ namespace winADO
             }
             return dt;
         }
+        public IDataReader executeQuery2(string strSelect, params SqlParameter[] param)
+        {
+            IDataReader dr = null;
+            try
+            {
+                cmd = cnn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = strSelect;
+                if (param!=null)
+                {
+                    foreach (SqlParameter item in param)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
+                }
+                dr = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("excute query 2:" + ex.Message);
+            }
+            return dr;
+        }
 
         //Hàm execute câu lệnh insert,update,delete
         public bool executeNonQuery(string strSQL)
@@ -122,6 +145,28 @@ namespace winADO
             return dt;
         }
 
-
+        internal bool executeNonQuery2(string strSQL,params SqlParameter[] param)
+        {
+            try
+            {
+                cmd = cnn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = strSQL;
+                if (param != null)
+                {
+                    foreach (SqlParameter item in param)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
+                }
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Insert/Update/Delete error:" + ex.Message);
+                return false;
+            }
+            return true;
+        }
     }
 }

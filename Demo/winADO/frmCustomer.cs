@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,15 +29,34 @@ namespace winADO
             FrmProduct f = new FrmProduct();
             f.Show();
             this.Hide();
-            
+
         }
         DataProvider data = new DataProvider();
         private void loadData()
         {
             dgCustomer.DataSource = data.executeQuery("select * from Customers");
-            cbCusID.DataSource = data.executeQuery("select * from Customers");
-            cbCusID.DisplayMember = "CustomerId";
-            cbCusID.ValueMember = "CustomerId";
+            //cách 1
+            //cbCusID.DataSource = data.executeQuery("select * from Customers");
+            //cbCusID.DisplayMember = "CustomerId";
+            //cbCusID.ValueMember = "CustomerId";
+
+            //cách 2
+            DataTable dt = data.executeQuery("select * from Customers");
+            List<Customer> listC = new List<Customer>();
+            while (dt.Rows.Count > 0)
+            {
+                int code = Convert.ToInt32(dt.Rows[0][0].ToString());
+                cbCusID.Items.Add(code);
+                dt.Rows.RemoveAt(0);
+            }
+
+            //IDataReader dr = data.executeQuery2("Select *  from Customers");
+            //while (dr.Read())
+            //{
+            //    int code = dr.GetInt32(0);
+            //    cbCusID.Items.Add(code);
+            //}
+            //dr.Close();
         }
 
         private void frmCustomer_Load(object sender, EventArgs e)
@@ -93,7 +113,7 @@ namespace winADO
                     "   SET [CustomerName] = N'" + txtCusName.Text + "'" +
                     "   ,[Birthdate] = '" + txtDOB.Text + "' " +
                     "   ,[Gender] = '" + gender + "' " +
-                    "   ,[Address] = N'"+txtAddress.Text+"' " +
+                    "   ,[Address] = N'" + txtAddress.Text + "' " +
                     "   WHERE [CustomerId] = '" + cbCusID.Text + "'";
 
                 if (data.executeNonQuery(strUp))
@@ -107,6 +127,54 @@ namespace winADO
             {
 
                 MessageBox.Show("add errror : " + exx.Message);
+            }
+        }
+
+        private void cbCusID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string code = cbCusID.SelectedItem.ToString();
+                string strSelect = " select * from Customers " +
+                    "where CustomerId= '"+code+"' ";
+                DataTable dt = data.executeQuery(strSelect);
+                if (dt.Rows.Count>0)
+                {
+
+                    txtCusName.Text = dt.Rows[0][1].ToString();
+                    txtDOB.Text = dt.Rows[0][2].ToString();
+                    if (dt.Rows[0][3].ToString().Equals("True"))
+                        rdMale.Checked = true;
+                    else rdFemale.Checked = true;
+                    txtAddress.Text = dt.Rows[0][4].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("cbo errror : " + ex.Message);
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String strDel = " delete from Customers where CustomerId = @id ";
+                List<SqlParameter> param = new List<SqlParameter>
+                {
+                    new SqlParameter("@id",cbCusID.Text)
+                };
+                if (data.executeNonQuery2(strDel,param.ToArray()))
+                {
+                    MessageBox.Show("oke");
+                    loadData();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("del errror : " + ex.Message);
             }
         }
     }

@@ -16,11 +16,16 @@ namespace winADO
             try
             {
                 String strSelect = "select * from Users " +
-                    "where account = '" + txtAcc.Text + "'" +
-                    "and password = '" + txtPass.Text + "'";
-                DataTable dt = data.executeQuery(strSelect);
+                    "where account = @acc " +
+                    "and password = @pass ";
+                List<SqlParameter> param = new List<SqlParameter>
+                {
+                    new SqlParameter("@acc",txtAcc.Text),
+                    new SqlParameter("@pass",txtPass.Text)
+                };
+                IDataReader dr = data.executeQuery2(strSelect,param.ToArray());
                 DataTable ret = data.getUser(txtAcc.Text, txtPass.Text);
-                if (ret.Rows.Count > 0)
+                if (dr.Read())
                 {
                     frmCustomer f = new frmCustomer(txtAcc.Text);
                     f.Show();
@@ -30,6 +35,7 @@ namespace winADO
                 {
                     MessageBox.Show("login fail");
                 }
+                dr.Close();
             }
             catch (Exception ex)
             {

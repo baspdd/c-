@@ -111,6 +111,7 @@
             this.cbCusID.Name = "cbCusID";
             this.cbCusID.Size = new System.Drawing.Size(160, 23);
             this.cbCusID.TabIndex = 6;
+            this.cbCusID.SelectedIndexChanged += new System.EventHandler(this.cbCusID_SelectedIndexChanged);
             // 
             // txtCusName
             // 
@@ -183,6 +184,7 @@
             this.btnDel.TabIndex = 14;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnReset
             // 
