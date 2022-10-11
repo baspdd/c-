@@ -16,5 +16,20 @@ namespace winform_EF
         {
             throw new NotImplementedException();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
