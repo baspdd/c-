@@ -46,7 +46,7 @@
               "target": "Package",
               "version": "[6.0.1, )"
             },
-            "Microsoft.Extensions.Caching.SqlServer": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.1, )"
             },

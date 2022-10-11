@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgCustomer = new System.Windows.Forms.DataGridView();
+            this.dgPro = new System.Windows.Forms.DataGridView();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -44,17 +44,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPro)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgCustomer
+            // dgPro
             // 
-            this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCustomer.Location = new System.Drawing.Point(52, 280);
-            this.dgCustomer.Name = "dgCustomer";
-            this.dgCustomer.RowTemplate.Height = 25;
-            this.dgCustomer.Size = new System.Drawing.Size(696, 184);
-            this.dgCustomer.TabIndex = 34;
+            this.dgPro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPro.Location = new System.Drawing.Point(52, 280);
+            this.dgPro.Name = "dgPro";
+            this.dgPro.RowTemplate.Height = 25;
+            this.dgPro.Size = new System.Drawing.Size(696, 184);
+            this.dgPro.TabIndex = 34;
             // 
             // btnDel
             // 
@@ -197,7 +197,7 @@
             this.Controls.Add(this.txtInstock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dgCustomer);
+            this.Controls.Add(this.dgPro);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -208,7 +208,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,7 +216,7 @@
 
         #endregion
 
-        private DataGridView dgCustomer;
+        private DataGridView dgPro;
         private Button btnDel;
         private Button btnUpdate;
         private Button btnAdd;
