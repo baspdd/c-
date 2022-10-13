@@ -2339,19 +2339,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\app code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
+      "projectUniqueName": "D:\\code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
       "projectName": "winform_EF",
-      "projectPath": "D:\\app code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\app code\\c-\\Demo\\winform_EF\\obj\\",
+      "projectPath": "D:\\code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
+      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\c-\\Demo\\winform_EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

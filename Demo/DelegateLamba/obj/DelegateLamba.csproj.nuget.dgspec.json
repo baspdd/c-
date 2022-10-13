@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\app code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj": {}
+    "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj": {}
   },
   "projects": {
-    "D:\\app code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj": {
+    "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\app code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
         "projectName": "DelegateLamba",
-        "projectPath": "D:\\app code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\app code\\c-\\Demo\\DelegateLamba\\obj\\",
+        "projectPath": "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
+        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\c-\\Demo\\DelegateLamba\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,14 +28,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj": {
-                "projectPath": "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj"
+              "D:\\code\\c-\\Demo\\Demo\\Demo.csproj": {
+                "projectPath": "D:\\code\\c-\\Demo\\Demo\\Demo.csproj"
               },
-              "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj": {
-                "projectPath": "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj"
+              "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj": {
+                "projectPath": "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj"
               },
-              "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj": {
-                "projectPath": "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj"
+              "D:\\code\\c-\\Demo\\OOP\\OOP.csproj": {
+                "projectPath": "D:\\code\\c-\\Demo\\OOP\\OOP.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj": {
+    "D:\\code\\c-\\Demo\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Demo\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\app code\\c-\\Demo\\Demo\\obj\\",
+        "projectPath": "D:\\code\\c-\\Demo\\Demo\\Demo.csproj",
+        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\c-\\Demo\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,17 +124,17 @@
         }
       }
     },
-    "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj": {
+    "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj",
         "projectName": "EventDemo",
-        "projectPath": "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\app code\\c-\\Demo\\EventDemo\\obj\\",
+        "projectPath": "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj",
+        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\c-\\Demo\\EventDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -179,17 +179,17 @@
         }
       }
     },
-    "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj": {
+    "D:\\code\\c-\\Demo\\OOP\\OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Demo\\OOP\\OOP.csproj",
         "projectName": "OOP",
-        "projectPath": "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\app code\\c-\\Demo\\OOP\\obj\\",
+        "projectPath": "D:\\code\\c-\\Demo\\OOP\\OOP.csproj",
+        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\c-\\Demo\\OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
