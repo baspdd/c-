@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\c-\\Demo\\winADO\\winADO.csproj": {}
+    "D:\\app code\\c-\\Demo\\winADO\\winADO.csproj": {}
   },
   "projects": {
-    "D:\\code\\c-\\Demo\\winADO\\winADO.csproj": {
+    "D:\\app code\\c-\\Demo\\winADO\\winADO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\c-\\Demo\\winADO\\winADO.csproj",
+        "projectUniqueName": "D:\\app code\\c-\\Demo\\winADO\\winADO.csproj",
         "projectName": "winADO",
-        "projectPath": "D:\\code\\c-\\Demo\\winADO\\winADO.csproj",
-        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\c-\\Demo\\winADO\\obj\\",
+        "projectPath": "D:\\app code\\c-\\Demo\\winADO\\winADO.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\app code\\c-\\Demo\\winADO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

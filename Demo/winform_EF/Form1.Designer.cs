@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgPro = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -44,17 +45,33 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPro)).BeginInit();
             this.SuspendLayout();
             // 
             // dgPro
             // 
+            this.dgPro.AllowUserToAddRows = false;
+            this.dgPro.AllowUserToDeleteRows = false;
             this.dgPro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Delete});
             this.dgPro.Location = new System.Drawing.Point(52, 280);
             this.dgPro.Name = "dgPro";
             this.dgPro.RowTemplate.Height = 25;
             this.dgPro.Size = new System.Drawing.Size(696, 184);
             this.dgPro.TabIndex = 34;
+            this.dgPro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPro_CellContentClick);
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 11;
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // btnDel
             // 
@@ -184,11 +201,22 @@
             this.cbCategory.Size = new System.Drawing.Size(208, 23);
             this.cbCategory.TabIndex = 44;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(587, 56);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 45;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 493);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.txtImage);
             this.Controls.Add(this.txtPrice);
@@ -232,5 +260,7 @@
         private Label label6;
         private TextBox txtImage;
         private ComboBox cbCategory;
+        private DataGridViewButtonColumn Delete;
+        private Button btnSearch;
     }
 }
