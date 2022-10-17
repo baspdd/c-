@@ -33,3 +33,38 @@ D:\code\c-\Demo\winADO\obj\Debug\net6.0-windows\refint\winADO.dll
 D:\code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.pdb
 D:\code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.genruntimeconfig.cache
 D:\code\c-\Demo\winADO\obj\Debug\net6.0-windows\ref\winADO.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\winADO.exe
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\appsettings.json
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\winADO.deps.json
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\winADO.runtimeconfig.json
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\winADO.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\winADO.pdb
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\app code\c-\Demo\winADO\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.csproj.AssemblyReference.cache
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.Form1.resources
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.frmCustomer.resources
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.FrmProduct.resources
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.csproj.GenerateResource.cache
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.GeneratedMSBuildEditorConfig.editorconfig
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.AssemblyInfoInputs.cache
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.AssemblyInfo.cs
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.csproj.CoreCompileInputs.cache
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.csproj.CopyComplete
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.dll
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\refint\winADO.dll
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.pdb
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\winADO.genruntimeconfig.cache
+D:\app code\c-\Demo\winADO\obj\Debug\net6.0-windows\ref\winADO.dll

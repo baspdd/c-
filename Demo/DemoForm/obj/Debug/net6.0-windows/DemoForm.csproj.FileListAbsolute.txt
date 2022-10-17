@@ -32,3 +32,20 @@ D:\code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\refint\DemoForm.dll
 D:\code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.pdb
 D:\code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.genruntimeconfig.cache
 D:\code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\ref\DemoForm.dll
+D:\app code\c-\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.exe
+D:\app code\c-\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.deps.json
+D:\app code\c-\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.runtimeconfig.json
+D:\app code\c-\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.dll
+D:\app code\c-\Demo\DemoForm\bin\Debug\net6.0-windows\DemoForm.pdb
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.csproj.AssemblyReference.cache
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.Form1.resources
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.csproj.GenerateResource.cache
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.AssemblyInfoInputs.cache
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.AssemblyInfo.cs
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.csproj.CoreCompileInputs.cache
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.dll
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\refint\DemoForm.dll
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.pdb
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\DemoForm.genruntimeconfig.cache
+D:\app code\c-\Demo\DemoForm\obj\Debug\net6.0-windows\ref\DemoForm.dll

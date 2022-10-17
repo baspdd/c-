@@ -33,7 +33,7 @@ namespace StartUp
             //    this.Hide();
 
             //}
-            progressBar1.Increment(20);
+            progressBar1.Increment(10);
             if (progressBar1.Value >= progressBar1.Maximum)
             {
                 timer1.Enabled = false;

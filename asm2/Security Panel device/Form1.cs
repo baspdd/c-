@@ -85,7 +85,7 @@ namespace Security_Panel_device
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            int val = Convert.ToInt32(txt);
+            long val = Int64.Parse(txt);
             String att = "";
             if (val == 1645 || val == 1689) att = "Technicians";
             else if (val == 8345) att = "Custodians";

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ModZSl3uyQiCKjDNU4Xcou5dpYkIgqWSiqSk+L3/CrJG2c2CuOZwkX+RJVwV6uqljzCC1+GNWLA3ywkWgeL+A==",
+  "dgSpecHash": "1afkshcIwPHryEoTMZIg+aAyfqAKT2ilVi1C0/r6oAFfrXfVG23NgGqI1RbEU5+KreghF3XnQHnlO7IK7eDsow==",
   "success": true,
-  "projectFilePath": "D:\\code\\c-\\Demo\\Demo\\Demo.csproj",
+  "projectFilePath": "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
