@@ -80,5 +80,25 @@ namespace StartUp
             }
             return ret;
         }
+
+        private void textBox2_MouseHover(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.Pink;
+        }
+
+        private void textBox1_MouseHover(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.Pink;
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.White;
+        }
+
+        private void textBox2_MouseLeave(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.White;
+        }
     }
 }
