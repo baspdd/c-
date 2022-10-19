@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,7 +25,10 @@ namespace StartUp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            frmMain f = new frmMain();
+            this.Hide();
+            this.Close();
+            f.Show();
         }
 
         private void textBox1_CursorChanged(object sender, EventArgs e)
@@ -34,9 +38,16 @@ namespace StartUp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int year = Int32.Parse(textBox1.Text);
-            string luna = getLunar(year);
-            textBox2.Text = luna;
+            if (Regex.Match(textBox1.Text, "[0-9]+").Success)
+            {
+                int year = Int32.Parse(textBox1.Text);
+                string luna = getLunar(year);
+                textBox2.Text = luna;
+            }
+            else
+            {
+                textBox2.Text = "";
+            }
         }
 
         private string getLunar(int year)

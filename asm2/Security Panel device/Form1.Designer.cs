@@ -63,6 +63,7 @@
             this.txtSecurityCode.ReadOnly = true;
             this.txtSecurityCode.Size = new System.Drawing.Size(179, 23);
             this.txtSecurityCode.TabIndex = 1;
+            this.txtSecurityCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 

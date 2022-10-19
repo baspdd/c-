@@ -182,10 +182,15 @@ namespace Dictionary_Ado
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
-            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
-            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
-            WordId = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+            var i = e.RowIndex;
+            if (i >= 0)
+            {
+                textBox1.Text = dataGridView1.Rows[i].Cells[1].FormattedValue.ToString();
+                textBox2.Text = dataGridView1.Rows[i].Cells[2].FormattedValue.ToString();
+                comboBox1.Text = dataGridView1.Rows[i].Cells[4].FormattedValue.ToString();
+                WordId = dataGridView1.Rows[i].Cells[0].FormattedValue.ToString();
+            }
+            
         }
     }
 }

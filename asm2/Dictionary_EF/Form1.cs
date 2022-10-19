@@ -106,7 +106,8 @@ namespace Dictionary_EF
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Regex.Match(textBox1.Text, "[a-zA-Z ]+").Success && Regex.Match(textBox2.Text, "[a-zA-Z ]+").Success)
+            Dictionary p = db.Dictionaries.FirstOrDefault(item => item.WordId == Int32.Parse(WordId));
+            if (Regex.Match(textBox1.Text, "[a-zA-Z ]+").Success && Regex.Match(textBox2.Text, "[a-zA-Z ]+").Success && !textBox1.Text.Equals(p.Word))
             {
                 update();
             }
@@ -174,7 +175,12 @@ namespace Dictionary_EF
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            WordId = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+            var i = e.RowIndex;
+            if (i >=0)
+            {
+                WordId = dataGridView1.Rows[i].Cells[0].FormattedValue.ToString();
+
+            }
         }
     }
 }

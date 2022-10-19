@@ -31,36 +31,3 @@ D:\app code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\refint\Dictionary_Ad
 D:\app code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.pdb
 D:\app code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.genruntimeconfig.cache
 D:\app code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\ref\Dictionary_Ado.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Dictionary_Ado.exe
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\appsettings.json
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Dictionary_Ado.deps.json
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Dictionary_Ado.runtimeconfig.json
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Dictionary_Ado.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Dictionary_Ado.pdb
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\code\c-\asm2\Dictionary_Ado\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.csproj.AssemblyReference.cache
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.Form1.resources
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.csproj.GenerateResource.cache
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.GeneratedMSBuildEditorConfig.editorconfig
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.AssemblyInfoInputs.cache
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.AssemblyInfo.cs
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.csproj.CoreCompileInputs.cache
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.csproj.CopyComplete
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.dll
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\refint\Dictionary_Ado.dll
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.pdb
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\Dictionary_Ado.genruntimeconfig.cache
-D:\code\c-\asm2\Dictionary_Ado\obj\Debug\net6.0-windows\ref\Dictionary_Ado.dll
