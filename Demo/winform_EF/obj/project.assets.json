@@ -2344,11 +2344,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\app code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
+      "projectUniqueName": "D:\\code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
       "projectName": "winform_EF",
-      "projectPath": "D:\\app code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
+      "projectPath": "D:\\code\\c-\\Demo\\winform_EF\\winform_EF.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\app code\\c-\\Demo\\winform_EF\\obj\\",
+      "outputPath": "D:\\code\\c-\\Demo\\winform_EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

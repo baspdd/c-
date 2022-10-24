@@ -64,11 +64,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\app code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
+      "projectUniqueName": "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
       "projectName": "DelegateLamba",
-      "projectPath": "D:\\app code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
+      "projectPath": "D:\\code\\c-\\Demo\\DelegateLamba\\DelegateLamba.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\app code\\c-\\Demo\\DelegateLamba\\obj\\",
+      "outputPath": "D:\\code\\c-\\Demo\\DelegateLamba\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,14 +85,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj": {
-              "projectPath": "D:\\app code\\c-\\Demo\\Demo\\Demo.csproj"
+            "D:\\code\\c-\\Demo\\Demo\\Demo.csproj": {
+              "projectPath": "D:\\code\\c-\\Demo\\Demo\\Demo.csproj"
             },
-            "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj": {
-              "projectPath": "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj"
+            "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj": {
+              "projectPath": "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj"
             },
-            "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj": {
-              "projectPath": "D:\\app code\\c-\\Demo\\OOP\\OOP.csproj"
+            "D:\\code\\c-\\Demo\\OOP\\OOP.csproj": {
+              "projectPath": "D:\\code\\c-\\Demo\\OOP\\OOP.csproj"
             }
           }
         }

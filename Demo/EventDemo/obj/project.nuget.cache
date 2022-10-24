@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uf+3dT6X2h0N6KDj59jqBXBOJjn8asGnjnFEXouZrq3bzpFiM7gyoQWfwEYWHPl9EonQf6p96zm4FmfuCaSnig==",
+  "dgSpecHash": "oD2AiTeaHQl8c3F79kghBA33PLrjHZPBoe1/pwJuvX/zgo4mYdSaqkI4Zz7N1iZsT9etiBfq5G+ylgiTHIlT1Q==",
   "success": true,
-  "projectFilePath": "D:\\app code\\c-\\Demo\\EventDemo\\EventDemo.csproj",
+  "projectFilePath": "D:\\code\\c-\\Demo\\EventDemo\\EventDemo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
