@@ -5,17 +5,16 @@
 *@
 @{
 }
-
 @using webApp.Models
 @model Student
 
-<form asp-controller="Home" asp-action="Add" method="post">
-    Code: <input type="text" asp-for=code/>
+<form asp-controller="Home" asp-action="Update" method="post">
+    Code: <input type="text" asp-for=@Model.code />
     <span asp-validation-for=code></span>
-    <br /> Name:  <input type="text" asp-for=name/>
+    <br /> Name:  <input type="text" asp-for=name />
     <span asp-validation-for=name></span>
     <br /> mark:  <input type="text" asp-for=mark />
     <span asp-validation-for=mark></span>
-    <br /><input type="submit" value="ADD" />
+    <br /><input type="submit" value="update" />
 
 </form>

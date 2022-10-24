@@ -44,5 +44,32 @@ namespace webApp.Controllers
            Student student = list.FirstOrDefault(item=>item.code == code);
             return RedirectToAction("Index",student);
         }
+        public IActionResult Delete(string code)
+        {
+            Student student = list.FirstOrDefault(item => item.code == code);
+            list.Remove(student);   
+            ViewBag.Data = list;
+            return View("ListStudent",student);
+        }
+
+        public IActionResult Update(string code)
+        {
+            Student student = list.FirstOrDefault(item => item.code == code);
+            return View("Update", student);
+        }
+
+        [HttpPost]
+        public IActionResult Update(Student student)
+        {
+            if (ModelState.IsValid)//Tạo model thành công
+            {
+                Student stu = list.FirstOrDefault(item => item.code == student.code);
+                stu.name = student.name;
+                stu.mark = student.mark;
+                ViewBag.Data = list;
+                return View("ListStudent", student);
+            }
+            return View();
+        }
     }
 }
