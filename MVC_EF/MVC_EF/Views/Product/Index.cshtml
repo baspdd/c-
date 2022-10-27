@@ -1,0 +1,61 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using MVC_EF.Models;
+
+List Categories:
+<form id="frm" asp-controller="Product" asp-action="Index" method="post">
+
+    <select  name="cateId" onchange="changeCate()">
+        <option value="0">All Categories</option>
+        @foreach (Category item in @ViewBag.Categories)
+        {
+            @if (@item.CategoryId == @ViewBag.Selected)
+            {
+                <option value="@item.CategoryId" selected>@item.CategoryName</option>
+            }else
+            {
+                <option value="@item.CategoryId">@item.CategoryName</option>
+            }
+
+        }
+    </select>
+
+</form>
+
+<script>
+    function changeCate(){
+        document.getElementById("frm").submit();
+    }
+</script>
+<br />
+
+@model List<Product>
+List Product
+<table border="1">
+    <thead>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Price</td>
+    <td>Stock</td>
+    <td>Img</td>
+    <td>Cate</td>
+    </thead>
+    <tbody border="1">
+        @foreach (Product p in @Model)
+        {
+            <tr>
+                <td><a asp-controller="Product" asp-action="Detail" asp-route-id=@p.ProductId>@p.ProductId</a></td>
+                <td>@p.ProductName</td>
+                <td>@p.UnitPrice</td>
+                <td>@p.UnitsInStock</td>
+                <td></td>
+                <td>@p.Category.CategoryName</td>
+                <td><a asp-controller="Product" asp-action="Update" asp-route-id=@p.ProductId>up</a></td>
+                <td><a asp-controller="Product" asp-action="Delete" asp-route-id=@p.ProductId>del</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-controller="Product" asp-action="Add" method="get">
+    <input type="submit" value="ADD new" />
+</form>

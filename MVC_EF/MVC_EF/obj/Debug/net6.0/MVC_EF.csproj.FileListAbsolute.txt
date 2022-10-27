@@ -1,7 +1,7 @@
 D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\appsettings.Development.json
-D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\appsettings.json
 D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\MVC_EF.staticwebassets.runtime.json
 D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\MVC_EF.exe
+D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\appsettings.json
 D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\MVC_EF.deps.json
 D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\MVC_EF.runtimeconfig.json
 D:\code\c-\MVC_EF\MVC_EF\bin\Debug\net6.0\MVC_EF.dll
