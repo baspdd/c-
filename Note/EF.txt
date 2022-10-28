@@ -1,5 +1,5 @@
 Câu lệnh gen ra Models:
-dotnet ef dbcontext scaffold "server = DESKTOP-MCMOCN4\SQLEXPRESS;database = MySaleDB;uid=sa;pwd=1001;"Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
+dotnet ef dbcontext scaffold "server = DESKTOP-MCMOCN4\SQLEXPRESS;database = PE_PRN_Sum21;uid=sa;pwd=1001;"Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
 
 Đoạn code đọc file json trong hàm onconfig:
 var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
@@ -9,3 +9,5 @@ optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyCnn"));
 
 DESKTOP-MCMOCN4\SQLEXPRESS : lap
 DESKTOP-D0J2I3U\\SQLEXPRESS : pc
+DESKTOP-MCMOCN4\SQLEXPRESS
+PE_PRN_Sum21

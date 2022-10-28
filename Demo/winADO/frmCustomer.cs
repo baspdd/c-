@@ -41,14 +41,14 @@ namespace winADO
             cbCusID.ValueMember = "CustomerId";
 
             //cách 2
-            //DataTable dt = data.executeQuery("select * from Customers");
-            //List<Customer> listC = new List<Customer>();
-            //while (dt.Rows.Count > 0)
-            //{
-            //    int code = Convert.ToInt32(dt.Rows[0][0].ToString());
-            //    cbCusID.Items.Add(code);
-            //    dt.Rows.RemoveAt(0);
-            //}
+            DataTable dt = data.executeQuery("select * from customers");
+            List<Customer> listc = new List<Customer>();
+            while (dt.Rows.Count > 0)
+            {
+                int code = Convert.ToInt32(dt.Rows[0][0].ToString());
+                cbCusID.Items.Add(code);
+                dt.Rows.RemoveAt(0);
+            }
 
             //IDataReader dr = data.executeQuery2("Select *  from Customers");
             //while (dr.Read())
