@@ -1,0 +1,59 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using asm3.Models;
+
+Product Code : 
+<form id="frm" asp-controller="Home" asp-action="Index" method="post">
+    <form id="frm" asp-controller="Home" asp-action="Index" method="post">
+    <select name="id" onchange="changeCate()">
+        @foreach (Product item in @ViewBag.Products)
+        {
+            @if (@item.ProductCode == @ViewBag.Selected)
+            {
+                <option value="@item.ProductCode" selected>@item.ProductCode</option>
+            }
+            else
+            {
+                <option value="@item.ProductCode">@item.ProductCode</option>
+            }
+
+        }
+        </form>
+    </select>
+    <br /> ProductName:  <input type="text" placeholder="@ViewBag.Out.ProductName" />
+    <br /> Unit:  <input type="text" placeholder="@ViewBag.Out.Unit" />
+    <br /> Price:  Old <input type="text" placeholder="@ViewBag.Out.Price" /> New <input type="text" />
+    <br /> Image:  <input type="text" placeholder="@ViewBag.Out.Image" />
+    <br />
+    
+  
+    <br /><input type="submit" value="Update" />
+    <input type="submit" value="Reset" />
+</form>
+<script>
+    function changeCate(){
+        document.getElementById("frm").submit();
+    }
+</script>
+List Product
+<table border="1">
+    <thead>
+    <td>MaHang</td>
+    <td>Tenhang</td>
+    <td>DVT</td>
+    <td>Gia</td>
+    <td>Img</td>
+    </thead>
+    <tbody border="1">
+        @foreach (Product p in @ViewBag.Products)
+        {
+            <tr>
+                <td>@p.ProductCode</td>
+                <td>@p.ProductName</td>
+                <td>@p.Unit</td>
+                <td>@p.Price</td>
+                <td>@p.Image</td>
+              
+            </tr>
+        }
+    </tbody>
+</table>

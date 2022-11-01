@@ -8,6 +8,6 @@ optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyCnn"));
 
 
 DESKTOP-MCMOCN4\SQLEXPRESS : lap
-DESKTOP-D0J2I3U\\SQLEXPRESS : pc
+DESKTOP-D0J2I3U\SQLEXPRESS : pc
 DESKTOP-MCMOCN4\SQLEXPRESS
 PE_PRN_Sum21
