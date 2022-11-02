@@ -1,11 +1,12 @@
 ﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @using asm3.Models;
+@model Product;
 
-Product Code : 
-<form id="frm" asp-controller="Home" asp-action="Index" method="post">
-    <form id="frm" asp-controller="Home" asp-action="Index" method="post">
-    <select name="id" onchange="changeCate()">
-        @foreach (Product item in @ViewBag.Products)
+Product Code :
+
+<form id="idfrm" asp-controller="Home" asp-action="Index" method="post">
+    <select name="id" onchange="changeid()" asp-for=@Model.ProductCode>
+        @foreach (Product item in @ViewBag.ProductsID)
         {
             @if (@item.ProductCode == @ViewBag.Selected)
             {
@@ -17,23 +18,54 @@ Product Code :
             }
 
         }
-        </form>
     </select>
-    <br /> ProductName:  <input type="text" placeholder="@ViewBag.Out.ProductName" />
-    <br /> Unit:  <input type="text" placeholder="@ViewBag.Out.Unit" />
-    <br /> Price:  Old <input type="text" placeholder="@ViewBag.Out.Price" /> New <input type="text" />
-    <br /> Image:  <input type="text" placeholder="@ViewBag.Out.Image" />
-    <br />
-    
-  
-    <br /><input type="submit" value="Update" />
+    <script>
+        function changeid() {
+            document.getElementById("idfrm").submit();
+        }
+    </script>
+</form>
+<form id="frm" asp-controller="Home" asp-action="Name" method="post">
+    <br /> ProductName:  <input type="text" value="@ViewBag.Out.ProductName" name="txt" asp-for=@Model.ProductName />
+    <button onclick="changeCate()">Filter by Name</button>
+    <script>
+        function changeCate() {
+            document.getElementById("frm").submit();
+        }
+    </script>
+</form>
+<br /> Unit:
+<input type="text" value="@ViewBag.Out.Unit" asp-for=@Model.Unit />
+<br /> Price:  Old
+<form id="frm3" asp-controller="Home" asp-action="Price" method="post">
+    <input type="text" value="@ViewBag.Out.Price" name="price1" /> New <input type="text" name="price2" asp-for=@Model.Price />
+    <button onclick="changeCate3()">Filter by Price</button>
+    <script>
+        function changeCate3() {
+            document.getElementById("frm3").submit();
+        }
+    </script>
+</form>
+<form id="frm2" asp-controller="Home" asp-action="Image" method="post">
+    <br /> Image:  <input type="text" value="@ViewBag.Out.Image" name="txt2" asp-for=@Model.Image />
+    <button onclick="changeCate2()">Filter by Image</button>
+    <script>
+        function changeCate2() {
+            document.getElementById("frm2").submit();
+        }
+    </script>
+</form>
+<br />
+<form id="upfrm" asp-controller="Home" asp-action="Update" method="post">
+    <input type="submit" value="update" onclick="pdate()" />
+</form>
+
+
+<form asp-controller="Home" asp-action="Index" method="get">
     <input type="submit" value="Reset" />
 </form>
-<script>
-    function changeCate(){
-        document.getElementById("frm").submit();
-    }
-</script>
+<br />
+
 List Product
 <table border="1">
     <thead>
@@ -52,7 +84,7 @@ List Product
                 <td>@p.Unit</td>
                 <td>@p.Price</td>
                 <td>@p.Image</td>
-              
+
             </tr>
         }
     </tbody>

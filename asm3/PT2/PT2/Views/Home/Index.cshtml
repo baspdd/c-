@@ -1,0 +1,56 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using PT2.Models;
+
+Detail 
+<br />
+
+<form id="frm" asp-controller="Home" asp-action="Index" method="post">
+<br /> Name:
+    <input type="text" name="txt" placeholder="@ViewBag.MSG" >
+<br /> Master:
+
+
+    <select name="Mid">
+        <option value="0">--all--</option>
+        @foreach (DummyMaster item in ViewBag.Masters)
+        {
+            @if (@item.MasterId == @ViewBag.Selected)
+            {
+                <option value="@item.MasterId" selected>@item.MasterName</option>
+            }
+            else
+            {
+                <option value="@item.MasterId">@item.MasterName</option>
+            }
+        }
+    </select>
+    <br />
+    <button onclick="changeCate">Filter</button>
+    <br />
+</form>
+<script>
+    function changeCate(){
+        document.getElementById("frm").submit();
+    }
+</script>
+
+<table border="1">
+    <thead>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Master</td>
+    
+    </thead>
+    <tbody border="1">
+        @foreach (DummyDetail p in @ViewBag.Details)
+        {
+            <tr>
+                <td>@p.DetailId</td>
+                <td>@p.DetailName</td>
+                <td>@p.Master.MasterName</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -11,4 +11,5 @@ namespace asm3.Models
         public float? Price { get; set; }
         public string? Image { get; set; }
     }
+    
 }
