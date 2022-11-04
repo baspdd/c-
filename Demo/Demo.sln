@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoForm", "DemoForm\DemoFo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "winADO", "winADO\winADO.csproj", "{37ADA91A-9BB8-400C-91D4-72895CE169AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winform_EF", "winform_EF\winform_EF.csproj", "{548D7B37-9CB6-4DF7-B26C-8DD04E2A5F63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "winform_EF", "winform_EF\winform_EF.csproj", "{548D7B37-9CB6-4DF7-B26C-8DD04E2A5F63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winEvent", "winEvent\winEvent.csproj", "{1DDD9AC6-9CA0-4C71-B2DC-092F5C9E512E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{548D7B37-9CB6-4DF7-B26C-8DD04E2A5F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{548D7B37-9CB6-4DF7-B26C-8DD04E2A5F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{548D7B37-9CB6-4DF7-B26C-8DD04E2A5F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DDD9AC6-9CA0-4C71-B2DC-092F5C9E512E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DDD9AC6-9CA0-4C71-B2DC-092F5C9E512E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DDD9AC6-9CA0-4C71-B2DC-092F5C9E512E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DDD9AC6-9CA0-4C71-B2DC-092F5C9E512E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

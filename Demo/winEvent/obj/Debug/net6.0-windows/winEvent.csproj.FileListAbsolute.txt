@@ -1,0 +1,17 @@
+D:\code\c-\Demo\winEvent\bin\Debug\net6.0-windows\winEvent.exe
+D:\code\c-\Demo\winEvent\bin\Debug\net6.0-windows\winEvent.deps.json
+D:\code\c-\Demo\winEvent\bin\Debug\net6.0-windows\winEvent.runtimeconfig.json
+D:\code\c-\Demo\winEvent\bin\Debug\net6.0-windows\winEvent.dll
+D:\code\c-\Demo\winEvent\bin\Debug\net6.0-windows\winEvent.pdb
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.csproj.AssemblyReference.cache
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.Form1.resources
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.csproj.GenerateResource.cache
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.AssemblyInfoInputs.cache
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.AssemblyInfo.cs
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.csproj.CoreCompileInputs.cache
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.dll
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\refint\winEvent.dll
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.pdb
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\winEvent.genruntimeconfig.cache
+D:\code\c-\Demo\winEvent\obj\Debug\net6.0-windows\ref\winEvent.dll
