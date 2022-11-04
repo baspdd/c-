@@ -2339,7 +2339,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2347,11 +2347,11 @@
       "projectUniqueName": "D:\\code\\c-\\asm2\\Dictionary_EF\\Dictionary_EF.csproj",
       "projectName": "Dictionary_EF",
       "projectPath": "D:\\code\\c-\\asm2\\Dictionary_EF\\Dictionary_EF.csproj",
-      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\code\\c-\\asm2\\Dictionary_EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2411,7 +2411,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

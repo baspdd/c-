@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\code\\prn211\\asm\\les3\\les3.csproj",
+      "projectUniqueName": "D:\\code\\c-\\asm\\les3\\les3.csproj",
       "projectName": "les3",
-      "projectPath": "D:\\code\\prn211\\asm\\les3\\les3.csproj",
-      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
-      "outputPath": "D:\\code\\prn211\\asm\\les3\\obj\\",
+      "projectPath": "D:\\code\\c-\\asm\\les3\\les3.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\c-\\asm\\les3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

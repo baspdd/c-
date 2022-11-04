@@ -32,3 +32,20 @@ D:\app code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\refint\DentalPayme
 D:\app code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.pdb
 D:\app code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.genruntimeconfig.cache
 D:\app code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\ref\DentalPaymentApp.dll
+D:\code\c-\asm2\DentalPaymentApp\bin\Debug\net6.0-windows\DentalPaymentApp.exe
+D:\code\c-\asm2\DentalPaymentApp\bin\Debug\net6.0-windows\DentalPaymentApp.deps.json
+D:\code\c-\asm2\DentalPaymentApp\bin\Debug\net6.0-windows\DentalPaymentApp.runtimeconfig.json
+D:\code\c-\asm2\DentalPaymentApp\bin\Debug\net6.0-windows\DentalPaymentApp.dll
+D:\code\c-\asm2\DentalPaymentApp\bin\Debug\net6.0-windows\DentalPaymentApp.pdb
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.csproj.AssemblyReference.cache
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.Dental.resources
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.csproj.GenerateResource.cache
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.AssemblyInfoInputs.cache
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.AssemblyInfo.cs
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.csproj.CoreCompileInputs.cache
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.dll
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\refint\DentalPaymentApp.dll
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.pdb
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\DentalPaymentApp.genruntimeconfig.cache
+D:\code\c-\asm2\DentalPaymentApp\obj\Debug\net6.0-windows\ref\DentalPaymentApp.dll

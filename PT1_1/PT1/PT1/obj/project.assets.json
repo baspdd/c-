@@ -2557,11 +2557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\app code\\c-\\PT1_1\\PT1\\PT1\\PT1.csproj",
+      "projectUniqueName": "D:\\code\\c-\\PT1_1\\PT1\\PT1\\PT1.csproj",
       "projectName": "PT1",
-      "projectPath": "D:\\app code\\c-\\PT1_1\\PT1\\PT1\\PT1.csproj",
+      "projectPath": "D:\\code\\c-\\PT1_1\\PT1\\PT1\\PT1.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\app code\\c-\\PT1_1\\PT1\\PT1\\obj\\",
+      "outputPath": "D:\\code\\c-\\PT1_1\\PT1\\PT1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
