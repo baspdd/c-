@@ -136,6 +136,17 @@ CREATE TABLE [dbo].[Category](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+/****** Object:  Table [dbo].[OrderItem]    Script Date: 10/26/2022 8:38:04 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrderItem](
+	[id] [int] NOT NULL,
+	[proID] [int] NOT NULL,
+	[amount] [int] NOT NULL,
+)
+GO
 /****** Object:  Table [dbo].[Order]    Script Date: 10/26/2022 8:38:04 PM ******/
 SET ANSI_NULLS ON
 GO
@@ -145,7 +156,6 @@ CREATE TABLE [dbo].[Order](
 
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[uid] [int] NOT NULL,
-	[cart] [nvarchar](4000) NOT NULL,
 	[send] [Date] NULL,
 	[received] [Date] NULL,
 	[status] [int] NOT NULL,
@@ -167,9 +177,9 @@ GO
 
 SET IDENTITY_INSERT [dbo].[Category] ON 
 GO
-INSERT INTO [dbo].[Category] ([id],[name]) VALUES (1,'PC')
+INSERT INTO [dbo].[Category] ([id],[name]) VALUES (1,'Chairs')
 GO
-INSERT INTO [dbo].[Category] ([id],[name]) VALUES (2,'Lap')
+INSERT INTO [dbo].[Category] ([id],[name]) VALUES (2,'Table')
 GO
 SET IDENTITY_INSERT [dbo].[Category] OFF 
 GO
@@ -177,13 +187,13 @@ GO
 SET IDENTITY_INSERT [dbo].[Product] ON 
 GO
 INSERT INTO [dbo].[Product] ([id],[title],[type],[price],[image],[is_sale],[description],[amount])
-     VALUES  (1, 'Laptop Acer Gaming Aspire 7 A715-42G-R4XX', 2, 15299.000, 'https://hanoicomputercdn.com/media/product/61621_as7.png', 0, 'Laptop Acer Gaming Aspire 7 A715-42G-R4XX (NH.QAYSV.008) (R5 5500U/8GB RAM/256GB SSD/15.6 inch FHD/GTX1650 4G/Win11/Đen)' , 10)
+     VALUES  (1, 'Shilpi Handicrafts Wooden Armrest Chair', 1, 15299.000, 'https://www.ikea.com/om/en/images/products/stefan-chair-brown-black__0727320_pe735593_s5.jpg?f=s', 0, 'Shilpi Handicrafts Wooden Armrest Chair for Home & Office (Solid Wood, Standard)' , 10)
 GO
 INSERT INTO [dbo].[Product] ([id],[title],[type],[price],[image],[is_sale],[description],[amount])
-     VALUES  (2, 'Laptop Acer Gaming Aspire 7 A715-42G-R4XX', 2, 15299.000, 'https://hanoicomputercdn.com/media/product/61621_as7.png', 5, 'Laptop Acer Gaming Aspire 7 A715-42G-R4XX (NH.QAYSV.008) (R5 5500U/8GB RAM/256GB SSD/15.6 inch FHD/GTX1650 4G/Win11/Đen)' , 30)
+     VALUES  (2, 'Shilpi Handicrafts steal Armrest Chair', 1, 15299.000, 'https://mobileimages.lowes.com/productimages/9a8fed5d-da28-4a56-b2df-6a952050ef0a/44126414.jpg?size=pdhism', 5, 'Shilpi Handicrafts Wooden Armrest Chair for Home & Office (Solid Wood, Standard)' , 30)
 GO
 INSERT INTO [dbo].[Product] ([id],[title],[type],[price],[image],[is_sale],[description],[amount])
-     VALUES  (3, 'PC GAMING HACOM PRO 041', 1, 15299.000, 'https://hanoicomputercdn.com/media/product/61621_as7.png', 12, 'PC GAMING HACOM PRO 041 (i5 12400F/B660/8GB RAM/250GB SSD/GTX 1660 Ti/550W)' , 12)
+     VALUES  (3, 'NODELAND', 2, 15299.000, 'https://www.ikea.com/in/en/images/products/nodeland-coffee-table-medium-brown__0974637_pe812499_s5.jpg?f=xl', 12, 'NODELAND Coffee table, medium brown, 80x50 cm (31 1/2x19 5/8 ")' , 12)
 GO
 SET IDENTITY_INSERT [dbo].[Product] OFF 
 GO
@@ -194,6 +204,10 @@ GO
 
 ALTER TABLE [dbo].[Order]  WITH CHECK ADD FOREIGN KEY([uid])
 REFERENCES [dbo].[User] ([id])
+GO
+
+ALTER TABLE [dbo].[OrderItem]  WITH CHECK ADD FOREIGN KEY([id])
+REFERENCES [dbo].[Order] ([id])
 GO
 
 USE [master]
