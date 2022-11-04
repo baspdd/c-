@@ -142,11 +142,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Order](
+
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[uid] [int] NOT NULL,
-	[pid] [int] NOT NULL,
-	[amount] [int] NOT NULL,
-	[Date] [Date] NULL,
+	[cart] [nvarchar](4000) NOT NULL,
+	[send] [Date] NULL,
+	[received] [Date] NULL,
+	[status] [int] NOT NULL,
+	[total][decimal] NOT NULL,
  CONSTRAINT [PK_order] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
@@ -192,9 +195,7 @@ GO
 ALTER TABLE [dbo].[Order]  WITH CHECK ADD FOREIGN KEY([uid])
 REFERENCES [dbo].[User] ([id])
 GO
-ALTER TABLE [dbo].[Order]  WITH CHECK ADD FOREIGN KEY([pid])
-REFERENCES [dbo].[Product] ([id])
-GO
+
 USE [master]
 GO
 ALTER DATABASE [ASMSS] SET  READ_WRITE 
