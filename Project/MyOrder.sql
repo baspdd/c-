@@ -187,10 +187,10 @@ GO
 SET IDENTITY_INSERT [dbo].[Product] ON 
 GO
 INSERT INTO [dbo].[Product] ([id],[title],[type],[price],[image],[is_sale],[description],[amount])
-     VALUES  (1, 'Shilpi Handicrafts Wooden Armrest Chair', 1, 15299.000, 'https://www.ikea.com/om/en/images/products/stefan-chair-brown-black__0727320_pe735593_s5.jpg?f=s', 0, 'Shilpi Handicrafts Wooden Armrest Chair for Home & Office (Solid Wood, Standard)' , 10)
+     VALUES  (1, 'Armrest Chair', 1, 15299.000, 'https://www.ikea.com/om/en/images/products/stefan-chair-brown-black__0727320_pe735593_s5.jpg?f=s', 0, 'Shilpi Handicrafts Wooden Armrest Chair for Home & Office (Solid Wood, Standard)' , 10)
 GO
 INSERT INTO [dbo].[Product] ([id],[title],[type],[price],[image],[is_sale],[description],[amount])
-     VALUES  (2, 'Shilpi Handicrafts steal Armrest Chair', 1, 15299.000, 'https://mobileimages.lowes.com/productimages/9a8fed5d-da28-4a56-b2df-6a952050ef0a/44126414.jpg?size=pdhism', 5, 'Shilpi Handicrafts Wooden Armrest Chair for Home & Office (Solid Wood, Standard)' , 30)
+     VALUES  (2, 'stealt Chair', 1, 15299.000, 'https://mobileimages.lowes.com/productimages/9a8fed5d-da28-4a56-b2df-6a952050ef0a/44126414.jpg?size=pdhism', 5, 'Shilpi Handicrafts Wooden Armrest Chair for Home & Office (Solid Wood, Standard)' , 30)
 GO
 INSERT INTO [dbo].[Product] ([id],[title],[type],[price],[image],[is_sale],[description],[amount])
      VALUES  (3, 'NODELAND', 2, 15299.000, 'https://www.ikea.com/in/en/images/products/nodeland-coffee-table-medium-brown__0974637_pe812499_s5.jpg?f=xl', 12, 'NODELAND Coffee table, medium brown, 80x50 cm (31 1/2x19 5/8 ")' , 12)
