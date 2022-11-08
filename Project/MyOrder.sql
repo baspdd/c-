@@ -142,10 +142,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[OrderItem](
-	[id] [int] NOT NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[oid] [int] NOT NULL,
 	[proID] [int] NOT NULL,
 	[amount] [int] NOT NULL,
-)
+ CONSTRAINT [PK_order] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
 GO
 /****** Object:  Table [dbo].[Order]    Script Date: 10/26/2022 8:38:04 PM ******/
 SET ANSI_NULLS ON
@@ -160,7 +165,7 @@ CREATE TABLE [dbo].[Order](
 	[received] [Date] NULL,
 	[status] [int] NOT NULL,
 	[total][decimal] NOT NULL,
- CONSTRAINT [PK_order] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_orderitem] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
@@ -198,6 +203,26 @@ GO
 SET IDENTITY_INSERT [dbo].[Product] OFF 
 GO
 
+SET IDENTITY_INSERT [dbo].[Order] ON 
+GO
+INSERT INTO [dbo].[Order] ([id],[uid],[send],[received],[status],[total]) VALUES (1, 1  ,CAST(N'2022-03-15' AS Date),NULL,0, 129504.21)
+GO
+SET IDENTITY_INSERT [dbo].[Order] OFF 
+GO
+
+
+
+SET IDENTITY_INSERT [dbo].[OrderItem] ON 
+GO
+INSERT INTO [dbo].[OrderItem] ([id],[oid],[proID],[amount]) VALUES  (1,1, 1,3)
+GO
+INSERT INTO [dbo].[OrderItem] ([id],[oid],[proID],[amount]) VALUES  (2,1, 2,3)
+GO
+INSERT INTO [dbo].[OrderItem] ([id],[oid],[proID],[amount]) VALUES  (3,1, 3,3)
+GO
+SET IDENTITY_INSERT [dbo].[OrderItem] OFF 
+GO
+
 ALTER TABLE [dbo].[Product]  WITH CHECK ADD FOREIGN KEY([type])
 REFERENCES [dbo].[Category] ([id])
 GO
@@ -206,8 +231,12 @@ ALTER TABLE [dbo].[Order]  WITH CHECK ADD FOREIGN KEY([uid])
 REFERENCES [dbo].[User] ([id])
 GO
 
-ALTER TABLE [dbo].[OrderItem]  WITH CHECK ADD FOREIGN KEY([id])
+ALTER TABLE [dbo].[OrderItem]  WITH CHECK ADD FOREIGN KEY([oid])
 REFERENCES [dbo].[Order] ([id])
+GO
+
+ALTER TABLE [dbo].[OrderItem]  WITH CHECK ADD FOREIGN KEY([proID])
+REFERENCES [dbo].[Product] ([id])
 GO
 
 USE [master]

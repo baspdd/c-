@@ -83,11 +83,17 @@ namespace ASM.Models
 
                 entity.Property(e => e.ProId).HasColumnName("proID");
 
-                entity.HasOne(d => d.IdNavigation)
+                entity.HasOne(d => d.OidNavigation)
                     .WithMany()
                     .HasForeignKey(d => d.Id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__OrderItem__id__2D27B809");
+
+                entity.HasOne(d => d.Pro)
+                    .WithMany()
+                    .HasForeignKey(d => d.ProId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__OrderItem__proID__2E1BDC42");
             });
 
             modelBuilder.Entity<Product>(entity =>

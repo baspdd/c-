@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace ASM.Models
 {
@@ -15,5 +16,14 @@ namespace ASM.Models
         public int Amount { get; set; }
 
         public virtual Category TypeNavigation { get; set; } = null!;
+        public string getType()
+        {
+            using (ASMSSContext context = new ASMSSContext())
+            {
+                Category category = new Category();
+                category = context.Categories.FirstOrDefault(p => p.Id == Type);
+                return category.Name;
+            }
+        }
     }
 }
