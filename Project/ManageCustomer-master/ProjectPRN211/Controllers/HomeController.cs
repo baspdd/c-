@@ -194,9 +194,10 @@ namespace ProjectPRN211.Controllers
             try
             {
                 OrderItem ite = context.OrderItems.FirstOrDefault(item => item.Id == odid);
+                List<OrderItem> list = context.OrderItems.ToList();
                 context.OrderItems.Remove(ite);
-
-                return RedirectToAction("Cart");
+                context.SaveChanges();
+                return RedirectToAction("cart");
 
             }
             catch (Exception)
