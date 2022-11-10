@@ -5,6 +5,7 @@ using System.Web;
 using System.Collections.Generic;
 using static System.Net.Mime.MediaTypeNames;
 using System.Security.Cryptography;
+using System;
 
 namespace ProjectPRN211.Controllers
 {
@@ -69,6 +70,8 @@ namespace ProjectPRN211.Controllers
         public IActionResult AddtoCart(int pid, int quantity)
         {
             Product pro = context.Products.FirstOrDefault(p => p.Id == pid);
+            pro.Amount -= quantity;
+            context.Products.Update(pro);
             double ret = (double)(pro.Price * (100 - pro.IsSale) / 100 * quantity);
             Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
             if (order != null)
@@ -98,7 +101,6 @@ namespace ProjectPRN211.Controllers
                 {
                     ot.Amount += quantity;
                     context.OrderItems.Update(ot);
-
                 }
                 else
                 {
@@ -126,11 +128,12 @@ namespace ProjectPRN211.Controllers
             {
                 context.Orders.Add(new Order
                 {
-                    Uid = us.Id,
+                    Uid = 1,
                     Status = 0,
                     Total = (int)ret
                 });
-                Order ot = context.Orders.Last();
+                context.SaveChanges();
+                Order ot = context.Orders.ToList().Last();
                 context.OrderItems.Add(new OrderItem
                 {
                     Oid = ot.Id,
@@ -146,7 +149,34 @@ namespace ProjectPRN211.Controllers
             }
 
         }
+        [HttpPost]
+        public IActionResult UpdateCartItem(int pid, int quantity)
+        {
+            try
+            {
+                Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
 
+                OrderItem ite = context.OrderItems.FirstOrDefault(p => p.Oid == order.Id && p.ProId == pid);
+                int ret = quantity - ite.Amount;
+                ite.Amount += ret;
+
+                Product pro = context.Products.FirstOrDefault(p => p.Id == pid);
+                pro.Amount -= ret;
+                double total = (double)(pro.Price * (100 - pro.IsSale) / 100 * ret);
+                order.Total += (int)total;
+
+                context.Products.Update(pro);
+                context.OrderItems.Update(ite);
+                context.Orders.Update(order);
+                context.SaveChanges();
+                return RedirectToAction("Cart");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public IActionResult Detail(int? id)
         {
             try
@@ -174,7 +204,7 @@ namespace ProjectPRN211.Controllers
                 Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
                 if (order != null)
                 {
-                    List<OrderItem> item = context.OrderItems.Where(p => p.Oid == order.Id).ToList();
+                    List<OrderItem> item = context.OrderItems.Where(p => p.Oid == order.Id).OrderBy(p => p.ProId).ToList();
                     List<Category> cate = context.Categories.ToList();
 
                     context.Categories.ToList();
@@ -194,18 +224,40 @@ namespace ProjectPRN211.Controllers
             }
 
         }
+        public IActionResult CartDetail(int oid)
+        {
+            try
+            {
+                Order order = context.Orders.FirstOrDefault(p => p.Id == oid);
+                List<OrderItem> item = context.OrderItems.Where(p => p.Oid == order.Id).OrderBy(p => p.ProId).ToList();
+
+                ViewBag.ListO = item;
+                ViewBag.order = order;
+                return View();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
         public IActionResult DeleteItem(int odid)
         {
             try
             {
 
                 OrderItem ite = context.OrderItems.FirstOrDefault(item => item.Id == odid);
-                context.OrderItems.Remove(ite);
 
                 Product pro = context.Products.FirstOrDefault(p => p.Id == ite.ProId);
                 double ret = (double)(pro.Price * (100 - pro.IsSale) / 100 * ite.Amount);
+                pro.Amount += ite.Amount;
                 Order order = context.Orders.FirstOrDefault(p => p.Id == ite.Oid);
                 order.Total -= (int)ret;
+
+                context.Products.Update(pro);
+                context.OrderItems.Remove(ite);
                 context.Orders.Update(order);
                 context.SaveChanges();
                 return RedirectToAction("cart");
@@ -218,11 +270,46 @@ namespace ProjectPRN211.Controllers
             }
 
         }
+        public IActionResult CheckOut()
+        {
+            try
+            {
+                Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
+                order.Status = 1;
+                order.Send = DateTime.Today;
+                context.Orders.Update(order);
+                context.SaveChanges();
+                return RedirectToAction("OrderManage");
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IActionResult OrderManage()
+        {
+            try
+            {
+                List<Order> listO = context.Orders.Where(p => p.Uid == 1).ToList();
+                ViewBag.listO = listO;
+                return View();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
         public IActionResult ProMana()
         {
             try
             {
+                context.Categories.ToList();
                 List<Product> list = context.Products.ToList();
                 ViewBag.products = list;
                 return View();
@@ -233,7 +320,80 @@ namespace ProjectPRN211.Controllers
 
                 throw;
             }
+        }
 
+        public IActionResult UpdateProduct(int pid)
+        {
+            try
+            {
+                Product p = context.Products.FirstOrDefault(p => p.Id == pid);
+                ViewBag.P = p;
+                return View();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        [HttpPost]
+        public IActionResult UpdateProduct(int pid, int isS, string title, int type, int price, string des, int am, string img)
+        {
+            try
+            {
+
+                Product Pro = context.Products.FirstOrDefault(p => p.Id == pid);
+                ViewBag.test = pid;
+                return View();
+                //Pro.Title = title;
+                //Pro.Type = type;
+                //Pro.Price = price;
+                //Pro.Image = img;
+                //Pro.IsSale = isS;
+                //Pro.Description = des;
+                //Pro.Amount = am;
+                //context.Products.Update(Pro);
+                //context.SaveChanges();
+                //return RedirectToAction("ProMana");
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public IActionResult AddProduct()
+        {
+            ViewBag.Categories = context.Categories.ToList();
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddProduct(string title, int type, decimal price, string img, int iss, string des, int am)
+        {
+            try
+            {
+                Product product = new Product
+                {
+                    Title = title,
+                    Type = type,
+                    Price = price,
+                    Image = img,
+                    IsSale = iss,
+                    Description = des,
+                    Amount = am
+                };
+                context.Products.Add(product);
+                context.SaveChanges();
+                return RedirectToAction("ProMana");
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
     }

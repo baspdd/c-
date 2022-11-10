@@ -15,7 +15,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Cart</title>
+    <title>Products Management</title>
 
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css"
@@ -62,53 +62,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (OrderItem ite in @ViewBag.ListO)
+                        @foreach (Product ite in @ViewBag.products)
                         {
-                            Product propduct = ite.get();
                             <tr>
-                                <form asp-controller="Home" asp-action="UpdateCartItem" method="post">
-                                <td>@propduct.Id</td>
-                                <td>@propduct.Title</td>
-                                <td>@propduct.getType()</td>
-                                <td>@propduct.Price</td>
+                                <td>@ite.Id</td>
+                                <td>@ite.Title</td>
+                                <td>@ite.getType()</td>
+                                <td>@ite.Price</td>
                                 <td>
                                     <div class="img-box">
-                                        <img src="@propduct.Image" style="width:120px;height:120px;" alt="">
+                                        <img src="@ite.Image" style="width:120px;height:120px;" alt="">
                                     </div>
                                 </td>
-                                <td>@propduct.IsSale</td>
+                                <td>@ite.IsSale</td>
+                                <td>@ite.Amount</td>
                                 <td>
-                                    <input name="pid" value="@ite.ProId" style="display:none" />
-                                    <input type="number" min="1" max="@propduct.Amount" value="@ite.Amount" name="quantity" />
+                                    <a asp-controller="Home" asp-action="UpdateProduct" asp-route-pid=@ite.Id>Update</a>
                                 </td>
-                                <td>
-                                    <input type="submit" class="" value="Update" />
-                                </td>
-                                <td><a asp-controller="Home" asp-action="DeleteItem" asp-route-odid=@ite.Id>Delete</a></td>
-                                </form>
-
+                                
                             </tr>
 
                         }
                     </tbody>
                 </table>
-                
+
             </div>
-            <h2>
-                Status : @ViewBag.order.getSta()
-            </h2>
-            <br>
-            <div class="heading_container">
-                <h2 style="color:red">
-                    Total : @ViewBag.order.Total
-                </h2>
-            </div>
+            <form asp-controller="Home" asp-action="AddProduct" method="get">
+                <input type="submit" value="ADD new" />
+            </form>
         </div>
     </section>
 
-    <button class="brand-btn" style="margin-left: 40%">
-        <a asp-controller="Home" asp-action="CheckOut">Check out</a>
-    </button>
+
 
 
     <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>

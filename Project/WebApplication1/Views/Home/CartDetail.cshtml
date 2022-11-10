@@ -66,7 +66,6 @@
                         {
                             Product propduct = ite.get();
                             <tr>
-                                <form asp-controller="Home" asp-action="UpdateCartItem" method="post">
                                 <td>@propduct.Id</td>
                                 <td>@propduct.Title</td>
                                 <td>@propduct.getType()</td>
@@ -78,24 +77,20 @@
                                 </td>
                                 <td>@propduct.IsSale</td>
                                 <td>
-                                    <input name="pid" value="@ite.ProId" style="display:none" />
-                                    <input type="number" min="1" max="@propduct.Amount" value="@ite.Amount" name="quantity" />
+                                    @ite.Amount
                                 </td>
-                                <td>
-                                    <input type="submit" class="" value="Update" />
-                                </td>
-                                <td><a asp-controller="Home" asp-action="DeleteItem" asp-route-odid=@ite.Id>Delete</a></td>
-                                </form>
+                                
 
                             </tr>
 
                         }
                     </tbody>
                 </table>
-                
+
             </div>
             <h2>
                 Status : @ViewBag.order.getSta()
+                <h5>Day : @ViewBag.order.Send</h5>
             </h2>
             <br>
             <div class="heading_container">
@@ -107,7 +102,7 @@
     </section>
 
     <button class="brand-btn" style="margin-left: 40%">
-        <a asp-controller="Home" asp-action="CheckOut">Check out</a>
+        <a asp-controller="Home" asp-action="CheckOut">Received</a>
     </button>
 
 
