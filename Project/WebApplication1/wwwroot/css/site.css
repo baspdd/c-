@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  color:red;
 }
 
 @media (min-width: 768px) {
@@ -15,4 +16,8 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.mad{
+    color:blue;
 }
