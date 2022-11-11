@@ -328,7 +328,7 @@ namespace ProjectPRN211.Controllers
             {
                 Product p = context.Products.FirstOrDefault(p => p.Id == pid);
                 ViewBag.P = p;
-                return View();
+                return View(p);
 
             }
             catch (Exception)
@@ -338,7 +338,7 @@ namespace ProjectPRN211.Controllers
             }
         }
         [HttpPost]
-        public IActionResult UpdateProduct(int pid, int isS, string title, int type, int price, string des, int am, string img)
+        public IActionResult UpdateProduct(int? pid, int isS, string title, int type, int price, string des, int am, string img)
         {
             try
             {

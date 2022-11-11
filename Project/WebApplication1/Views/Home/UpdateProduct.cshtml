@@ -33,6 +33,7 @@
 @{
     Product prod = ViewBag.P;
 }
+@model Product
 
 <body class="sub_page">
     @Html.Partial("Navbar.cshtml")
@@ -43,7 +44,7 @@
                 <form asp-controller="Home" asp-action="UpdateProduct" method="post">
                     <div class="col-md-6">
                         <div class="detail-box">
-                            <input type="number" name="pid" value="@prod.Id" />
+                            <input  disabled name="pid" value=@prod.Id />
                             <h4>
                                 % Discount :<input name="isS" value="@prod.IsSale" type="number" min="0" max="100" />
                             </h4>
