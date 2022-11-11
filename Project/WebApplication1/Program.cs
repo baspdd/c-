@@ -5,7 +5,7 @@ var app = builder.Build();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=AddProduct}/{id?}"
+    pattern: "{controller=Home}/{action=ProMana}/{id?}"
     );
 
 app.UseStaticFiles();

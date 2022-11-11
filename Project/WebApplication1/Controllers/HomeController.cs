@@ -36,6 +36,28 @@ namespace ProjectPRN211.Controllers
 
         }
 
+        public IActionResult Search(string? search)
+        {
+            try
+            {
+                List<Product> products = context.Products.ToList();
+                List<Category> cate = context.Categories.ToList();
+                if (!string.IsNullOrEmpty(search))
+                {
+                    products = context.Products.Where(p => p.Title.ToLower().Contains(search.ToLower())).ToList();
+                }
+                ViewBag.Cate = cate;
+                ViewBag.ListP = products;
+                return View("Shop");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
 
         public IActionResult Login()
         {
@@ -70,6 +92,10 @@ namespace ProjectPRN211.Controllers
         public IActionResult AddtoCart(int pid, int quantity)
         {
             Product pro = context.Products.FirstOrDefault(p => p.Id == pid);
+            if (pro.Amount==0)
+            {
+                return RedirectToAction("Shop");
+            }
             pro.Amount -= quantity;
             context.Products.Update(pro);
             double ret = (double)(pro.Price * (100 - pro.IsSale) / 100 * quantity);
@@ -356,6 +382,26 @@ namespace ProjectPRN211.Controllers
                 //context.Products.Update(Pro);
                 //context.SaveChanges();
                 //return RedirectToAction("ProMana");
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpPost]
+        public IActionResult UpdateProduct2(int? pid, int quantity)
+        {
+            try
+            {
+
+                Product Pro = context.Products.FirstOrDefault(p => p.Id == pid);
+                Pro.Amount = quantity;
+                context.Products.Update(Pro);
+                context.SaveChanges();
+                return RedirectToAction("ProMana");
 
             }
             catch (Exception)

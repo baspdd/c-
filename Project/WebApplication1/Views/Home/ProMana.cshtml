@@ -75,11 +75,20 @@
                                     </div>
                                 </td>
                                 <td>@ite.IsSale</td>
-                                <td>@ite.Amount</td>
+                                <form id="frm" asp-controller="Home" asp-action="UpdateProduct2" method="post">
+
+                                <td>
+                                    <input name="pid" value="@ite.Id" style="display:none" />
+                                    <input type="number" min="0"  value="@ite.Amount" name="quantity" />
+                                </td>
+                                <td>
+                                    <input type="submit" class="" value="Update" />
+                                </td>
+                                </form>
                                 <td>
                                     <a asp-controller="Home" asp-action="UpdateProduct" asp-route-pid=@ite.Id>Update</a>
                                 </td>
-                                
+
                             </tr>
 
                         }

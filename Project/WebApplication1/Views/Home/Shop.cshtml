@@ -52,7 +52,6 @@
                             Categories
                         </h2>
                     </div>
-                    <form id="frm" asp-controller="Home" asp-action="Filter" method="post">
                     <div class="tab_container">
                         @foreach (Category item in @ViewBag.Cate)
                         {
@@ -66,6 +65,11 @@
                                 </div>
                             </a>
                         }
+                    </div>
+                    <form id="frm" asp-controller="Home" asp-action="Search" method="post">
+                    <div>Search
+                            <input type="text" name="search" />
+                        <input type="submit" value="Search"/>
                     </div>
                     </form>
                 </div>
