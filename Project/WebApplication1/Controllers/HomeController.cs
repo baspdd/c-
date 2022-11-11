@@ -12,7 +12,6 @@ namespace ProjectPRN211.Controllers
     public class HomeController : Controller
     {
         static ASMSSContext context = new ASMSSContext();
-        static User us = new User();
 
         public IActionResult Shop(int id)
         {
@@ -70,9 +69,10 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
-                us = context.Users.FirstOrDefault(u => u.Username.Equals(name) && u.Password.Equals(pass));
+               User us = context.Users.FirstOrDefault(u => u.Username.Equals(name) && u.Password.Equals(pass));
                 if (us != null)
                 {
+                    HttpContext.Session.SetString("uid", us.Id.ToString());
                     return RedirectToAction("Shop");
                 }
                 else
@@ -91,6 +91,11 @@ namespace ProjectPRN211.Controllers
         [HttpPost]
         public IActionResult AddtoCart(int pid, int quantity)
         {
+            string uid = HttpContext.Session.GetString("uid");
+            if (string.IsNullOrEmpty(uid))
+            {
+                return RedirectToAction("Login");
+            }
             Product pro = context.Products.FirstOrDefault(p => p.Id == pid);
             if (pro.Amount==0)
             {
@@ -99,7 +104,7 @@ namespace ProjectPRN211.Controllers
             pro.Amount -= quantity;
             context.Products.Update(pro);
             double ret = (double)(pro.Price * (100 - pro.IsSale) / 100 * quantity);
-            Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
+            Order order = context.Orders.FirstOrDefault(p => p.Uid == Int32.Parse(uid) && p.Status == 0);
             if (order != null)
             {
 
@@ -109,7 +114,7 @@ namespace ProjectPRN211.Controllers
             }
             else
             {
-                addNew(pid, quantity, ret);
+                addNew(pid, quantity, ret,uid);
 
             }
             context.SaveChanges();
@@ -148,13 +153,13 @@ namespace ProjectPRN211.Controllers
 
         }
 
-        private void addNew(int pid, int quantity, double ret)
+        private void addNew(int pid, int quantity, double ret, string uid)
         {
             try
             {
                 context.Orders.Add(new Order
                 {
-                    Uid = 1,
+                    Uid = Int32.Parse(uid),
                     Status = 0,
                     Total = (int)ret
                 });
@@ -180,7 +185,9 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
-                Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
+                string uid = HttpContext.Session.GetString("uid");
+                
+                Order order = context.Orders.FirstOrDefault(p => p.Uid == Int32.Parse(uid) && p.Status == 0);
 
                 OrderItem ite = context.OrderItems.FirstOrDefault(p => p.Oid == order.Id && p.ProId == pid);
                 int ret = quantity - ite.Amount;
@@ -227,7 +234,12 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
-                Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
+                string uid = HttpContext.Session.GetString("uid");
+                if (string.IsNullOrEmpty(uid))
+                {
+                    return RedirectToAction("Login");
+                }
+                Order order = context.Orders.FirstOrDefault(p => p.Uid == Int32.Parse(uid) && p.Status == 0);
                 if (order != null)
                 {
                     List<OrderItem> item = context.OrderItems.Where(p => p.Oid == order.Id).OrderBy(p => p.ProId).ToList();
@@ -300,7 +312,12 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
-                Order order = context.Orders.FirstOrDefault(p => p.Uid == 1 && p.Status == 0);
+                string uid = HttpContext.Session.GetString("uid");
+                if (string.IsNullOrEmpty(uid))
+                {
+                    return RedirectToAction("Shop");
+                }
+                Order order = context.Orders.FirstOrDefault(p => p.Uid == Int32.Parse(uid) && p.Status == 0);
                 order.Status = 1;
                 order.Send = DateTime.Today;
                 context.Orders.Update(order);
@@ -319,7 +336,12 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
-                List<Order> listO = context.Orders.Where(p => p.Uid == 1).ToList();
+                string uid = HttpContext.Session.GetString("uid");
+                if (string.IsNullOrEmpty(uid))
+                {
+                    return RedirectToAction("Login");
+                }
+                List<Order> listO = context.Orders.Where(p => p.Uid == Int32.Parse(uid)).ToList();
                 ViewBag.listO = listO;
                 return View();
             }
