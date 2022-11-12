@@ -34,6 +34,44 @@ namespace ProjectPRN211.Controllers
             }
 
         }
+        public IActionResult Sort1()
+        {
+            try
+            {
+                List<Product> products = context.Products.ToList();
+                List<Category> cate = context.Categories.ToList();
+                    products = context.Products.OrderBy(p => p.Title).
+                        ToList();
+                ViewBag.Cate = cate;
+                ViewBag.ListP = products;
+                return View("Shop");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        public IActionResult Sort2()
+        {
+            try
+            {
+                List<Product> products = context.Products.ToList();
+                List<Category> cate = context.Categories.ToList();
+                products = context.Products.OrderBy(p => p.Title).Reverse().
+                    ToList();
+                ViewBag.Cate = cate;
+                ViewBag.ListP = products;
+                return View("Shop");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
 
         public IActionResult Search(string? search)
         {
@@ -63,23 +101,37 @@ namespace ProjectPRN211.Controllers
         [HttpPost]
         public IActionResult Register(string name, string email, string phone, string add, string user, string pass)
         {
-            User search = context.Users.FirstOrDefault(p => p.Username.Equals(user));
-            if (search != null)
+            try
             {
-                return View();
+                User search = context.Users.FirstOrDefault(p => p.Username.Equals(user));
+                if (search != null || name == null || email == null || phone == null || add == null || user == null || pass == null)
+                {
+                    return View();
+                }
+                else
+                {
+
+                    User us = new User
+                    {
+                        Fullname = name,
+                        Email = email,
+                        Phone = phone,
+                        Address = add,
+                        Username = user,
+                        Password = pass
+                    };
+                    context.Users.Add(us);
+                    context.SaveChanges();
+                    return RedirectToAction("Login");
+                }
             }
-            User us = new User
+            catch (Exception)
             {
-                Fullname = name,
-                Email = email,
-                Phone = phone,
-                Address = add,
-                Username = user,
-                Password = pass
-            };
-            context.Users.Add(us);
-            context.SaveChanges();
-            return RedirectToAction("Login");
+
+                throw;
+            }
+
+
         }
         public IActionResult Login()
         {
@@ -110,7 +162,11 @@ namespace ProjectPRN211.Controllers
             }
 
         }
-
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("uid");
+            return RedirectToAction("Shop");
+        }
         [HttpPost]
         public IActionResult AddtoCart(int pid, int quantity)
         {
@@ -210,9 +266,15 @@ namespace ProjectPRN211.Controllers
             {
                 string uid = HttpContext.Session.GetString("uid");
 
+
                 Order order = context.Orders.FirstOrDefault(p => p.Uid == Int32.Parse(uid) && p.Status == 0);
 
                 OrderItem ite = context.OrderItems.FirstOrDefault(p => p.Oid == order.Id && p.ProId == pid);
+                if (quantity==0)
+                {
+                    DeleteItem(order.Id);
+                    return RedirectToAction("Cart");
+                }
                 int ret = quantity - ite.Amount;
                 ite.Amount += ret;
 
@@ -397,9 +459,10 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
+                seee = pid;
                 Product p = context.Products.FirstOrDefault(p => p.Id == pid);
                 ViewBag.P = p;
-                return View(p);
+                return View();
 
             }
             catch (Exception)
@@ -408,26 +471,24 @@ namespace ProjectPRN211.Controllers
                 throw;
             }
         }
+        static int seee;
         [HttpPost]
-        public IActionResult UpdateProduct(int? pid, int isS, string title, int type, int price, string des, int am, string img)
+        public IActionResult UpdateProduct(Product p,int pid/*int? pid, int isS, string title, int type, int price, string des, int am, string img*/)
         {
             try
             {
 
-                Product Pro = context.Products.FirstOrDefault(p => p.Id == pid);
-                ViewBag.test = pid;
-                return View();
-                //Pro.Title = title;
-                //Pro.Type = type;
-                //Pro.Price = price;
-                //Pro.Image = img;
-                //Pro.IsSale = isS;
-                //Pro.Description = des;
-                //Pro.Amount = am;
-                //context.Products.Update(Pro);
-                //context.SaveChanges();
-                //return RedirectToAction("ProMana");
-
+                Product Pro = context.Products.FirstOrDefault(p => p.Id == seee);
+                Pro.Title = p.Title;
+                Pro.Type = p.Type;
+                Pro.Price = p.Price;
+                Pro.Image = p.Image;
+                Pro.IsSale = p.IsSale;
+                Pro.Description = p.Description;
+                Pro.Amount = p.Amount;
+                context.Products.Update(Pro);
+                context.SaveChanges();
+                return RedirectToAction("ProMana");
             }
             catch (Exception)
             {
@@ -463,8 +524,14 @@ namespace ProjectPRN211.Controllers
         [HttpPost]
         public IActionResult AddProduct(string title, int type, decimal price, string img, int iss, string des, int am)
         {
+            if (title == null || price == null || am == null)
+            {
+                ViewBag.Categories = context.Categories.ToList();
+                return View();
+            }
             try
             {
+
                 Product product = new Product
                 {
                     Title = title,

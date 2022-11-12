@@ -44,26 +44,26 @@
                 <form asp-controller="Home" asp-action="UpdateProduct" method="post">
                     <div class="col-md-6">
                         <div class="detail-box">
-                            <input  disabled name="pid" value=@prod.Id />
+                            <input disabled name="pid" value=@prod.Id asp-for="Id"/>
                             <h4>
-                                % Discount :<input name="isS" value="@prod.IsSale" type="number" min="0" max="100" />
+                                % Discount :<input name="isS" value="@prod.IsSale" type="number" min="0" max="100" asp-for=IsSale />
                             </h4>
                             <h3 class="main_heading">
-                                <input name="title" value="@prod.Title" type="text" />
+                                <input name="title" value="@prod.Title" type="text" asp-for=Title/>
                             </h3>
                             <h10>Category : @prod.TypeNavigation.Name
-                                <input type="hidden" name="type" value="@prod.Type" />
+                                <input type="hidden" name="type" value="@prod.Type" asp-for=Type/>
                             </h10>
-                            <h10>Price : <input name="price" value="@prod.Price" type="number" min="1" /></h10>
+                            <h10>Price : <input name="price" value="@prod.Price" type="number" min="1" asp-for=Price /></h10>
                             <h10>Description :
                                 
-                                <input name="des" value="@prod.Description" type="text" style="width:contain" />
+                                <input name="des" value="@prod.Description" type="text" style="width:contain" asp-for=Description />
                                 </h10>
                             <h10>
-                                Quantity  :  <input name="am" name="" value="@prod.Amount" type="number" min="0" />
+                                Quantity  :  <input name="am" name="" value="@prod.Amount" type="number" min="0" asp-for=Amount/>
                             </h10>
                             <h10>
-                                img link  :  <input name="img" type="url" value="@prod.Image" />
+                                img link  :  <input name="img" type="text" value="@prod.Image" asp-for=Image />
                             </h10>
                             <div class="btn-box">
                                 <input type="submit" class="" value="Update" />
