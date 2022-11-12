@@ -56,8 +56,31 @@ namespace ProjectPRN211.Controllers
             }
 
         }
-
-
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register(string name, string email, string phone, string add, string user, string pass)
+        {
+            User search = context.Users.FirstOrDefault(p => p.Username.Equals(user));
+            if (search != null)
+            {
+                return View();
+            }
+            User us = new User
+            {
+                Fullname = name,
+                Email = email,
+                Phone = phone,
+                Address = add,
+                Username = user,
+                Password = pass
+            };
+            context.Users.Add(us);
+            context.SaveChanges();
+            return RedirectToAction("Login");
+        }
         public IActionResult Login()
         {
             return View();
@@ -69,7 +92,7 @@ namespace ProjectPRN211.Controllers
         {
             try
             {
-               User us = context.Users.FirstOrDefault(u => u.Username.Equals(name) && u.Password.Equals(pass));
+                User us = context.Users.FirstOrDefault(u => u.Username.Equals(name) && u.Password.Equals(pass));
                 if (us != null)
                 {
                     HttpContext.Session.SetString("uid", us.Id.ToString());
@@ -97,7 +120,7 @@ namespace ProjectPRN211.Controllers
                 return RedirectToAction("Login");
             }
             Product pro = context.Products.FirstOrDefault(p => p.Id == pid);
-            if (pro.Amount==0)
+            if (pro.Amount == 0)
             {
                 return RedirectToAction("Shop");
             }
@@ -114,7 +137,7 @@ namespace ProjectPRN211.Controllers
             }
             else
             {
-                addNew(pid, quantity, ret,uid);
+                addNew(pid, quantity, ret, uid);
 
             }
             context.SaveChanges();
@@ -186,7 +209,7 @@ namespace ProjectPRN211.Controllers
             try
             {
                 string uid = HttpContext.Session.GetString("uid");
-                
+
                 Order order = context.Orders.FirstOrDefault(p => p.Uid == Int32.Parse(uid) && p.Status == 0);
 
                 OrderItem ite = context.OrderItems.FirstOrDefault(p => p.Oid == order.Id && p.ProId == pid);
@@ -455,7 +478,7 @@ namespace ProjectPRN211.Controllers
                 context.Products.Add(product);
                 context.SaveChanges();
                 return RedirectToAction("ProMana");
-                
+
             }
             catch (Exception)
             {
