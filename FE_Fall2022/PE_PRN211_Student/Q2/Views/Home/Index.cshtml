@@ -1,0 +1,42 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Q2.Models;
+
+<h1>List of Movies</h1>
+Directors
+<ul>
+    @foreach (Director ite in @ViewBag.Direc)
+    {
+        <li><a asp-controller="Home" asp-action="Search" asp-route-id=@ite.Id>@ite.FullName</a></li>
+    }
+</ul>
+<table>
+    <thead>
+    <td>Title</td>
+    <td>ReleaseDate</td>
+    <td>Description</td>
+    <td>Language</td>
+    <td>Director</td>
+    <td>Producers</td>
+    <td>Genres</td>
+    </thead>
+    <tbody>
+        <tr>----------------------------------------------------------------------------------------------------------</tr>
+        @foreach (Movie item in @ViewBag.Mov)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.ReleaseDate</td>
+                <td>@item.Description</td>
+                <td>@item.Language</td>
+                <td></td>
+                <td>
+                    @foreach (Genre gen in item.Genres)
+                    {
+                        @gen.Title
+                        <br />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
