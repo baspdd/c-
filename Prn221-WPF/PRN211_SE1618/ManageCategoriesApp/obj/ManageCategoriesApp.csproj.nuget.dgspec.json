@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\DemoFirstWPF.csproj": {}
+    "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\ManageCategoriesApp\\ManageCategoriesApp.csproj": {}
   },
   "projects": {
-    "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\DemoFirstWPF.csproj": {
+    "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\ManageCategoriesApp\\ManageCategoriesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\DemoFirstWPF.csproj",
-        "projectName": "DemoFirstWPF",
-        "projectPath": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\DemoFirstWPF.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\ManageCategoriesApp\\ManageCategoriesApp.csproj",
+        "projectName": "ManageCategoriesApp",
+        "projectPath": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\ManageCategoriesApp\\ManageCategoriesApp.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\obj\\",
+        "outputPath": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\ManageCategoriesApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
