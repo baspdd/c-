@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="WindowManageCategories.xaml">
+    <Page Update="ADO.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

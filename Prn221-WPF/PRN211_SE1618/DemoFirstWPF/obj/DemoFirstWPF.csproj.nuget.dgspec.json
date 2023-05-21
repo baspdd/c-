@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\DemoFirstWPF.csproj",
         "projectName": "DemoFirstWPF",
         "projectPath": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\DemoFirstWPF.csproj",
-        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\code\\c-\\Prn221-WPF\\PRN211_SE1618\\DemoFirstWPF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

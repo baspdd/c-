@@ -19,3 +19,5 @@ D:\code\c-\Prn221-WPF\PRN211_SE1618\DemoFirstWPF\obj\Debug\net6.0-windows\refint
 D:\code\c-\Prn221-WPF\PRN211_SE1618\DemoFirstWPF\obj\Debug\net6.0-windows\DemoFirstWPF.pdb
 D:\code\c-\Prn221-WPF\PRN211_SE1618\DemoFirstWPF\obj\Debug\net6.0-windows\DemoFirstWPF.genruntimeconfig.cache
 D:\code\c-\Prn221-WPF\PRN211_SE1618\DemoFirstWPF\obj\Debug\net6.0-windows\ref\DemoFirstWPF.dll
+D:\code\c-\Prn221-WPF\PRN211_SE1618\DemoFirstWPF\obj\Debug\net6.0-windows\Controls.g.cs
+D:\code\c-\Prn221-WPF\PRN211_SE1618\DemoFirstWPF\obj\Debug\net6.0-windows\Controls.baml

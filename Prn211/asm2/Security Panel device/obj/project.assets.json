@@ -8,7 +8,7 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "D:\\code\\c-\\Prn211\\asm2\\Security Panel device\\Security Panel device.csproj",
       "projectName": "Security Panel device",
       "projectPath": "D:\\code\\c-\\Prn211\\asm2\\Security Panel device\\Security Panel device.csproj",
-      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\code\\c-\\Prn211\\asm2\\Security Panel device\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

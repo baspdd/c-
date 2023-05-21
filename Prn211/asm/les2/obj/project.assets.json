@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\code\\c-\\asm\\les2\\les2.csproj",
+      "projectUniqueName": "D:\\code\\c-\\Prn211\\asm\\les2\\les2.csproj",
       "projectName": "les2",
-      "projectPath": "D:\\code\\c-\\asm\\les2\\les2.csproj",
+      "projectPath": "D:\\code\\c-\\Prn211\\asm\\les2\\les2.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\code\\c-\\asm\\les2\\obj\\",
+      "outputPath": "D:\\code\\c-\\Prn211\\asm\\les2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
