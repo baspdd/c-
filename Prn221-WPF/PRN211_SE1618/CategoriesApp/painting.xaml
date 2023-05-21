@@ -1,0 +1,34 @@
+﻿<Window x:Class="CategoriesApp.painting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CategoriesApp"
+        mc:Ignorable="d"
+        Title="painting" Height="450" Width="800">
+    <Grid>
+        <Canvas Height="335" Background="AntiqueWhite" Margin="92,50,59,49">
+            <Rectangle
+ Width="100"
+ Height="50"
+ Fill="#CCCCFF"
+                RadiusX="20"
+ RadiusY="20"
+ Canvas.Left="10"
+ Canvas.Top="25" />
+
+            <Polygon Name="hexagon"
+                Stroke="Blue"
+                StrokeThickness="2.0"
+        Fill="Gold"
+ Points="176,30 302.44,103 302.44,249 176,322 49.5603,249 49.5603,103"
+ Canvas.Left="10" Canvas.Top="6" />
+            <Polygon Name="hexagon2"
+                Stroke="Blue"
+                StrokeThickness="2.0"
+        Fill="Gold"
+ Points="302.44,103 302.44,249 176,322 49.5603,249 49.5603,103"
+ Canvas.Left="329" Canvas.Top="6" HorizontalAlignment="Left" VerticalAlignment="Center" Width="348" />
+        </Canvas>
+    </Grid>
+</Window>
