@@ -101,6 +101,26 @@ INSERT INTO Categories (CategoryID, CategoryName) VALUES
 (4, 'Home');
 
 
+CREATE TABLE Car (
+    CarID INT,
+    CarName VARCHAR(50),
+    Manufacturer VARCHAR(50),
+    Price MONEY,
+    ReleasedYear INT
+);
+INSERT INTO Car (CarID, CarName, Manufacturer, Price, ReleasedYear)
+VALUES (1, 'Toyota Camry', 'Toyota', 25000, 2021);
+
+INSERT INTO Car (CarID, CarName, Manufacturer, Price, ReleasedYear)
+VALUES (2, 'Honda Civic', 'Honda', 22000, 2022);
+
+INSERT INTO Car (CarID, CarName, Manufacturer, Price, ReleasedYear)
+VALUES (3, 'Ford Mustang', 'Ford', 40000, 2020);
+
+INSERT INTO Car (CarID, CarName, Manufacturer, Price, ReleasedYear)
+VALUES (4, 'Chevrolet Corvette', 'Chevrolet', 60000, 2023);
+
+
 USE [master]
 GO
 ALTER DATABASE [MyStore] SET  READ_WRITE 

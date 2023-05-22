@@ -2343,19 +2343,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\csa\\PE_PRN211_Student\\Q1\\Q1.csproj",
+      "projectUniqueName": "D:\\code\\c-\\Prn211\\FE_Fall2022\\PE_PRN211_Student\\Q1\\Q1.csproj",
       "projectName": "Q1",
-      "projectPath": "D:\\csa\\PE_PRN211_Student\\Q1\\Q1.csproj",
-      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
-      "outputPath": "D:\\csa\\PE_PRN211_Student\\Q1\\obj\\",
+      "projectPath": "D:\\code\\c-\\Prn211\\FE_Fall2022\\PE_PRN211_Student\\Q1\\Q1.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\c-\\Prn211\\FE_Fall2022\\PE_PRN211_Student\\Q1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2415,7 +2415,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

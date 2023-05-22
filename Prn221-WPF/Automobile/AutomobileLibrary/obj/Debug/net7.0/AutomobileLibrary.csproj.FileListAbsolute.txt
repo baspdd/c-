@@ -1,0 +1,14 @@
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\bin\Debug\net7.0\AutomobileLibrary.deps.json
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\bin\Debug\net7.0\AutomobileLibrary.runtimeconfig.json
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\bin\Debug\net7.0\AutomobileLibrary.dll
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\bin\Debug\net7.0\AutomobileLibrary.pdb
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.csproj.AssemblyReference.cache
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.AssemblyInfoInputs.cache
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.AssemblyInfo.cs
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.csproj.CoreCompileInputs.cache
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.dll
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\refint\AutomobileLibrary.dll
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.pdb
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\AutomobileLibrary.genruntimeconfig.cache
+D:\code\c-\Prn221-WPF\Automobile\AutomobileLibrary\obj\Debug\net7.0\ref\AutomobileLibrary.dll
