@@ -125,7 +125,7 @@ namespace ManageCategoriesApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ManageCategoriesApp;component/ado.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ManageCategoriesApp;V1.0.0.0;component/ado.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ADO.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

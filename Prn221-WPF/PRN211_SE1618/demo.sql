@@ -106,8 +106,12 @@ CREATE TABLE Car (
     CarName VARCHAR(50),
     Manufacturer VARCHAR(50),
     Price MONEY,
-    ReleasedYear INT
-);
+    ReleasedYear INT, CONSTRAINT [PK_car] PRIMARY KEY CLUSTERED 
+(
+	[CarID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
 INSERT INTO Car (CarID, CarName, Manufacturer, Price, ReleasedYear)
 VALUES (1, 'Toyota Camry', 'Toyota', 25000, 2021);
 

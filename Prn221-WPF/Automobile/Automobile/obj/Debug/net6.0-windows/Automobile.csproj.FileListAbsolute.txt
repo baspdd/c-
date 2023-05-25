@@ -57,3 +57,4 @@ D:\code\c-\Prn221-WPF\Automobile\Automobile\bin\Debug\net6.0-windows\runtimes\wi
 D:\code\c-\Prn221-WPF\Automobile\Automobile\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\code\c-\Prn221-WPF\Automobile\Automobile\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\code\c-\Prn221-WPF\Automobile\Automobile\obj\Debug\net6.0-windows\Automobile.csproj.CopyComplete
+D:\code\c-\Prn221-WPF\Automobile\Automobile\bin\Debug\net6.0-windows\appsettings.json
