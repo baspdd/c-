@@ -33,3 +33,4 @@ D:\code\c-\Prn221-WPF\ASM1\ASM1\obj\Debug\net7.0-windows\WPF.csproj.CopyComplete
 D:\code\c-\Prn221-WPF\ASM1\ASM1\bin\Debug\net7.0-windows\appsettings.json
 D:\code\c-\Prn221-WPF\ASM1\ASM1\obj\Debug\net7.0-windows\Product.g.cs
 D:\code\c-\Prn221-WPF\ASM1\ASM1\obj\Debug\net7.0-windows\Product.baml
+D:\code\c-\Prn221-WPF\ASM1\ASM1\obj\Debug\net7.0-windows\Member.g.cs
