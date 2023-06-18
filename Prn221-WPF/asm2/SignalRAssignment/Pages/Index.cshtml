@@ -1,0 +1,56 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers;
+@addTagHelper *, AuthoringTagHelpers
+@using Models
+@model SignalRAssignment.Pages.IndexModel
+
+
+<h1>Products </h1>
+
+<form method="get" asp-page-handler="OnGetAsync" asp-page="/Index">
+    Room: <input type="text" name="nameSearch" />
+    <input type="submit" value="Search" />
+</form>
+
+
+<h2>List of Products</h2>
+
+
+<table class="table table-bordered">
+    <td>ProductName</td>
+    <td>CompanyName</td>
+    <td>CategoryName</td>
+    <td>QuantityPerUnit</td>
+    <td>UnitPrice</td>
+    <td></td>
+    <tbody>
+        @{
+            if (Model.Products != null && Model.Products.Any())
+            {
+                foreach (var item in Model.Products)
+                {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td>@item.Supplier.CompanyName</td>
+                        <td>@item.Category.CategoryName</td>
+                        <td>@item.QuantityPerUnit</td>
+                        <td>@item.UnitPrice</td>
+                        <td><img src="@item.ProductImage" style="width:60px;height:80px;"></td>
+
+                        <td>
+                            <form method="post" asp-page-handler="OnDelete" asp-page="List">
+                                <input type="hidden" />
+                                <input type="submit" value="Delete" />
+                            </form>
+
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <p>No products found.</p>
+            }
+        }
+    </tbody>
+</table>

@@ -3575,7 +3575,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3583,11 +3583,11 @@
       "projectUniqueName": "D:\\code\\c-\\Prn221-WPF\\asm\\WPF\\WPF.csproj",
       "projectName": "WPF",
       "projectPath": "D:\\code\\c-\\Prn221-WPF\\asm\\WPF\\WPF.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
       "outputPath": "D:\\code\\c-\\Prn221-WPF\\asm\\WPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

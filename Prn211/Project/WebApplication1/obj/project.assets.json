@@ -3759,7 +3759,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3767,11 +3767,11 @@
       "projectUniqueName": "D:\\code\\c-\\Prn211\\Project\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
       "projectPath": "D:\\code\\c-\\Prn211\\Project\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
       "outputPath": "D:\\code\\c-\\Prn211\\Project\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\code\\c-\\Prn211\\FE_Fall2022\\PE_PRN211_Student\\Q2\\Q2.csproj",
         "projectName": "Q2",
         "projectPath": "D:\\code\\c-\\Prn211\\FE_Fall2022\\PE_PRN211_Student\\Q2\\Q2.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
         "outputPath": "D:\\code\\c-\\Prn211\\FE_Fall2022\\PE_PRN211_Student\\Q2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
