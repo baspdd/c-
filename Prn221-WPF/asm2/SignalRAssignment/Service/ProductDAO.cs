@@ -38,5 +38,62 @@ namespace SignalRAssignment.Service
                 throw;
             }
         }
+
+        public string getLatestProductID()
+        {
+            try
+            {
+                string newId;
+                var lastAccount = dbContext.Products.OrderBy(p => p.ProductId).LastOrDefault();
+                if (lastAccount != null)
+                {
+                    var currentVal = Int32.Parse(lastAccount.ProductId.Substring(4));
+                    var nextVal = currentVal + 1;
+                    newId = $"PROD{nextVal:D3}";
+                }
+                else
+                {
+                    newId = "PROD001"; // Default value if there are no existing accounts
+                }
+                return newId;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public async Task InsertProductAsync(Product product)
+        {
+            try
+            {
+                dbContext.Products.Add(product);
+                await dbContext.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Task<Product> getProductByID(string id)
+        {
+            try
+            {
+                return dbContext.Products
+                      .Include(product => product.Supplier)
+                    .Include(product => product.Category)
+                    .FirstOrDefaultAsync(m => m.ProductId == id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
     }
 }

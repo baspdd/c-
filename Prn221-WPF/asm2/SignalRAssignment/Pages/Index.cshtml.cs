@@ -2,18 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SignalRAssignment.Models;
+using SignalRAssignment.Service;
 
 namespace SignalRAssignment.Pages
 {
     public class IndexModel : PageModel
     {
 
-        private readonly SignalRAssignment.Models.MyStoreContext dbContext;
-
-        public IndexModel(SignalRAssignment.Models.MyStoreContext context)
-        {
-            dbContext = context;
-        }
+        private ProductDAO productDAO = new ProductDAO();
 
 
         [BindProperty]
@@ -25,18 +21,7 @@ namespace SignalRAssignment.Pages
             try
             {
                 string nameSearch = Request.Query["nameSearch"];
-
-                IQueryable<Product> query = dbContext.Products
-                    .Include(product => product.Supplier)
-                    .Include(product => product.Category);
-
-                if (!String.IsNullOrEmpty(nameSearch))
-                {
-                    query = query
-                        .Where(product => product.ProductName.ToUpper().Contains(nameSearch.ToUpper()));
-                }
-
-                Products = await query.ToListAsync();
+                Products = await productDAO.getProductsAsync(nameSearch );
 
             }
             catch (Exception)

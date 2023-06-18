@@ -12,13 +12,12 @@ namespace SignalRAssignment.Pages.Products
 {
     public class IndexModel : PageModel
     {
-        ProductDAO productDAO = new ProductDAO();
+        private ProductDAO productDAO = new ProductDAO();
 
         public IList<Product> Product { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
-
             Product = await productDAO.getProductsAsync(null);
         }
     }

@@ -1,4 +1,5 @@
-﻿using SignalRAssignment.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SignalRAssignment.Models;
 
 namespace SignalRAssignment.Service
 {
@@ -53,7 +54,6 @@ namespace SignalRAssignment.Service
 
                 throw;
             }
-
         }
 
         public bool checkAccountDuplicate(Account account)
@@ -68,5 +68,7 @@ namespace SignalRAssignment.Service
                 throw;
             }
         }
+
+        
     }
 }

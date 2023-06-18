@@ -25,9 +25,7 @@ namespace SignalRAssignment.Pages.Account
             {
                 return Page();
             }
-
-            Customer customer = new Customer();
-
+          
             accountDAO.InsertAccountAsync(Account);
 
             return RedirectToPage("/Index");
