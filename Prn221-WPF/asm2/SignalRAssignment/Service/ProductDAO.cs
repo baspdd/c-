@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SignalRAssignment.Models;
 
@@ -94,6 +95,26 @@ namespace SignalRAssignment.Service
                 throw;
             }
 
+        }
+
+        public async Task deleteProductAsync(string id)
+        {
+            var product = await getProductByID(id);
+            if (product != null)
+            {
+                dbContext.Products.Remove(product);
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        public SelectList getAllCategories()
+        {
+            return new SelectList(dbContext.Categories, "CategoryId", "CategoryName");
+        }
+
+        public SelectList getAllSuppliers()
+        {
+            return new SelectList(dbContext.Suppliers, "SupplierId", "CompanyName");
         }
     }
 }

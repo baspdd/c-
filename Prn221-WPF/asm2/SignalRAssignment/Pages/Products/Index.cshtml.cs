@@ -16,9 +16,10 @@ namespace SignalRAssignment.Pages.Products
 
         public IList<Product> Product { get; set; } = default!;
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
             Product = await productDAO.getProductsAsync(null);
+            return Page();
         }
     }
 }
