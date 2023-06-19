@@ -1,22 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using SignalRAssignment.Service;
 
 namespace SignalRAssignment.Pages.Account
 {
     public class LoginModel : PageModel
     {
-
-        private readonly SignalRAssignment.Models.MyStoreContext dbContext;
-
-        public LoginModel(SignalRAssignment.Models.MyStoreContext context)
-        {
-            dbContext = context;
-        }
-
         public void OnGet()
         {
         }
 
+        private AccountDAO accountDAO = new AccountDAO();
 
         [BindProperty]
         public string Username { get; set; }
@@ -25,22 +19,23 @@ namespace SignalRAssignment.Pages.Account
         public string Password { get; set; }
 
 
-        public async Task OnPostAsync()
+        public async Task<IActionResult> OnPostAsync()
         {
             try
             {
-                Username = Request.Query["Username"];
-                Password = Request.Query["Password"];
+                //Username = Request.Query["Username"].ToString();
+                //Password = Request.Query["Password"].ToString();
 
-                var acc = dbContext.Accounts.FirstOrDefault(acc
-                    => acc.UserName.Equals(Username) && acc.Password.Equals(Password));
+                var acc = accountDAO.checkAccountLogin(Username, Password);
 
-                if (acc != null)
+                if (acc == null)
                 {
-
+                    return Page();
                 }
+                var sessionStr = acc.Type ? "staff" : "customer";
+                HttpContext.Session.SetString(sessionStr, acc.AccountId);
 
-
+                return RedirectToPage("/Products/Index");
 
 
             }

@@ -27,7 +27,9 @@ namespace SignalRAssignment.Service
                 if (!String.IsNullOrEmpty(nameSearch))
                 {
                     query = query
-                        .Where(product => product.ProductName.ToUpper().Contains(nameSearch.ToUpper()));
+                        .Where(product => product.ProductName.ToUpper().Contains(nameSearch.ToUpper())
+                        || product.ProductId.ToUpper().Contains(nameSearch.ToUpper())
+                        );
                 }
 
                 return await query.ToListAsync();
@@ -80,6 +82,20 @@ namespace SignalRAssignment.Service
             }
         }
 
+        public async Task UpdateProductAsync(Product product)
+        {
+            try
+            {
+                dbContext.Attach(product).State = EntityState.Modified;
+                await dbContext.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public Task<Product> getProductByID(string id)
         {
             try
@@ -115,6 +131,11 @@ namespace SignalRAssignment.Service
         public SelectList getAllSuppliers()
         {
             return new SelectList(dbContext.Suppliers, "SupplierId", "CompanyName");
+        }
+
+        public bool ProductExists(string id)
+        {
+            return (dbContext.Products?.Any(e => e.ProductId == id)).GetValueOrDefault();
         }
     }
 }

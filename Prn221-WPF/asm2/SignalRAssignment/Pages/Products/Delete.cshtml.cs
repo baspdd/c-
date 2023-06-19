@@ -46,7 +46,7 @@ namespace SignalRAssignment.Pages.Products
 
             productDAO.deleteProductAsync(id);
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Products/Index");
         }
     }
 }

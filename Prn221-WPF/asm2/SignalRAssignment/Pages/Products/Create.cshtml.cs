@@ -18,16 +18,17 @@ namespace SignalRAssignment.Pages.Products
             ViewData["id"] = productDAO.getLatestProductID();
         }
 
+        
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || Product == null)
+            if (Product == null)
             {
                 return Page();
             }
 
             productDAO.InsertProductAsync(Product);
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("/Products/Index");
         }
     }
 }

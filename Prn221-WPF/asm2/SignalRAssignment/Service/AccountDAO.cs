@@ -69,6 +69,11 @@ namespace SignalRAssignment.Service
             }
         }
 
-        
+        public Account checkAccountLogin(string username, string password)
+        {
+
+            return dbContext.Accounts.FirstOrDefault(acc
+                    => acc.UserName.Equals(username) && acc.Password.Equals(password));
+        }
     }
 }

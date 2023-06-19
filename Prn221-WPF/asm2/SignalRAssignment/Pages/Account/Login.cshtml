@@ -1,13 +1,9 @@
 ﻿@page
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers;
-@addTagHelper *, AuthoringTagHelpers
-@using Models
-@model LoginModel
+@model SignalRAssignment.Pages.Account.LoginModel
 @{
 }
 
-
-<form method="post" asp-page-handler="OnPostAsync" asp-page="/Account/Login">
+<form method="post">
     <div>
         User Name<input type="text" placeholder="User Name" name="Username" />
     </div>

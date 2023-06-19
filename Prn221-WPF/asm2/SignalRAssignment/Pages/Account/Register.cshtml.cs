@@ -9,7 +9,7 @@ namespace SignalRAssignment.Pages.Account
     {
 
 
-        AccountDAO accountDAO = new AccountDAO();
+        private AccountDAO accountDAO = new AccountDAO();
 
         public void OnGet()
         {
