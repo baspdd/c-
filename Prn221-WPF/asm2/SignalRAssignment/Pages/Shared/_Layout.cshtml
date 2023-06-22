@@ -31,7 +31,13 @@
                             if (staff != null)
                             {
                                 <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Orders/Index">Orders</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Products/Index">Product Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Profile/Details" asp-route-id="@staff">Profile</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Account/Logout">Log out</a>
@@ -40,14 +46,18 @@
                             else if (cus != null)
                             {
                                 <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Orders/Index">Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Profile/Details" asp-route-id="@cus">Profile</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Account/Logout">Log out</a>
                                 </li>
                             }
                             else
                             {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Orders/Index">Orders</a>
-                                </li>
+                                
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Account/Register">Register</a>
                                 </li>

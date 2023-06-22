@@ -28,7 +28,7 @@ namespace SignalRAssignment.Service
                 {
                     query = query
                         .Where(product => product.ProductName.ToUpper().Contains(nameSearch.ToUpper())
-                        || product.ProductId.ToUpper().Contains(nameSearch.ToUpper())
+                        
                         );
                 }
 

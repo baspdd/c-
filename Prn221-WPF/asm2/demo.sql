@@ -197,7 +197,7 @@ GO
 -- Create the Account table
 CREATE TABLE [dbo].[Account] (
   [AccountID] [VARCHAR](8) NOT NULL,
-  [UserName] [VARCHAR](10) NOT NULL,
+  [UserName] [NVARCHAR](10) NOT NULL,
   [Password] [VARCHAR](20) NOT NULL,
   [FullName] [VARCHAR](50),
   [Type] [BIT] NOT NULL,
@@ -290,6 +290,7 @@ VALUES
   ('CUST003', 'user3', 'password3', 'Michael Brown', 0),
   ('CUST004', 'user4', 'password4', 'Emily Johnson', 0),
   ('CUST005', 'user5', 'password5', 'David Lee', 1)
+
 
 
 USE [master]

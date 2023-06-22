@@ -245,7 +245,7 @@ namespace WPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF;V1.0.0.0;component/productmanagement.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPF;component/productmanagement.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ProductManagement.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
