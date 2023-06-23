@@ -13,18 +13,18 @@
     <Compile Update="WindowCategoriesApp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="stackPanel.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Controls.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="painting.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WindowCategoriesApp.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="stackPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
