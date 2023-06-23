@@ -1,5 +1,6 @@
 ﻿using DataAcess.Repository;
 using Microsoft.Extensions.DependencyInjection;
+using SaleWPFApp;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -28,8 +29,8 @@ namespace WPF
         {
             services.AddSingleton<Login>();
             services.AddSingleton<ProductManagement>();
-            //services.AddSingleton<OrderManagement>();
-            //services.AddSingleton<MemberManagement>();
+            services.AddSingleton<OrderManagement>();
+            services.AddSingleton<MemberManagement>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IMemberRepository, MemberRepository>();

@@ -18,6 +18,12 @@
     <Page Update="Login.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MemberManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OrderManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ProductManagement.xaml">
       <SubType>Designer</SubType>
     </Page>
