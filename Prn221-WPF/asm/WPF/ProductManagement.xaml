@@ -118,5 +118,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <ComboBox HorizontalAlignment="Left" Margin="470,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"
+                  Text="{Binding Path=MemberId, Mode=OneWay}" 
+                         DataContext="{Binding ElementName=lvMembers,Path=SelectedItem}"
+                  />
     </Grid>
 </Window>

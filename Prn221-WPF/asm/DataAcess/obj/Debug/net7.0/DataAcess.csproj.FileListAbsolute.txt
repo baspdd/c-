@@ -1,0 +1,16 @@
+D:\code\c-\Prn221-WPF\asm\DataAcess\bin\Debug\net7.0\appsettting.json
+D:\code\c-\Prn221-WPF\asm\DataAcess\bin\Debug\net7.0\DataAcess.deps.json
+D:\code\c-\Prn221-WPF\asm\DataAcess\bin\Debug\net7.0\DataAcess.dll
+D:\code\c-\Prn221-WPF\asm\DataAcess\bin\Debug\net7.0\DataAcess.pdb
+D:\code\c-\Prn221-WPF\asm\DataAcess\bin\Debug\net7.0\BusinessObject.dll
+D:\code\c-\Prn221-WPF\asm\DataAcess\bin\Debug\net7.0\BusinessObject.pdb
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.csproj.AssemblyReference.cache
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.AssemblyInfoInputs.cache
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.AssemblyInfo.cs
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.csproj.CoreCompileInputs.cache
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.csproj.CopyComplete
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.dll
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\refint\DataAcess.dll
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\DataAcess.pdb
+D:\code\c-\Prn221-WPF\asm\DataAcess\obj\Debug\net7.0\ref\DataAcess.dll
