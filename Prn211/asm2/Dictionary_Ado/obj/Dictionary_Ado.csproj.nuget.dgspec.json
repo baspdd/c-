@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\code\\c-\\Prn211\\asm2\\Dictionary_Ado\\Dictionary_Ado.csproj",
         "projectName": "Dictionary_Ado",
         "projectPath": "D:\\code\\c-\\Prn211\\asm2\\Dictionary_Ado\\Dictionary_Ado.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
         "outputPath": "D:\\code\\c-\\Prn211\\asm2\\Dictionary_Ado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

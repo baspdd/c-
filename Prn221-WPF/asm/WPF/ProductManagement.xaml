@@ -106,7 +106,7 @@
         </StackPanel>
 
         <!--Product's data loaded from database-->
-        <ListView Grid.Row="3" Grid.ColumnSpan="2" Background="#e0e7ff" Name="lvProducts">
+        <ListView Grid.Row="3" Grid.ColumnSpan="2" Background="#e0e7ff" Name="lvProducts" ItemsSource="{Binding Products}" PreviewMouseLeftButtonUp="lv_click">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ProductId" Width="80" DisplayMemberBinding="{Binding Path=ProductId }"/>
@@ -119,8 +119,15 @@
             </ListView.View>
         </ListView>
         <ComboBox HorizontalAlignment="Left" Margin="470,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"
-                  Text="{Binding Path=MemberId, Mode=OneWay}" 
-                         DataContext="{Binding ElementName=lvMembers,Path=SelectedItem}"
+                  ItemsSource="{Binding ElementName=lvProducts, Path=ItemsSource, Mode=OneWay}"
+                  DisplayMemberPath="CategoryId" 
+                  SelectedItem="{Binding ElementName=lvProducts, Path=SelectedItem, Mode=OneWay}"
                   />
+
+        <CheckBox Content="Is Active" HorizontalAlignment="Left" Margin="41,333,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"
+                  Name="checkBox"
+                  IsChecked="{Binding Path=IsCategoryActive, Mode=TwoWay}"
+                  />
+
     </Grid>
 </Window>

@@ -38,8 +38,10 @@ namespace WPF
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var login = serviceProvider.GetService<Login>();
-            login.Show();
+            //var login = serviceProvider.GetService<Login>();
+            //login.Show();
+            var product = serviceProvider.GetService<ProductManagement>();
+            product.Show();
         }
     }
 }

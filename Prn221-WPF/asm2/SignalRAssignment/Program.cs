@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<MyStoreContext>(options =>{});
+builder.Services.AddScoped<MyStoreContext>();
 
 builder.Services.AddSession(options =>
 {
@@ -15,6 +16,7 @@ builder.Services.AddSession(options =>
 });
 
 var app = builder.Build();
+
 
 app.UseSession();
 
@@ -34,6 +36,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Account/Login");
+    return Task.CompletedTask;
+});
 
 app.Run();
 

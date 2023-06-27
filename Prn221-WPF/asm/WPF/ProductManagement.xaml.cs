@@ -1,7 +1,9 @@
 ﻿using BusinessObject.Models;
 using DataAcess.Repository;
+using SaleWPFApp;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +33,7 @@ namespace WPF
             _memberRepository = memberRepository;
             _orderRepository = orderRepository;
             InitializeComponent();
+            LoadProductList();
         }
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -188,16 +191,47 @@ namespace WPF
 
         private void btnLoadOrders_Click(object sender, RoutedEventArgs e)
         {
-            //OrderManagement orderManagement = new OrderManagement(_productRepository, _memberRepository, _orderRepository);
-            //orderManagement.Show();
-            //this.Close();
+            OrderManagement orderManagement = new OrderManagement(_productRepository, _memberRepository, _orderRepository);
+            orderManagement.Show();
+            this.Close();
         }
 
         private void btnLoadMembers_Click(object sender, RoutedEventArgs e)
         {
-            //MemberManagement member = new MemberManagement(_productRepository, _memberRepository, _orderRepository);
-            //member.Show();
-            //this.Close();
+            MemberManagement member = new MemberManagement(_productRepository, _memberRepository, _orderRepository);
+            member.Show();
+            this.Close();
         }
+
+        public void lv_click(object sender, RoutedEventArgs e)
+        {
+            //var item = (sender as ListView).SelectedItem;
+            //if (item != null)
+            //{
+            //    var product = (Product)item;
+            //    if (product.CategoryId == 1)
+            //    {
+            //        checkBox.IsChecked = true;
+            //    }
+            //    else checkBox.IsChecked = false;
+            //}
+        }
+
+        public bool IsCategoryActive
+        {
+            get { return checkBox.IsChecked.GetValueOrDefault(); }
+            set
+            {
+                var item = (Product)lvProducts.SelectedItem;
+                if (item.CategoryId == 1)
+                {
+                    checkBox.IsChecked = true;
+                }
+                else checkBox.IsChecked = false;
+            }
+        }
+
+
+
     }
 }
