@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using SignalRAssignment.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<MyStoreContext>(options =>{});
+builder.Services.AddDbContext<MyStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn")));
 builder.Services.AddScoped<MyStoreContext>();
 
 builder.Services.AddSession(options =>
