@@ -43,7 +43,7 @@ app.MapGet("/", context =>
     context.Response.Redirect("/Products/Index");
     return Task.CompletedTask;
 });
-app.MapHub<ProductHub>("/hub");
+app.MapHub<SignalHub>("/hub");
 
 app.Run();
 

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SignalRAssignment.Service;
+using System.Text.Json;
 
 namespace SignalRAssignment.Pages.Account
 {
@@ -33,6 +34,8 @@ namespace SignalRAssignment.Pages.Account
                     return Page();
                 }
                 var sessionStr = acc.Type ? "staff" : "customer";
+                //var accJson = JsonSerializer.Serialize<Models.Account>(acc);
+
                 HttpContext.Session.SetString(sessionStr, acc.AccountId);
 
                 return RedirectToPage("/Products/Index");
