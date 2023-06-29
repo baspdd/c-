@@ -27,9 +27,7 @@ namespace SignalRAssignment.Service
                 if (!String.IsNullOrEmpty(nameSearch))
                 {
                     query = query
-                        .Where(product => product.ProductName.ToUpper().Contains(nameSearch.ToUpper())
-                        
-                        );
+                        .Where(product => product.ProductName.ToUpper().Contains(nameSearch.ToUpper()));
                 }
 
                 return await query.ToListAsync();
@@ -116,11 +114,8 @@ namespace SignalRAssignment.Service
         public async Task deleteProductAsync(string id)
         {
             var product = await getProductByID(id);
-            if (product != null)
-            {
-                dbContext.Products.Remove(product);
-                await dbContext.SaveChangesAsync();
-            }
+            dbContext.Products.Remove(product);
+            await dbContext.SaveChangesAsync();
         }
 
         public SelectList getAllCategories()

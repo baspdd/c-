@@ -1,4 +1,4 @@
-﻿@page 
+﻿@page
 @model SignalRAssignment.Pages.Products.IndexModel
 @using SignalRAssignment.Models
 
@@ -64,10 +64,16 @@
                         <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
                         <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
                         <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+
+                      
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="~/js/site.js"></script>
 </body>
+
+
 </html>

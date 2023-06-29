@@ -17,11 +17,11 @@ namespace SignalRAssignment.Pages.Products
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var sessionStr = HttpContext.Session.GetString("staff");
-            if (sessionStr == null)
-            {
-                return RedirectToPage("/Index");
-            }
+            //var sessionStr = HttpContext.Session.GetString("staff");
+            //if (sessionStr == null)
+            //{
+            //    return RedirectToPage("/Index");
+            //}
             Product = await productDAO.getProductsAsync(null);
             return Page();
         }

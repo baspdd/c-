@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SignalRAssignment.Hubs;
 using SignalRAssignment.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,10 +9,10 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<MyStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn")));
 builder.Services.AddScoped<MyStoreContext>();
-
+builder.Services.AddSignalR();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.IdleTimeout = TimeSpan.FromSeconds(10000);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
@@ -39,9 +40,10 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Account/Login");
+    context.Response.Redirect("/Products/Index");
     return Task.CompletedTask;
 });
+app.MapHub<ProductHub>("/hub");
 
 app.Run();
 

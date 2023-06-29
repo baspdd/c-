@@ -7,11 +7,16 @@
 
 <h1>Products </h1>
 
-<form method="get" asp-page-handler="OnGetAsync" asp-page="/Index">
-    Room: <input type="text" name="nameSearch" />
+<form method="get">
+    Room: <input type="text" name="strSearch" />
     <input type="submit" value="Search" />
 </form>
 
+
+<form method="post">
+    <input  type="file" name="inpFile"/>
+    <button type="submit">Import</button>
+</form>
 
 <h2>List of Products</h2>
 
