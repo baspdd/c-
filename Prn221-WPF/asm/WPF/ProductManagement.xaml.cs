@@ -205,16 +205,16 @@ namespace WPF
 
         public void lv_click(object sender, RoutedEventArgs e)
         {
-            //var item = (sender as ListView).SelectedItem;
-            //if (item != null)
-            //{
-            //    var product = (Product)item;
-            //    if (product.CategoryId == 1)
-            //    {
-            //        checkBox.IsChecked = true;
-            //    }
-            //    else checkBox.IsChecked = false;
-            //}
+            var item = (sender as ListView).SelectedItem;
+            if (item != null)
+            {
+                var product = (Product)item;
+                if (product.CategoryId == 1)
+                {
+                    checkBox.IsChecked = true;
+                }
+                else checkBox.IsChecked = false;
+            }
         }
 
         public bool IsCategoryActive
