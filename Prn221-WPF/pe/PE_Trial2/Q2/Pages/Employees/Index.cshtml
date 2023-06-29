@@ -1,0 +1,37 @@
+﻿@page
+@model Q2.Pages.Employees.IndexModel
+@{
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>Title</th>
+            <th>Birthdate</th>
+            <th>Hiredate</th>
+            <th>Department</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model.Employees)
+        {
+            <tr>
+                <td>@employee.EmployeeId</td>
+                <td>@employee.FirstName @employee.LastName</td>
+                <td>@employee.Title</td>
+                <td>@employee.BirthDate</td>
+                <td>@employee.HireDate</td>
+                <td>@employee.Department.DepartmentName</td>
+                <td>
+                    <form method="post">
+                        <input hidden name="employeeId" value="@employee.EmployeeId" />
+                    <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
