@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\c#\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj": {}
+    "D:\\code\\c-\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj": {}
   },
   "projects": {
-    "D:\\code\\c#\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj": {
+    "D:\\code\\c-\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\c#\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj",
+        "projectUniqueName": "D:\\code\\c-\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj",
         "projectName": "Q2",
-        "projectPath": "D:\\code\\c#\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj",
+        "projectPath": "D:\\code\\c-\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\Q2.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\c#\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\obj\\",
+        "outputPath": "D:\\code\\c-\\Prn221-WPF\\pe\\PE_Trial2\\Q2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
