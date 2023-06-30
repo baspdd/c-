@@ -1975,7 +1975,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\LenoZ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1983,11 +1983,11 @@
       "projectUniqueName": "D:\\code\\c-\\Prn221-WPF\\pe\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\Q2.csproj",
       "projectName": "Q2",
       "projectPath": "D:\\code\\c-\\Prn221-WPF\\pe\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\Q2.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\LenoZ\\.nuget\\packages\\",
       "outputPath": "D:\\code\\c-\\Prn221-WPF\\pe\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LenoZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
