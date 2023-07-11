@@ -1,0 +1,49 @@
+﻿<Window x:Class="Q1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q1"
+        mc:Ignorable="d"
+        Title="EmployeeWindow" Height="650" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="265*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,0,400,216" Background="LightBlue">
+            <TextBlock HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"  Foreground="Red" Margin="10,10,0,0" TextWrapping="Wrap" Text="Add Start" VerticalAlignment="Top"/>
+            <Label Content="Star's Name"/>
+            <TextBox TextWrapping="Wrap" Width="363" Name="name" Text="{Binding Id}" DataContext="{Binding SelectedItem, ElementName=listEmployee}" Height="22"/>
+            <Label Content="Gender" />
+            <DockPanel>
+                <RadioButton Content="Male" IsChecked="True" Margin="0,0,30,0" Name="male"/>
+                <RadioButton Content="Female" Name="female"/>
+            </DockPanel>
+            <Label Content="Date of birth"/>
+            <DatePicker Name="dob" Text="{Binding Dob}" DataContext="{Binding SelectedItem, ElementName=listEmployee}"/>
+            <Label Content="Description"/>
+            <TextBox TextWrapping="Wrap" Width="384" Name="des" Text="{Binding Phone}" DataContext="{Binding SelectedItem, ElementName=listEmployee}" Height="51"/>
+            <Label Content="Nationality"/>
+            <ComboBox Width="379" Name="Nationality" />
+        </StackPanel>
+        <StackPanel Margin="0,338,400,42" Grid.RowSpan="2">
+            <DockPanel HorizontalAlignment="Center">
+                <Button Margin="0,0,10,0" Content="Add To Below List" Name="btnAdd" Width="113" Click="btnAdd_Click"></Button>
+                <Button Margin="0,0,10,0" Content="Import from file" Name="btnEdit" Width="113" Click="btnEdit_Click"></Button>
+                <Button Margin="0,0,10,0" Content="Save to database" Name="btnDelete" Width="113" Click="btnDelete_Click"></Button>
+            </DockPanel>
+        </StackPanel>
+        <ListView Margin="0,378,0,-23" Name="listEmployee" PreviewMouseLeftButtonUp="listView_Click" Grid.RowSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Start Name" Width="133.3333333333333" DisplayMemberBinding="{Binding Path=FullName}"/>
+                    <GridViewColumn Header="Gender" Width="133.3333333333333" DisplayMemberBinding="{Binding Path=Male}"/>
+                    <GridViewColumn Header="DateOfBirth" Width="133.3333333333333" DisplayMemberBinding="{Binding Path=Dob,StringFormat=dd/MM/yyyy}"/>
+                    <GridViewColumn Header="Description" Width="243.3333333333333" DisplayMemberBinding="{Binding Path=Description}"/>
+                    <GridViewColumn Header="Nationality" Width="153.3333333333333" DisplayMemberBinding="{Binding Path=Nationality}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

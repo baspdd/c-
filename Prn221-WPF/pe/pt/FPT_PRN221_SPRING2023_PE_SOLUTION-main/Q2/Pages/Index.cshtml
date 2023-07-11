@@ -1,0 +1,76 @@
+﻿@page "/Movies/Producer_Movie"
+@model Q2.Pages.IndexModel
+@{
+    Layout = "_Layout";
+}
+<h1>Insurance Connected</h1>
+
+
+@{
+    @foreach (var item in Model.Producer)
+    {
+        <a asp-page="./Index" asp-route-id="@item.Id">@item.Name</a>
+    }
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Language)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Director)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Producer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Stars)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Movie)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Language)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Director.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producer.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stars)
+                </td>
+                <td>
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

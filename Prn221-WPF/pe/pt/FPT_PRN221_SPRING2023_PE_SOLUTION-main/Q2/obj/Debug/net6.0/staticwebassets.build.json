@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "4CD4e1MVpwv2AhougQPCEzS10kVUXoA4vtJ2dgFZLPM=",
+  "Source": "Q2",
+  "BasePath": "_content/Q2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Q2\\wwwroot",
+      "Source": "Q2",
+      "ContentRoot": "D:\\code\\c-\\Prn221-WPF\\pe\\pt\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\wwwroot\\",
+      "BasePath": "_content/Q2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\code\\c-\\Prn221-WPF\\pe\\pt\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "Q2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\code\\c-\\Prn221-WPF\\pe\\pt\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\wwwroot\\",
+      "BasePath": "_content/Q2",
+      "RelativePath": "js/signalr/dist/browser/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Identity": "D:\\code\\c-\\Prn221-WPF\\pe\\pt\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\wwwroot\\js\\site.js",
+      "SourceId": "Q2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\code\\c-\\Prn221-WPF\\pe\\pt\\FPT_PRN221_SPRING2023_PE_SOLUTION-main\\Q2\\wwwroot\\",
+      "BasePath": "_content/Q2",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}
