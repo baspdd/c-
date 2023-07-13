@@ -1,8 +1,14 @@
-﻿using Q1.Model;
+﻿using Microsoft.Win32;
+using Q1.Model;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace Q1
 {
@@ -26,7 +32,7 @@ namespace Q1
             {
                "USA", "UK", "Japan" , "China",
             };
-            listEmployee.ItemsSource = context.Stars.ToList();
+            //listEmployee.ItemsSource = context.Stars.ToList();
             listStart = context.Stars.ToList();
         }
 
@@ -81,30 +87,16 @@ namespace Q1
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            //        try
-            //        {
-            //            var employee = GetEmployeeObject();
-            //            if (employee != null)
-            //            {
-            //                var oldEmployee = context.Employees.FirstOrDefault(e => e.Id == employee.Id);
-            //                if (oldEmployee != null)
-            //                {
-            //                    oldEmployee.Name = employee.Name;
-            //                    oldEmployee.Gender = employee.Gender;
-            //                    oldEmployee.Phone = employee.Phone;
-            //                    oldEmployee.Dob = employee.Dob;
-            //                    oldEmployee.Idnumber = employee.Idnumber;
-            //                    context.Employees.Update(oldEmployee);
-            //                    context.SaveChanges();
-            //                    UpdateGridView();
-            //                    MessageBox.Show("Update Employee Succeed", "Update employee");
-            //                }
-            //            }
-            //        }
-            //        catch (System.Exception)
-            //        {
-            //            MessageBox.Show("Update Employee Failed", "Update employee");
-            //        }
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                using StreamReader reader = new(openFileDialog.FileName);
+                var json = reader.ReadToEnd();
+                List<Star> stars = JsonSerializer.Deserialize<List<Model.Star>>(json);
+                listEmployee.ItemsSource = null;
+                listEmployee.ItemsSource = stars;
+            }
+
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
