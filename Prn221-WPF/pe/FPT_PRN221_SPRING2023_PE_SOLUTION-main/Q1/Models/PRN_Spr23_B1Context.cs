@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
@@ -29,9 +30,10 @@ namespace Q1.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
-                string connectionString = config.GetConnectionString("SqlServerConnection");
-                optionsBuilder.UseSqlServer(connectionString);
+                var conf = new ConfigurationBuilder()
+                  .SetBasePath(Directory.GetCurrentDirectory())
+                  .AddJsonFile("appsettings.json").Build();
+                optionsBuilder.UseSqlServer(conf.GetConnectionString("MyCnn"));
             }
         }
 
