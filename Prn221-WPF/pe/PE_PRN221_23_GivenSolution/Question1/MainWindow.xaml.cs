@@ -23,6 +23,7 @@ namespace Question1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<employees> listEMP = new List<employees>();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,10 +31,7 @@ namespace Question1
 
         public void UpdateGridView()
         {
-            Nationality.ItemsSource = new List<string>()
-            {
-               "USA", "UK", "Japan" , "China",
-            };
+
             //listEmployee.ItemsSource = context.Stars.ToList();
             //listStart = context.Stars.ToList();
         }
@@ -119,22 +117,42 @@ namespace Question1
 
         private void listView_Click(object sender, RoutedEventArgs e)
         {
-            //        var item = (sender as ListView).SelectedItem;
-            //        if (item != null)
-            //        {
-            //            var gender = ((Employee)item).Gender;
-            //            if (!string.IsNullOrEmpty(gender))
-            //            {
-            //                if (gender.ToLower() == "female")
-            //                {
-            //                    female.IsChecked = true;
-            //                }
-            //                else
-            //                {
-            //                    male.IsChecked = true;
-            //                }
-            //            }
-            //        }
+            var item = (sender as ListView).SelectedItem;
+            if (item != null)
+            {
+                var male = ((employees)item).IsMale;
+                if (male) gender.IsChecked = true;
+                else gender.IsChecked = false;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                using StreamReader reader = new(openFileDialog.FileName);
+                var json = reader.ReadToEnd();
+                path.Text = openFileDialog.FileName;
+                List<employees> emp = JsonSerializer.Deserialize<List<employees>>(json);
+                listEmployee.ItemsSource = emp;
+                listEMP.AddRange(emp);
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in listEMP)
+            {
+                if (item.Id == Int32.Parse(Id.Text))
+                {
+                    item.Name = Name.Text;
+                    item.Dob = (DateTime)dob.SelectedDate;
+                    item.IsMale = (bool)gender.IsChecked;
+                }
+            }
+            string json = JsonSerializer.Serialize(listEMP);
+            File.WriteAllText("employees.json", json);
         }
     }
 }

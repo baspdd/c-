@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Question2.Hubs;
+using Question2.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // db
-//builder.Services.AddDbContext<MyStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn")));
-//builder.Services.AddScoped<MyStoreContext>();
+builder.Services.AddDbContext<PE_PRN_23SumContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn")));
+builder.Services.AddScoped<PE_PRN_23SumContext>();
 //signalr
 builder.Services.AddSignalR();
 

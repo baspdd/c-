@@ -1,0 +1,64 @@
+﻿@page "/Products/Paging"
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers;
+@addTagHelper *, AuthoringTagHelpers
+@model Question2.Pages.ProductsModel
+@{
+}
+<h1>Categories</h1>
+
+@{
+    @foreach (var item in Model.Categories)
+    {
+        <a asp-page="./Index" asp-route-id="@item.CategoryId">@item.CategoryName</a>
+        <br />
+    }
+}
+
+<h1>List of products</h1>
+
+There are total @Model.Products.Count();
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Products[0].ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products[0].QuantityPerUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products[0].UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products[0].UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products[0].Category)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantityPerUnit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

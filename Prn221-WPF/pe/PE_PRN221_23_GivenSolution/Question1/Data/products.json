@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Name": "Product 1",
+    "Price": 2000,
+    "IsActive": true
+  },
+  {
+    "Id": 2,
+    "Name": "Product 2",
+    "Price": 320,
+    "IsActive": false
+  },
+  {
+    "Id": 3,
+    "Name": "Product 3",
+    "Price": 2100,
+    "IsActive": false
+  },
+  {
+    "Id": 4,
+    "Name": "Product 4",
+    "Price": 2600,
+    "IsActive": true
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "Code": "PRN211",
+    "Title": "Programming with C# and .Net - basic",
+    "StartDate": "2023-01-05T00:00:00",
+    "EndDate": "2023-06-30T00:00:00",
+    "Price": 2000000
+  },
+  {
+    "Code": "PRN221",
+    "Title": "Programming with C# and .Net - advance",
+    "StartDate": "2023-01-05T00:00:00",
+    "EndDate": "2023-06-30T00:00:00",
+    "Price": 2500000
+  },
+  {
+    "Code": "PRJ301",
+    "Title": "Web Programming with Java",
+    "StartDate": "2023-01-01T00:00:00",
+    "EndDate": "2023-03-31T00:00:00",
+    "Price": 1000000
+  }
+]
