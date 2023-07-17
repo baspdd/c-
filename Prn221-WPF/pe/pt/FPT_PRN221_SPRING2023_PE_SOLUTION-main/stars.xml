@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Actors>
+	<Actor>
+		<FullName>Jamie Lee Curtis</FullName>
+		<Male>false</Male>
+		<Dob>1958-11-22T00:00:00</Dob>
+		<Description>Jamie Lee Curtis was born on November 22, 1958 in Los Angeles, California, the daughter of legendary actors Janet Leigh and Tony Curtis. She got her big break at acting in 1978 when she won the role of Laurie Strode in Halloween (1978). After that, she became famous for roles in movies like Trading Places (1983), Perfect (1985)</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Andi Matichak</FullName>
+		<Male>false</Male>
+		<Dob>1970-09-11T00:00:00</Dob>
+		<Description>Andi Matichak is an American actress. She has appeared in such television series as 666 Park Avenue, Orange Is the New Black and Blue Bloods. She stars as Allyson Nelson in the horror film Halloween (2018), a direct sequel to the 1978 original film of the same name. Matichak was born in Framingham, Massachusetts, but raised in the suburbs of Chicago, Illinois. She attended St. Francis High School in Wheaton, Illinois. During a summer while still in high school, Matichak worked as a model in Greece, where she met a talent agent who encouraged her to act.</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>James Jude Courtney</FullName>
+		<Male>true</Male>
+		<Dob>1957-01-31T00:00:00</Dob>
+		<Description>James Jude Courtney was born on January 31, 1957 in Portland, Ohio, USA. He is an actor, known for Far and Away (1992), Halloween Kills (2021)</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Chris Pratt</FullName>
+		<Male>true</Male>
+		<Dob>1979-06-21T00:00:00</Dob>
+		<Description>Christopher Michael "Chris" Pratt was born on June 21, 1979 in Virginia, Minnesota and raised in Lake Stevens, Washington, to Kathleen Louise (Indahl), who worked at a supermarket, and Daniel Clifton Pratt, who remodeled houses. He is of mostly Norwegian descent. He graduated from Lake Stevens High School in 1997, and has two older siblings.</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Anya Taylor-Joy</FullName>
+		<Male>false</Male>
+		<Dob>1996-04-16T00:00:00</Dob>
+		<Description>Anya-Josephine Marie Taylor-Joy (born 16 April 1996) is a British-American actress. She is best known for her roles as Beth Harmon in Gambit H?u (2020), Thomasin in the period horror film Phu Thuy (2015), as Casey Cooke in the horror-thriller Tach Biet (2016)</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Charlie Day</FullName>
+		<Male>true</Male>
+		<Dob>1976-02-09T00:00:00</Dob>
+		<Description>Charles Peckham Day was born in New York City, NY, and raised in Middletown, Rhode Island. His parents are both music teachers - his mother, Mary (Peckham), is a piano teacher, and his father, Dr. Thomas Charles Day, was a professor of music at Salve Regina University in Newport, Rhode Island. Charlie plays both piano and guitar.</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Odessa A’zion</FullName>
+		<Male>false</Male>
+		<Dob>1984-10-01T00:00:00</Dob>
+		<Description>Odessa A’zion is known for Hellraiser (2022), Conception (2011) and The Inhabitant (2022).</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Jamie Clayton</FullName>
+		<Male>false</Male>
+		<Dob>1978-01-15T00:00:00</Dob>
+		<Description>Jamie Clayton's big break was playing Kyla on season threeof the hit HBO series Hung alongside Thomas Jane. After her multi-episode arc on Hung, Jamie joined actors Mary Lynn Rajskub and Hank Harris as a lead in the Emmy winning digital series, Dirty Work, playing crime scene cleanup maven Michelle.</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+	<Actor>
+		<FullName>Leonardo DiCaprio</FullName>
+		<Male>true</Male>
+		<Dob>1974-11-11T00:00:00</Dob>
+		<Description>Leonardo Wilhelm DiCaprio was born November 11, 1974 in Los Angeles, California, the only child of Irmelin DiCaprio (née Indenbirken) and former comic book artist George DiCaprio. His father is of Italian and German descent, and his mother, who is German-born, is of German and Russian ancestry. His middle name, "Wilhelm", was his maternal grandfather's first name.</Description>
+		<Nationality>USA</Nationality>
+	</Actor>
+</Actors>

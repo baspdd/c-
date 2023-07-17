@@ -1,7 +1,10 @@
 ﻿using Q1.Models;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml.Serialization;
 
 namespace Q1
 {
@@ -20,7 +23,15 @@ namespace Q1
 
         public void UpdateGridView()
         {
-            listEmployee.ItemsSource = context.Employees.ToList();
+            //XmlSerializer serializer = new XmlSerializer(typeof(List<Service>));
+            //List<Service> services;
+            //using (FileStream stream = new FileStream("services.xml", FileMode.Open))
+            //{
+            //    services = (List<Service>)serializer.Deserialize(stream);
+            //}
+            //listEmployee.ItemsSource = services;
+
+            //listEmployee.ItemsSource = context.Employees.ToList();
         }
 
         private void HandleBeforeLoad()

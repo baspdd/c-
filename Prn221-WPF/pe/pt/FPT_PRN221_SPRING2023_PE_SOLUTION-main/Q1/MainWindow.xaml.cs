@@ -1,14 +1,19 @@
-﻿using Microsoft.Win32;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Win32;
 using Q1.Model;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Xml.Serialization;
 
 namespace Q1
 {
@@ -32,8 +37,23 @@ namespace Q1
             {
                "USA", "UK", "Japan" , "China",
             };
+            //var conf = new ConfigurationBuilder().AddJsonFile("stars.json")
+            //     .Build();
+            string json = File.ReadAllText("stars.json");
+            List<Star> stars = JsonSerializer.Deserialize<List<Model.Star>>(json);
+
+            //XmlSerializer serializer = new XmlSerializer(typeof(List<Star>));
+            //List<Star> stars;
+            //using (FileStream stream = new FileStream("stars.xml", FileMode.Open))
+            //{
+            //    stars = (List<Star>)serializer.Deserialize(stream);
+            //}
+
+            
+            listEmployee.ItemsSource = stars;
+            listStart = stars;
             //listEmployee.ItemsSource = context.Stars.ToList();
-            listStart = context.Stars.ToList();
+            //listStart = context.Stars.ToList();
         }
 
         private void HandleBeforeLoad()
@@ -75,7 +95,7 @@ namespace Q1
                        "USA", "UK", "Japan" , "China",
                     };
                     var list = context.Stars.ToList();
-                    list.Insert(0,star); ;
+                    list.Insert(0, star); ;
                     listStart = list;
                     listEmployee.ItemsSource = list;
                 }
@@ -101,18 +121,20 @@ namespace Q1
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                foreach (var item in listStart)
-                {
-                    item.Id = 0;
-                }
-                context.Stars.AddRangeAsync(listStart);
-                context.SaveChanges();
-            }
-            catch (System.Exception ex)
-            {
-            }
+            //try
+            //{
+            //    foreach (var item in listStart)
+            //    {
+            //        item.Id = 0;
+            //    }
+            //    context.Stars.AddRangeAsync(listStart);
+            //    context.SaveChanges();
+            //}
+            //catch (System.Exception ex)
+            //{
+            //}
+            string json = JsonSerializer.Serialize(listStart);
+            File.WriteAllText("stars.json", json);
         }
 
         private void listView_Click(object sender, RoutedEventArgs e)

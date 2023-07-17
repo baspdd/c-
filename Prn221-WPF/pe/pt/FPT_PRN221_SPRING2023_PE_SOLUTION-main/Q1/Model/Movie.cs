@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Q1.Model
 {
@@ -22,7 +23,10 @@ namespace Q1.Model
         public virtual Director? Director { get; set; }
         public virtual Producer? Producer { get; set; }
 
+        [XmlIgnore]
         public virtual ICollection<Genre> Genres { get; set; }
+
+        [XmlIgnore]
         public virtual ICollection<Star> Stars { get; set; }
     }
 }

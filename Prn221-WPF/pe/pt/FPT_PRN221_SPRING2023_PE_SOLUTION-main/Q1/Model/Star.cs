@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Q1.Model
 {
@@ -17,6 +18,7 @@ namespace Q1.Model
         public string? Description { get; set; }
         public string? Nationality { get; set; }
 
+        [XmlIgnore]
         public virtual ICollection<Movie> Movies { get; set; }
     }
 }

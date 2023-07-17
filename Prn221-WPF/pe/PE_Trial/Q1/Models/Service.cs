@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Q1.Models
 {
@@ -14,7 +15,9 @@ namespace Q1.Models
         public DateTime? PaymentDate { get; set; }
         public int? Employee { get; set; }
 
+        [XmlIgnore]
         public virtual Employee? EmployeeNavigation { get; set; }
+        [XmlIgnore]
         public virtual Room? RoomTitleNavigation { get; set; }
     }
 }

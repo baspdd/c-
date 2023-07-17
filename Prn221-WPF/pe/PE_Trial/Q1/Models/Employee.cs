@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Q1.Models
 {
@@ -17,6 +18,7 @@ namespace Q1.Models
         public string? Phone { get; set; }
         public string? Idnumber { get; set; }
 
+        [XmlIgnore]
         public virtual ICollection<Service> Services { get; set; }
     }
 }
