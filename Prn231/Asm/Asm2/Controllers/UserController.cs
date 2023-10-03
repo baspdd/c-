@@ -9,15 +9,15 @@ namespace Asm2.Controllers
     public class UserController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllOrder()
+        public IActionResult GetAll()
         {
             using (MySaleDbContext db = new MySaleDbContext())
             {
                 return Ok(db.Users.ToList());
             }
         }
-        [HttpGet("id")]
-        public IActionResult GetOrderById(string email, string password)
+        [HttpGet("user")]
+        public IActionResult GetUser(string email, string password)
         {
             using (MySaleDbContext db = new MySaleDbContext())
             {
@@ -29,7 +29,7 @@ namespace Asm2.Controllers
 
 
         [HttpPost]
-        public IActionResult AddOrder(User user)
+        public IActionResult Insert(User user)
         {
             using (MySaleDbContext db = new MySaleDbContext())
             {

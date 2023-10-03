@@ -1,43 +1,98 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+using Refit;
 using System;
 using System.Diagnostics;
+using System.Net.Http;
 using System.Net.Http.Json;
 using WebMVC.Models;
+
+using Refit;
+using Newtonsoft.Json;
+
+
+
 
 namespace WebMVC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
         string url = "http://localhost:5110/api/Category";
         string urlProduct = "http://localhost:5110/api/Product";
+        //public async Task<IActionResult> IndexAsync()
+        //{
+        //    try
+        //    {
+        //        var client = new HttpClient();
+
+        //        var response = await client.GetAsync(url);
+        //        var data = await response.Content.ReadAsStringAsync();
+        //        ViewBag.Cate = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(data);
+
+        //        response = await client.GetAsync(urlProduct);
+        //        data = await response.Content.ReadAsStringAsync();
+        //        ViewBag.ListP = System.Text.Json.JsonSerializer.Deserialize<List<Product>>(data);
+
+        //        client.Dispose();
+
+        //        return View();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        throw;
+        //    }
+
+        //}
+
+        public interface ICategoryApi
+        {
+            [Get("/api/Category")]
+            Task<List<Category>> GetCategories();
+        }
+
+        public interface IProductApi
+        {
+            [Get("/api/Product")]
+            Task<List<Product>> GetProducts();
+        }
+        string local = "http://localhost:5110";
         public async Task<IActionResult> IndexAsync()
         {
             try
             {
-                var client = new HttpClient();
+                var categoryApi = RestService.For<ICategoryApi>(local, new RefitSettings
+                {
+                    ContentSerializer = new NewtonsoftJsonContentSerializer(
+                        new JsonSerializerSettings
+                        {
+                            ContractResolver = new CamelCasePropertyNamesContractResolver()
+                        })
+                });
 
-                var response = await client.GetAsync(url);
-                var data = await response.Content.ReadAsStringAsync();
-                ViewBag.Cate = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(data);
+                var productApi = RestService.For<IProductApi>(local, new RefitSettings
+                {
+                    ContentSerializer = new NewtonsoftJsonContentSerializer(
+                        new JsonSerializerSettings
+                        {
+                            ContractResolver = new CamelCasePropertyNamesContractResolver()
+                        })
+                });
 
-                response = await client.GetAsync(urlProduct);
-                data = await response.Content.ReadAsStringAsync();
-                ViewBag.ListP = System.Text.Json.JsonSerializer.Deserialize<List<Product>>(data);
+                ViewBag.Cate = await categoryApi.GetCategories();
+                ViewBag.ListP = await productApi.GetProducts();
 
-                client.Dispose();
                 return View();
             }
             catch (Exception e)
             {
                 throw;
             }
-
         }
 
         public async Task<IActionResult> CreateAsync()

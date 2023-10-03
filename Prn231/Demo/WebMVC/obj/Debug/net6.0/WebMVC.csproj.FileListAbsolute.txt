@@ -28,3 +28,12 @@ D:\code\c-\Prn231\Demo\WebMVC\obj\Debug\net6.0\refint\WebMVC.dll
 D:\code\c-\Prn231\Demo\WebMVC\obj\Debug\net6.0\WebMVC.pdb
 D:\code\c-\Prn231\Demo\WebMVC\obj\Debug\net6.0\WebMVC.genruntimeconfig.cache
 D:\code\c-\Prn231\Demo\WebMVC\obj\Debug\net6.0\ref\WebMVC.dll
+D:\code\c-\Prn231\Demo\WebMVC\obj\Debug\net6.0\WebMVC.csproj.AssemblyReference.cache
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\Refit.dll
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\Refit.Newtonsoft.Json.dll
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\System.Net.Http.Json.dll
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\System.Text.Json.dll
+D:\code\c-\Prn231\Demo\WebMVC\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\code\c-\Prn231\Demo\WebMVC\obj\Debug\net6.0\WebMVC.csproj.CopyComplete

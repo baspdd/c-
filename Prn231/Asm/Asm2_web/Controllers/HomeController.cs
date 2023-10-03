@@ -24,7 +24,7 @@ namespace Asm2_web.Controllers
         public async Task<IActionResult> LoginAsync(string user, string pass)
         {
             var client = new HttpClient();
-            var response = await client.GetAsync(urlUser + "/id?email=" + user + "&password=" + pass);
+            var response = await client.GetAsync(urlUser + "/user?email=" + user + "&password=" + pass);
             var data = await response.Content.ReadAsStringAsync();
             var acc = System.Text.Json.JsonSerializer.Deserialize<User>(data);
             client.Dispose();

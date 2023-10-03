@@ -19,7 +19,7 @@ namespace Asm2.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Author author)
+        public IActionResult Insert(Author author)
         {
             using (MySaleDbContext db = new MySaleDbContext())
             {
@@ -39,18 +39,18 @@ namespace Asm2.Controllers
             }
         }
 
-        //[HttpDelete]
-        //public IActionResult Delete(int id)
-        //{
-        //    using (MySaleDbContext db = new MySaleDbContext())
-        //    {
-        //        var or = db.Authors.SingleOrDefault(o => o.AuthorId == id);
-        //        if (or == null) return NotFound();
-        //        db.Authors.Remove(or);
-        //        db.SaveChanges();
-        //        return Ok();
-        //    }
-        //}
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            using (MySaleDbContext db = new MySaleDbContext())
+            {
+                var or = db.Authors.SingleOrDefault(o => o.AuthorId == id);
+                if (or == null) return NotFound();
+                db.Authors.Remove(or);
+                db.SaveChanges();
+                return Ok();
+            }
+        }
 
     }
 }

@@ -19,6 +19,7 @@ namespace Asm2.Controllers
             }
         }
 
+        [HttpPost]
         public IActionResult Add(Publisher author)
         {
             using (MySaleDbContext db = new MySaleDbContext())
@@ -39,17 +40,17 @@ namespace Asm2.Controllers
             }
         }
 
-        //[HttpDelete]
-        //public IActionResult Delete(int id)
-        //{
-        //    using (MySaleDbContext db = new MySaleDbContext())
-        //    {
-        //        var or = db.Publishers.SingleOrDefault(o => o.PubId == id);
-        //        if (or == null) return NotFound();
-        //        db.Publishers.Remove(or);
-        //        db.SaveChanges();
-        //        return Ok();
-        //    }
-        //}
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            using (MySaleDbContext db = new MySaleDbContext())
+            {
+                var or = db.Publishers.SingleOrDefault(o => o.PubId == id);
+                if (or == null) return NotFound();
+                db.Publishers.Remove(or);
+                db.SaveChanges();
+                return Ok();
+            }
+        }
     }
 }

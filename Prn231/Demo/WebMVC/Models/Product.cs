@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebMVC.Models
 {
-    internal class Product
+    public class Product
     {
         public int productId { get; set; }
         public string? productName { get; set; }

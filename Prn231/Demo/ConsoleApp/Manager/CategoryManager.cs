@@ -56,7 +56,7 @@ namespace ConsoleApp.Manager
             }
         }
 
-        
+
 
         internal async Task SearchCategoryAsync()
         {
@@ -172,6 +172,6 @@ namespace ConsoleApp.Manager
                 Console.WriteLine("Up error : " + e.Message);
             }
         }
-       
+
     }
 }
