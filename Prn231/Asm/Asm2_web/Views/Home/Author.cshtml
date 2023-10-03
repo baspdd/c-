@@ -1,0 +1,18 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Asm2_web.Models;
+
+@{
+    ViewData["Title"] = "Author";
+}
+
+
+<form asp-controller="Home" asp-action="Login" method="post">
+    <br /> First name :  <input type="text" name="fname" />
+    <br /> Lass name :  <input type="text" name="lname" />
+    <br /> city :  <input type="text" name="repass" />
+    <br /> email :  <input type="text" name="repass" />
+
+    <br /><input type="submit" value="register" />
+</form>
+
+<a asp-controller="Home" asp-action="Index">Login</a>

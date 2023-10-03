@@ -1,0 +1,15 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Asm2_web.Models;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<form asp-controller="Home" asp-action="Login" method="post">
+    <br /> User :  <input type="text" name="user" />
+    <br /> Pass :  <input type="text" name="pass" />
+    <br /><input type="submit" value="Login" />
+</form>
+
+<a asp-controller="Home" asp-action="SignUp">SignUp</a>

@@ -1,0 +1,16 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Asm2_web.Models;
+
+@{
+    ViewData["Title"] = "Sign";
+}
+
+
+<form asp-controller="Home" asp-action="Login" method="post">
+    <br /> User :  <input type="text" name="user" />
+    <br /> Pass :  <input type="text" name="pass" />
+    <br /> rePass :  <input type="text" name="repass" />
+    <br /><input type="submit" value="register" />
+</form>
+
+<a asp-controller="Home" asp-action="Index">Login</a>

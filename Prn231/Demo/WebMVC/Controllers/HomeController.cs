@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Diagnostics;
+using System.Net.Http.Json;
 using WebMVC.Models;
 
 namespace WebMVC.Controllers
@@ -38,6 +39,7 @@ namespace WebMVC.Controllers
             }
 
         }
+
         public async Task<IActionResult> CreateAsync()
         {
             try
@@ -54,21 +56,28 @@ namespace WebMVC.Controllers
                 throw;
             }
 
-
         }
         [HttpPost]
-        public IActionResult CreateAsync(string title, int type, decimal price, string img, int iss, string des, int am)
+        public async Task<IActionResult> CreateAsync(string name, int categoryId, decimal unitPrice, int unitsInStock, string img)
         {
-
             try
             {
+                Product pro = new Product
+                {
+                    productName = name,
+                    categoryId = categoryId,
+                    unitPrice = unitPrice,
+                    unitsInStock = unitsInStock,
+                    image = img
+                };
+                var client = new HttpClient();
+                var response = await client.PostAsJsonAsync(urlProduct, pro);
                 return RedirectToAction("Index");
-
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
             }
+            return View();
         }
 
         public async Task<IActionResult> DetailAsync(int? id)

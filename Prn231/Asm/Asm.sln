@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asm", "Asm\Asm.csproj", "{4AE48030-8285-4D30-B2A1-010D49798FBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asm", "Asm\Asm.csproj", "{4AE48030-8285-4D30-B2A1-010D49798FBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asm2", "Asm2\Asm2.csproj", "{9DB2CF5A-CF3E-4D32-8C17-404D8BEDF31B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asm2_web", "Asm2_web\Asm2_web.csproj", "{A062EE8B-D629-4A48-9F07-EDAA11EBEEB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4AE48030-8285-4D30-B2A1-010D49798FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AE48030-8285-4D30-B2A1-010D49798FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AE48030-8285-4D30-B2A1-010D49798FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DB2CF5A-CF3E-4D32-8C17-404D8BEDF31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB2CF5A-CF3E-4D32-8C17-404D8BEDF31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB2CF5A-CF3E-4D32-8C17-404D8BEDF31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB2CF5A-CF3E-4D32-8C17-404D8BEDF31B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A062EE8B-D629-4A48-9F07-EDAA11EBEEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A062EE8B-D629-4A48-9F07-EDAA11EBEEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A062EE8B-D629-4A48-9F07-EDAA11EBEEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A062EE8B-D629-4A48-9F07-EDAA11EBEEB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
