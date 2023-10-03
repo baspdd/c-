@@ -1,0 +1,20 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using WebMVC.Models;
+
+
+<form asp-controller="Home" asp-action="AddProduct" method="post">
+    <br /> Name :  <input type="text" name="name" />
+    <br /> Category:
+    <select  name="categoryId">
+        @foreach (Category c in ViewBag.Categories)
+        {
+            <option value=@c.categoryId>
+                @c.categoryName
+            </option>
+        }
+    </select>
+    <br /> unitPrice:  <input name="unitPrice" type="number"  min="0" value="0" step="any" />
+    <br /> unitsInStock:  <input name="unitsInStock" type="number"  min="1" value="1" />
+    <br /> Image: <input name="img" type="text"  />
+    <br /><input type="submit" value="ADD" />
+</form>

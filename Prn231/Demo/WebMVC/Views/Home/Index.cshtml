@@ -1,0 +1,72 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using WebMVC.Models;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div>
+    <h2>  List categories :</h2>
+
+    <select name="category">
+        <option value="0">--all--</option>
+        @foreach (Category item in @ViewBag.Cate)
+        {
+            @if (@item.categoryId == @ViewBag.Selected)
+            {
+                <option value="@item.categoryId" selected>@item.categoryName</option>
+            }
+            else
+            {
+                <option value="@item.categoryId">@item.categoryName</option>
+            }
+        }
+    </select>
+</div>
+
+<br />
+
+
+<h2>List Product </h2>
+<div class="container">
+
+
+    <div class="brand_container layout_padding2">
+
+        <table border="1">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>unitPrice</td>
+                <td>unitsInStock</td>
+                <td>image</td>
+                <td>category</td>
+            </tr>
+
+            @foreach (Product item in @ViewBag.ListP)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Home" asp-action="Detail" asp-route-id=@item.productId>@item.productId</a>
+                    </td>
+                    <td>@item.productName</td>
+                    <td>@item.unitPrice</td>
+                    <td>@item.unitsInStock</td>
+                    <td>@item.image</td>
+                    <td>@item.category.categoryName</td>
+                    <td>
+                        <a asp-controller="Home" asp-action="DeleteItem" asp-route-id=@item.productId>Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<a asp-controller="Home" asp-action="Create">Create new</a>

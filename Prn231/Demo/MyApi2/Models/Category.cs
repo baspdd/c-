@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MyApi2.Models
 {
@@ -11,9 +12,9 @@ namespace MyApi2.Models
         }
 
         public int CategoryId { get; set; }
-        public string CategoryName { get; set; } = null!;
-        public string? Description { get; set; }
+        public string? CategoryName { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Product> Products { get; set; }
     }
 }

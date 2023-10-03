@@ -1,0 +1,18 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using WebMVC.Models;
+
+
+@{
+    ViewData["Title"] = "Detail Page";
+}
+<a asp-controller="Home" asp-action="Index" >Home</a>
+@{
+    Product product = ViewBag.P;
+    <h1>@product.productName</h1>
+    <h5>@product.productName</h5>
+    <h5>@product.unitPrice</h5>
+    <h5>@product.unitsInStock</h5>
+    <h5>@product.image</h5>
+    <h5>@product.category.categoryName</h5>
+}
+

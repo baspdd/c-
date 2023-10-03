@@ -13,7 +13,7 @@ namespace MyApi2.Controllers
         [HttpGet]
         public IActionResult GetAllCategory()
         {
-            using (MyStoreContext db = new MyStoreContext())
+            using (MySaleDBContext db = new MySaleDBContext())
             {
                 return Ok(db.Categories.ToList());
             }
@@ -22,9 +22,20 @@ namespace MyApi2.Controllers
         [HttpGet("id")]
         public IActionResult GetCategoryById(int id)
         {
-            using (MyStoreContext db = new MyStoreContext())
+            using (MySaleDBContext db = new MySaleDBContext())
             {
                 var cate = db.Categories.SingleOrDefault(cate => cate.CategoryId == id);
+                if (cate == null) return NotFound();
+                return Ok(cate);
+            }
+        }
+        //Get:api/Category/name
+        [HttpGet("name")]
+        public IActionResult GetCategoryByName(string name)
+        {
+            using (MySaleDBContext db = new MySaleDBContext())
+            {
+                var cate = db.Categories.Where(cate => cate.CategoryName.Contains(name)).ToList();
                 if (cate == null) return NotFound();
                 return Ok(cate);
             }
@@ -32,12 +43,10 @@ namespace MyApi2.Controllers
 
         //Post:api/Category
         [HttpPost]
-        public IActionResult AddCategory(string name)
+        public IActionResult AddCategory(Category cate)
         {
-            using (MyStoreContext db = new MyStoreContext())
+            using (MySaleDBContext db = new MySaleDBContext())
             {
-                Category cate = new Category();
-                cate.CategoryName = name;
                 db.Categories.Add(cate);
                 db.SaveChanges();
                 return Ok(db.Categories.ToList());
@@ -45,13 +54,13 @@ namespace MyApi2.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateCategory(int id , string name)
+        public IActionResult UpdateCategory(Category cate)
         {
-            using (MyStoreContext db = new MyStoreContext())
+            using (MySaleDBContext db = new MySaleDBContext())
             {
-                var c = db.Categories.SingleOrDefault(cate => cate.CategoryId == id);
-                if (c == null) return NotFound();
-                c.CategoryName = name;
+                var check = db.Categories.Any(c => c.CategoryId == cate.CategoryId);
+                if (!check) return NotFound();
+                db.Categories.Update(cate);
                 db.SaveChanges();
                 return Ok(db.Categories.ToList());
             }
@@ -60,11 +69,11 @@ namespace MyApi2.Controllers
         [HttpDelete]
         public IActionResult DeleteCategory(int id)
         {
-            using (MyStoreContext db = new MyStoreContext())
+            using (MySaleDBContext db = new MySaleDBContext())
             {
-                var c = db.Categories.Include(c =>c.Products).SingleOrDefault(cate => cate.CategoryId == id);
+                var c = db.Categories.Include(c => c.Products).SingleOrDefault(cate => cate.CategoryId == id);
                 if (c == null) return NotFound();
-                if (c.Products != null) return BadRequest();
+                if (c.Products != null) c.Products.Clear();
                 db.Categories.Remove(c);
                 db.SaveChanges();
                 return Ok(db.Categories.ToList());
