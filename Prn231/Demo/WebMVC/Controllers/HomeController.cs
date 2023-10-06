@@ -66,26 +66,13 @@ namespace WebMVC.Controllers
         {
             try
             {
-                var categoryApi = RestService.For<ICategoryApi>(local, new RefitSettings
-                {
-                    ContentSerializer = new NewtonsoftJsonContentSerializer(
-                        new JsonSerializerSettings
-                        {
-                            ContractResolver = new CamelCasePropertyNamesContractResolver()
-                        })
-                });
-
-                var productApi = RestService.For<IProductApi>(local, new RefitSettings
-                {
-                    ContentSerializer = new NewtonsoftJsonContentSerializer(
-                        new JsonSerializerSettings
-                        {
-                            ContractResolver = new CamelCasePropertyNamesContractResolver()
-                        })
-                });
-
+                
+                var categoryApi = RestService.For<ICategoryApi>(local);
                 ViewBag.Cate = await categoryApi.GetCategories();
+
+                var productApi = RestService.For<IProductApi>(local);
                 ViewBag.ListP = await productApi.GetProducts();
+
 
                 return View();
             }
@@ -94,7 +81,7 @@ namespace WebMVC.Controllers
                 throw;
             }
         }
-
+      
         public async Task<IActionResult> CreateAsync()
         {
             try
