@@ -1,0 +1,53 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using WebMVC.Models;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+
+<form asp-controller="Home" asp-action="Index" method="get">
+    <br /> Detail Name  :  <input type="text" name="name" />
+    <br /> Master:
+    <select name="master">
+        <option>
+            ----All----
+        </option>
+        @foreach (DummyMaster c in ViewBag.Categories)
+        {
+            <option value=@c.masterName>
+                @c.masterName
+            </option>
+        }
+    </select>
+    <input type="submit" value="Filter" />
+</form>
+
+<h2>List Product </h2>
+
+
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Master</td>
+    </tr>
+    @foreach (DummyDetail item in @ViewBag.ListP)
+    {
+        <tr>
+            <td>@item.detailId</td>
+            <td>@item.detailName</td>
+            <td>@item.master.masterName</td>
+
+            <br />
+        </tr>
+    }
+</table>
+
