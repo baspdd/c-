@@ -143,6 +143,17 @@ namespace ConsoleAPI.Manager
                 //        }
                 //    }
                 //}
+
+                using (WebClient client = new WebClient())
+                {
+                    string response = client.DownloadString(url);
+                    var cate2 = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(response);
+                    foreach (var item in cate2)
+                    {
+                        Console.WriteLine(item);
+                    }
+                }
+
                 List<Category> cate = new List<Category>();
                 var categoryApi = RestService.For<ICategoryApi>(url);
                 cate = await categoryApi.GetCategories();

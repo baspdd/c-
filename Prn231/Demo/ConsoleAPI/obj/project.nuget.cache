@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "w6zW3gtZAO4fN9/JQ0W4lBBv994bW5QYMfF6ZiFip3vtTDJW8cs8xqVT+jLvM3HoThvQvavDbwftAVc/k4VEtw==",
+  "success": true,
+  "projectFilePath": "D:\\code\\c-\\Prn231\\Demo\\ConsoleAPI\\ConsoleAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LenoZ\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\refit\\7.0.0\\refit.7.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
