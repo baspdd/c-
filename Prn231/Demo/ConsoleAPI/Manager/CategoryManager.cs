@@ -1,10 +1,12 @@
 ﻿using ConsoleAPI.iAPI;
 using ConsoleAPI.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Refit;
 using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ConsoleAPI.Manager
 {
@@ -144,15 +146,25 @@ namespace ConsoleAPI.Manager
                 //    }
                 //}
 
-                using (WebClient client = new WebClient())
-                {
-                    string response = client.DownloadString(url);
-                    var cate2 = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(response);
-                    foreach (var item in cate2)
-                    {
-                        Console.WriteLine(item);
-                    }
-                }
+                //using (WebClient client = new WebClient())
+                //{
+                //    string response = client.DownloadString(url);
+                //    var cate2 = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(response);
+                //    foreach (var item in cate2)
+                //    {
+                //        Console.WriteLine(item);
+                //    }
+                //}
+
+                //var productApi = RestService.For<ICategoryApi>(url, new RefitSettings
+                //{
+                //    ContentSerializer = new NewtonsoftJsonContentSerializer(
+                //              new JsonSerializerSettings
+                //              {
+                //                  ContractResolver = new CamelCasePropertyNamesContractResolver()
+                //              })
+                //});
+
 
                 List<Category> cate = new List<Category>();
                 var categoryApi = RestService.For<ICategoryApi>(url);
