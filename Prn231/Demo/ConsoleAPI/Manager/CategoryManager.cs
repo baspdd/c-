@@ -129,22 +129,22 @@ namespace ConsoleAPI.Manager
         {
             try
             {
-                //using (HttpClient client = new HttpClient())
-                //{
-                //    using (HttpResponseMessage response = await client.GetAsync(url))
-                //    {
-                //        using (HttpContent content = response.Content)
-                //        {
-                //            string data = await content.ReadAsStringAsync();
-                //            var cate = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(data);
-                //            var categories = JsonConvert.DeserializeObject<List<Category>>(data);
-                //            foreach (var item in categories)
-                //            {
-                //                Console.WriteLine(item);
-                //            }
-                //        }
-                //    }
-                //}
+                using (HttpClient client = new HttpClient())
+                {
+                    using (HttpResponseMessage response = await client.GetAsync(url))
+                    {
+                        using (HttpContent content = response.Content)
+                        {
+                            string data = await content.ReadAsStringAsync();
+                            var cate1 = System.Text.Json.JsonSerializer.Deserialize<List<Category>>(data);
+                            var categories = JsonConvert.DeserializeObject<List<Category>>(data);
+                            foreach (var item in categories)
+                            {
+                                Console.WriteLine(item);
+                            }
+                        }
+                    }
+                }
 
                 //using (WebClient client = new WebClient())
                 //{
@@ -169,8 +169,11 @@ namespace ConsoleAPI.Manager
                 List<Category> cate = new List<Category>();
                 var categoryApi = RestService.For<ICategoryApi>(url);
                 cate = await categoryApi.GetCategories();
+                
                 foreach (var item in cate)
                 {
+                    Console.WriteLine("2");
+
                     Console.WriteLine(item);
                 }
 
