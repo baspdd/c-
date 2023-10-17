@@ -20,19 +20,37 @@ namespace Api.Controllers
             _context = context;
         }
 
-
         // GET: api/Questions
         [HttpGet]
-        public IActionResult GetQuestions(string keyid)
+        public async Task<ActionResult<IEnumerable<Question>>> GetQuestions()
         {
-            if (_context.Questions == null) return NotFound();
-            if (!_context.Keys.Any(c => c.KeyId == keyid)) return NotFound();
-            var questions = _context.Questions.Where(c => c.KeyId == keyid).ToList();
-            if(questions.Count == 0) return NotFound();
-            return Ok(questions);
+          if (_context.Questions == null)
+          {
+              return NotFound();
+          }
+            return await _context.Questions.ToListAsync();
+        }
+
+        // GET: api/Questions/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Question>> GetQuestion(int id)
+        {
+          if (_context.Questions == null)
+          {
+              return NotFound();
+          }
+            var question = await _context.Questions.FindAsync(id);
+
+            if (question == null)
+            {
+                return NotFound();
+            }
+
+            return question;
         }
 
         // PUT: api/Questions/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutQuestion(int id, Question question)
         {
@@ -67,10 +85,10 @@ namespace Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Question>> PostQuestion(Question question)
         {
-            if (_context.Questions == null)
-            {
-                return Problem("Entity set 'MyStoreContext.Questions'  is null.");
-            }
+          if (_context.Questions == null)
+          {
+              return Problem("Entity set 'MyStoreContext.Questions'  is null.");
+          }
             _context.Questions.Add(question);
             await _context.SaveChangesAsync();
 
