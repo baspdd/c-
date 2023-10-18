@@ -16,4 +16,10 @@ public partial class Question
     public string RightAnswer { get; set; } = null!;
 
     public virtual Key Key { get; set; } = null!;
+
+    public virtual ICollection<string> listAnswer { get; set; } = new List<string>();
+
+    public List<string> GetAnswers(string answer) => answer.Split('/').ToList();
+
+
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Api.Models;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace Api.Controllers
 {
@@ -22,23 +23,37 @@ namespace Api.Controllers
 
         // GET: api/Questions
         [HttpGet]
+        [EnableQuery]
         public async Task<ActionResult<IEnumerable<Question>>> GetQuestions()
         {
-          if (_context.Questions == null)
-          {
-              return NotFound();
-          }
+            if (_context.Questions == null)
+            {
+                return NotFound();
+            }
             return await _context.Questions.ToListAsync();
         }
+
+
+        [HttpGet("key")]
+        [EnableQuery]
+        public async Task<ActionResult<bool>> GetKey(string key)
+        {
+            return await _context.Keys.AnyAsync(c => c.KeyId == key);
+        }
+
+
+
+
+
 
         // GET: api/Questions/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Question>> GetQuestion(int id)
         {
-          if (_context.Questions == null)
-          {
-              return NotFound();
-          }
+            if (_context.Questions == null)
+            {
+                return NotFound();
+            }
             var question = await _context.Questions.FindAsync(id);
 
             if (question == null)
@@ -85,10 +100,10 @@ namespace Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Question>> PostQuestion(Question question)
         {
-          if (_context.Questions == null)
-          {
-              return Problem("Entity set 'MyStoreContext.Questions'  is null.");
-          }
+            if (_context.Questions == null)
+            {
+                return Problem("Entity set 'MyStoreContext.Questions'  is null.");
+            }
             _context.Questions.Add(question);
             await _context.SaveChangesAsync();
 
