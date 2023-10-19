@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lgd3sftMjMIncg0oThAy9iA/eiPGd21TDPw91Rhiy04=",
+  "Hash": "A9aXdiivYPS8c3Mn9EV5fj3138R0pRHtrS7jPqRU9tY=",
   "Source": "web",
   "BasePath": "_content/web",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\code\\c-\\Prn231\\Project\\web\\wwwroot\\css\\style.css",
+      "SourceId": "web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\code\\c-\\Prn231\\Project\\web\\wwwroot\\",
+      "BasePath": "_content/web",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "D:\\code\\c-\\Prn231\\Project\\web\\wwwroot\\favicon.ico",

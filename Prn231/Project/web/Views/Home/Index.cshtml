@@ -1,65 +1,119 @@
-﻿@model IEnumerable<web.Models.Question>
+﻿@using Newtonsoft.Json;
+@model IEnumerable<web.Models.Question>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.QuestionId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KeyId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Content)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Answer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listAnswer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RightAnswer)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuestionId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KeyId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Answer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listAnswer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RightAnswer)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+@{
+    var list = Model;
+    var item = list.First();
 }
-    </tbody>
-</table>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test </title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+
+
+<body>
+    <div>
+        <div id="header">
+            <h2>EOS</h2>
+            <h2>Student Name :</h2>
+            <h2>Course </h2>
+        </div>
+        <div id="content">
+            <div class="content_head">
+                <h2 class="blue">There are 40 questions and your progress of answering is</h2>
+                <div class="progress-container">
+                    <div class="progress-bar">50%</div>
+                </div>
+            </div>
+
+            <div class="content_body">
+
+                <h1 class="blue">Question</h1>
+                <p>(Choose<span id="numberAnswers"></span> answer)</p>
+                <p id="questionContent"></p>
+                <div id="checkboxList"></div>
+                <div class="btn-container">
+                    <button class="btn btn-primary" id="backButton" disabled>Back</button>
+                    <button class="btn btn-primary" id="nextButton">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    var checkboxList = document.getElementById('checkboxList');
+    var numberAnswers = document.getElementById('numberAnswers');
+    var questionContent = document.getElementById('questionContent');
+    var backButton = document.getElementById('backButton');
+    var nextButton = document.getElementById('nextButton');
+
+    var questions = @Html.Raw(JsonConvert.SerializeObject(Model));
+    var currentIndex = 0;
+
+    function updateQuestion() {
+        var currentQuestion = questions[currentIndex];
+        numberAnswers.textContent = currentQuestion.numberRightAnswer;
+        questionContent.textContent = currentQuestion.Content;
+        while (checkboxList.firstChild) checkboxList.removeChild(checkboxList.firstChild);
+        currentQuestion.listAnswer.forEach(item => {
+            var checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = item;
+            checkbox.name = item;
+            var label = document.createElement('label');
+            label.htmlFor = item;
+            label.appendChild(document.createTextNode(item));
+            checkboxList.appendChild(checkbox);
+            checkboxList.appendChild(label);
+            checkboxList.appendChild(document.createElement('br')); // Add a line break
+        });
+    }
+
+    function handleBackButtonClick() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateQuestion();
+            nextButton.disabled = false;
+        }
+        if (currentIndex === 0) {
+            backButton.disabled = true;
+        }
+    }
+
+    function handleNextButtonClick() {
+        if (currentIndex < questions.length - 1) {
+            currentIndex++;
+            updateQuestion();
+            backButton.disabled = false;
+        }
+        if (currentIndex === questions.length - 1) {
+            nextButton.disabled = true;
+        }
+    }
+
+    updateQuestion();
+
+    backButton.addEventListener('click', handleBackButtonClick);
+    nextButton.addEventListener('click', handleNextButtonClick);
+
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20210302/json2.min.js"></script>
+
+</html>
+
+
+
+

@@ -27,6 +27,7 @@ namespace web.Controllers
             foreach (Question item in ques)
             {
                 item.listAnswer.AddRange(item.GetAnswers(item.Answer));
+                item.numberRightAnswer = item.GetNumberAnswers(item.RightAnswer);
             }
 
             return View(ques);
