@@ -70,14 +70,21 @@
             var checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.id = item;
+            checkbox.onchange = (event) => function checkClicked(event, item) {
+                
+            };
             checkbox.name = item;
             var label = document.createElement('label');
             label.htmlFor = item;
             label.appendChild(document.createTextNode(item));
             checkboxList.appendChild(checkbox);
             checkboxList.appendChild(label);
-            checkboxList.appendChild(document.createElement('br')); // Add a line break
+            checkboxList.appendChild(document.createElement('br'));
         });
+    }
+
+    function checkClicked(event, item) {
+        console.log(event.target.checked, item);
     }
 
     function handleBackButtonClick() {

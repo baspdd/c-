@@ -19,7 +19,7 @@ public partial class Question
 
     public virtual ICollection<string> listAnswer { get; set; } = new List<string>();
 
-    public virtual int numberRightAnswer { get; set; } 
+
 
     public List<string> GetAnswers(string answer) => answer.Split('/').ToList();
 
