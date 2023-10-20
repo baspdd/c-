@@ -50,69 +50,71 @@
         </div>
     </div>
 </body>
+<script src="~/js/testing_site.js"></script>
 <script>
 
-    var checkboxList = document.getElementById('checkboxList');
-    var numberAnswers = document.getElementById('numberAnswers');
-    var questionContent = document.getElementById('questionContent');
-    var backButton = document.getElementById('backButton');
-    var nextButton = document.getElementById('nextButton');
+    // var checkboxList = document.getElementById('checkboxList');
+    // var numberAnswers = document.getElementById('numberAnswers');
+    // var questionContent = document.getElementById('questionContent');
+    // var backButton = document.getElementById('backButton');
+    // var nextButton = document.getElementById('nextButton');
 
-    var questions = @Html.Raw(JsonConvert.SerializeObject(Model));
-    var currentIndex = 0;
+    // var questions = @Html.Raw(JsonConvert.SerializeObject(Model));
+    // var currentIndex = 0;
 
-    function updateQuestion() {
-        var currentQuestion = questions[currentIndex];
-        numberAnswers.textContent = currentQuestion.numberRightAnswer;
-        questionContent.textContent = currentQuestion.Content;
-        while (checkboxList.firstChild) checkboxList.removeChild(checkboxList.firstChild);
-        currentQuestion.listAnswer.forEach(item => {
-            var checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.id = item;
-            checkbox.onchange = (event) => function checkClicked(event, item) {
-                
-            };
-            checkbox.name = item;
-            var label = document.createElement('label');
-            label.htmlFor = item;
-            label.appendChild(document.createTextNode(item));
-            checkboxList.appendChild(checkbox);
-            checkboxList.appendChild(label);
-            checkboxList.appendChild(document.createElement('br'));
-        });
-    }
+    // function updateQuestion() {
+    //     var currentQuestion = questions[currentIndex];
+    //     numberAnswers.textContent = currentQuestion.numberRightAnswer;
+    //     questionContent.textContent = currentQuestion.Content;
+    //     while (checkboxList.firstChild) checkboxList.removeChild(checkboxList.firstChild);
+    //     currentQuestion.listAnswer.forEach(item => {
+    //         var checkbox = document.createElement('input');
+    //         checkbox.type = 'checkbox';
+    //         checkbox.id = item.Content;
+    //         checkbox.checked = item.Ticked;
+    //         checkbox.onchange = function (event) {
+    //             item.Ticked = event.target.checked;
+    //         };
+    //         checkbox.name = item.Content;
+    //         var label = document.createElement('label');
+    //         label.htmlFor = item.Content;
+    //         label.appendChild(document.createTextNode(item.Content));
+    //         checkboxList.appendChild(checkbox);
+    //         checkboxList.appendChild(label);
+    //         checkboxList.appendChild(document.createElement('br'));
+    //     });
+    // }
 
-    function checkClicked(event, item) {
-        console.log(event.target.checked, item);
-    }
+    // function checkClicked(event, item) {
+    //     console.log(event.target.checked, item);
+    // }
 
-    function handleBackButtonClick() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateQuestion();
-            nextButton.disabled = false;
-        }
-        if (currentIndex === 0) {
-            backButton.disabled = true;
-        }
-    }
+    // function handleBackButtonClick() {
+    //     if (currentIndex > 0) {
+    //         currentIndex--;
+    //         updateQuestion();
+    //         nextButton.disabled = false;
+    //     }
+    //     if (currentIndex === 0) {
+    //         backButton.disabled = true;
+    //     }
+    // }
 
-    function handleNextButtonClick() {
-        if (currentIndex < questions.length - 1) {
-            currentIndex++;
-            updateQuestion();
-            backButton.disabled = false;
-        }
-        if (currentIndex === questions.length - 1) {
-            nextButton.disabled = true;
-        }
-    }
+    // function handleNextButtonClick() {
+    //     if (currentIndex < questions.length - 1) {
+    //         currentIndex++;
+    //         updateQuestion();
+    //         backButton.disabled = false;
+    //     }
+    //     if (currentIndex === questions.length - 1) {
+    //         nextButton.disabled = true;
+    //     }
+    // }
 
-    updateQuestion();
+    // updateQuestion();
 
-    backButton.addEventListener('click', handleBackButtonClick);
-    nextButton.addEventListener('click', handleNextButtonClick);
+    // backButton.addEventListener('click', handleBackButtonClick);
+    // nextButton.addEventListener('click', handleNextButtonClick);
 
 </script>
 

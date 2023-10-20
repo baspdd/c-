@@ -17,11 +17,17 @@ public partial class Question
 
     public virtual Key Key { get; set; } = null!;
 
-    public virtual ICollection<string> listAnswer { get; set; } = new List<string>();
+    public virtual ICollection<QuestionAnswer> listAnswer { get; set; } = new List<QuestionAnswer>();
 
+    public int numberRightAnswer { get; set; }
 
-
-    public List<string> GetAnswers(string answer) => answer.Split('/').ToList();
+    public List<QuestionAnswer> GetAnswers(string answer)
+    {
+        List<QuestionAnswer> answerList = new List<QuestionAnswer>();
+        var list = answer.Split('/').ToList();
+        list.ForEach(answer => answerList.Add(new QuestionAnswer() { Content = answer }));
+        return answerList;
+    }
 
     public int GetNumberAnswers(string right) => right.Split('/').ToList().Count();
 }
