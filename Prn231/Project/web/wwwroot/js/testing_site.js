@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var currentQuestion = questions[currentIndex];
         numberAnswers.textContent = currentQuestion.numberRightAnswer;
         questionContent.textContent = currentQuestion.Content;
-        while (checkboxList.firstChild) checkboxList.removeChild(checkboxList.firstChild);
+        while (checkboxList.firstChild) checkboxList.empty();
         currentQuestion.listAnswer.forEach(item => {
             var checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
