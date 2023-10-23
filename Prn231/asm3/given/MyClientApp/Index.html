@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,13 @@
     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <script src="lib/jquery/dist/jquery.js"></script>
     <style>
-        table a, table img {
+        table a,
+        table img {
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <div class="container-fluid">
         <a href="AddProduct.html" class="btn btn-sm btn-primary">Add Product</a>
@@ -27,20 +30,71 @@
                     <th>Delete</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="table"></tbody>
         </table>
     </div>
     <script type="text/javascript">
+        $(document).ready(() => {
+            // localStorage.removeItem("proId");
+            getProduct();
+        });
+
+        var getProduct = () => $.ajax({
+            url: 'http://localhost:62271/api/Product',
+            type: 'GET',
+            headers: {
+                "Content-type": "application/json"
+            },
+            success: (data) => loadDataProductToView(data),
+            error: () => { alert('error'); }
+        });
+
+        var loadDataProductToView = (data) => {
+            $('#table').empty();
+            data.forEach(item => {
+                var json = JSON.stringify(item);
+                var html = `
+                    <tr>
+                        <td>${item.productId}</td>
+                        <td>${item.productName}</td>
+                        <td>${item.unitPrice}</td>
+                        <td>${item?.category?.categoryName}</td>
+                        <td>
+                            <img src='./icon/edit.png' onclick='editProduct(${item.productId})'
+                                style="
+                                width: 20px;
+                                 height: 20px;
+                            ">
+                        </td>
+                        <td>
+                            <img src='./icon/close.png' onclick='deleteProduct(${item.productId})'
+                                style="
+                                    width: 20px;
+                                    height: 20px;
+                            ">
+                        </td>
+                    </tr>`;
+                $('#table').append(html);
+            });
+        };
+
+        var editProduct = (id) => {
+            localStorage.setItem("proId", id);
+            // location.href = 'EditProduct.html';
+            location.href = `EditProduct.html?id=${id}`;
+        };
+
+        var deleteProduct = (id) => $.ajax({
+            url: `http://localhost:62271/api/Product/id?id=${id}`,
+            type: 'DELETE',
+            headers: {
+                "Content-type": "application/json"
+            },
+            success: () => getProduct(),
+            error: () => { alert('error'); }
+        });
         
     </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-

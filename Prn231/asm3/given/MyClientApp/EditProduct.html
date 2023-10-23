@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <script src="lib/jquery/dist/jquery.js"></script>
 </head>
+
 <body>
     <div class="container-fluid">
         <h2>Update a Product <a href="Index.html" class="btn btn-sm btn-primary">Back</a></h2>
@@ -33,18 +35,95 @@
             </select>
         </div>
         <div class="text-center panel-body">
-            <button type="submit" class="btn btn-sm btn-primary" id="UpdateButton">Update Product</button>
+            <button type="submit" onclick="updateProduct()" class="btn btn-sm btn-primary" id="UpdateButton">Update
+                Product</button>
         </div>
         <div id="resultDiv" style="display: none;">
             <h2>Product updated:</h2>
             <table class="table table-sm table-striped table-bordered m-2">
-                <thead><tr><th>Product ID</th><th>Product Name</th><th>Unit Price</th><th>Units</th><th>Category</th></tr></thead>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Unit Price</th>
+                        <th>Units</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
                 <tbody></tbody>
             </table>
         </div>
     </div>
     <script>
-        
+        const proIdLocal = localStorage.getItem("proId");
+        var proId;
+        $(document).ready(() => {
+            var urlParams = new URLSearchParams(window.location.search);
+            proId = urlParams.get("id");
+            getCategory();
+            getProduct();
+        });
+
+        var getCategory = () => $.ajax({
+            url: 'http://localhost:62271/api/Category',
+            type: 'GET',
+            headers: {
+                "Content-type": "application/json"
+            },
+            success: (data) => loadDataCategoryToView(data),
+            error: () => { alert('error'); }
+        });
+
+        var loadDataCategoryToView = (data) => {
+            data.forEach(item => {
+                $('#category').append(`<option value="${item.categoryId}">${item.categoryName}</option>`);
+            });
+        };
+
+        var getProduct = () => {
+            if (!!proId) {
+                $.ajax({
+                    url: `http://localhost:62271/api/Product/${proId}`,
+                    type: 'GET',
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    success: (data) => loadDataProductToView(data),
+                    error: () => { console.log(error); }
+                });
+            }
+        };
+
+        var loadDataProductToView = (data) => {
+            $('#proId').val(data.productId);
+            $('#proName').val(data.productName);
+            $('#price').val(data.unitPrice);
+            $('#stock').val(data.unitslnStock);
+            $('#category').val(data?.category?.categoryId);
+        };
+
+        var updateProduct = () => {
+            if (!!proId) {
+                $.ajax({
+                    url: `http://localhost:62271/api/Product?id=${proId}`,
+                    type: 'PUT',
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    data: JSON.stringify({
+                        productId: $('#proId').val(),
+                        productName: $('#proName').val(),
+                        unitPrice: $('#price').val(),
+                        unitslnStock: $('#stock').val(),
+                        categoryId: $('#category').val(),
+                        category: null
+                    }),
+                    success: () => { localStorage.removeItem("proId"); location.href = 'Index.html'; },
+                    error: (error) => { console.log(error); }
+                });
+            }
+        }
     </script>
 </body>
+
 </html>
