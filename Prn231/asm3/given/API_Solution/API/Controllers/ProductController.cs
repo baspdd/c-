@@ -40,6 +40,19 @@ namespace API.Controllers
             return Ok(productDTOs);
         }
 
+        [HttpGet("id")]
+        public IActionResult Gets(int id)
+        {
+            List<Product> products;
+            products = context.Products.Include(p => p.Category).ToList();
+            if (products == null)
+            {
+                return NotFound(); // Response with status code: 404
+            }
+            List<ProductDTO> productDTOs = products.Select(p => mapper.Map<Product, ProductDTO>(p)).Where(c=>c.Category.CategoryId == id).ToList();
+            return Ok(productDTOs);
+        }
+
         //[HttpGet]
         //public IActionResult Get()
         //{

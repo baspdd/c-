@@ -18,29 +18,83 @@
 
 <body>
     <div class="container-fluid">
+        <div class="form-group">
+            <label for="Category">Category</label>
+            <select title="" name="" id="category" onchange="getProduct2()">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Category">Name</label>
+            <select title="" name="" id="sort" onchange="sort()">
+                <option value="1">A-Z</option>
+                <option value="2">Z-A</option>>
+            </select>
+
+            <input type="text" name="" id="search">
+
+        </div>
+        <div class="form-group" id="stuid">
+
+        </div>
         <a href="AddProduct.html" class="btn btn-sm btn-primary">Add Product</a>
         <table class="table table-sm table-striped table-bordered m-2">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Unit price</th>
+                    <th onclick="order()">Unit price</th>
                     <th>Category</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </tr>
+
             </thead>
             <tbody id="table"></tbody>
         </table>
     </div>
     <script type="text/javascript">
+        var list;
         $(document).ready(() => {
-            // localStorage.removeItem("proId");
+            getCategory();
             getProduct();
         });
+        var check = false;
+        var order = () => {
+            if (check) { list.sort((b, a) => a.unitPrice - b.unitPrice); check = false; }
+            else { list.sort((b, a) => b.unitPrice - a.unitPrice); check = true; }
+            loadDataProductToView(list);
+        }
 
-        var getProduct = () => $.ajax({
-            url: 'http://localhost:62271/api/Product',
+        var sort = () => {
+            var ss = $('#sort').val();
+            if (ss == 1) {
+                list.sort((a, b) => a.productName.localeCompare(b.productName));
+            } else if (ss == 2) {
+                list.sort((a, b) => b.productName.localeCompare(a.productName));
+            }
+            loadDataProductToView(list);
+
+        }
+
+
+        var getCategory = () => $.ajax({
+            url: 'http://localhost:5000/api/Category',
+            type: 'GET',
+            headers: {
+                "Content-type": "application/json"
+            },
+            success: (data) => loadDataCategoryToView(data),
+            error: () => { alert('error'); }
+        });
+
+        const loadDataCategoryToView = (data) => {
+            data.forEach(item => {
+                $('#category').append(`<option value="${item.categoryId}">${item.categoryName}</option>`);
+            });
+        };
+
+        var getProduct2 = () => $.ajax({
+            url: `http://localhost:5000/api/Product/id?id=${$('#category').val()}`,
             type: 'GET',
             headers: {
                 "Content-type": "application/json"
@@ -48,6 +102,36 @@
             success: (data) => loadDataProductToView(data),
             error: () => { alert('error'); }
         });
+
+        var getProduct = () => $.ajax({
+            url: 'http://localhost:5000/api/Product',
+            type: 'GET',
+            headers: {
+                "Content-type": "application/json"
+            },
+            success: (data) => { loadDataProductToView(data); list = data; loadDataIDToView(data) },
+            error: () => { alert('error'); }
+        });
+
+        var search = () => $.ajax({
+            url: `http://localhost:5000/api/Product/search?name=${$('#search').val()}`,
+            type: 'GET',
+            headers: {
+                "Content-type": "application/json"
+            },
+            success: (data) => { loadDataProductToView(data); list = data; loadDataIDToView(data) },
+            error: () => { alert('error'); }
+        });
+
+        var loadDataIDToView = (data) => {
+            $('#stuid').empty();
+            data.forEach(item => {
+                var json = JSON.stringify(item);
+                var html = `<td onclick='editProduct(${item.productId})'><button class="btn-primary">${item.productId}</button>
+                    </td>`;
+                $('#stuid').append(html);
+            });
+        };
 
         var loadDataProductToView = (data) => {
             $('#table').empty();
@@ -85,7 +169,7 @@
         };
 
         var deleteProduct = (id) => $.ajax({
-            url: `http://localhost:62271/api/Product/id?id=${id}`,
+            url: `http://localhost:5000/api/Product/id?id=${id}`,
             type: 'DELETE',
             headers: {
                 "Content-type": "application/json"
@@ -93,7 +177,7 @@
             success: () => getProduct(),
             error: () => { alert('error'); }
         });
-        
+
     </script>
 </body>
 

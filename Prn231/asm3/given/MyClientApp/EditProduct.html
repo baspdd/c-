@@ -65,7 +65,7 @@
         });
 
         var getCategory = () => $.ajax({
-            url: 'http://localhost:62271/api/Category',
+            url: 'http://localhost:5000/api/Category',
             type: 'GET',
             headers: {
                 "Content-type": "application/json"
@@ -83,7 +83,7 @@
         var getProduct = () => {
             if (!!proId) {
                 $.ajax({
-                    url: `http://localhost:62271/api/Product/${proId}`,
+                    url: `http://localhost:5000/api/Product/${proId}`,
                     type: 'GET',
                     headers: {
                         "Content-type": "application/json"
@@ -105,7 +105,7 @@
         var updateProduct = () => {
             if (!!proId) {
                 $.ajax({
-                    url: `http://localhost:62271/api/Product?id=${proId}`,
+                    url: `http://localhost:5000/api/Product?id=${proId}`,
                     type: 'PUT',
                     headers: {
                         "Content-type": "application/json"

@@ -60,7 +60,7 @@
         });
 
         var getCategory = () => $.ajax({
-            url: 'http://localhost:62271/api/Category',
+            url: 'http://localhost:5000/api/Category',
             type: 'GET',
             headers: {
                 "Content-type": "application/json"
@@ -76,7 +76,7 @@
         };
 
         const createProduct = () => $.ajax({
-            url: `http://localhost:62271/api/Product`,
+            url: `http://localhost:5000/api/Product`,
             type: 'POST',
             headers: {
                 "Content-type": "application/json"
