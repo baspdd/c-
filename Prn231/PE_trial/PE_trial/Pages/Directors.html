@@ -6,26 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/wwwroot/css/site.css" asp-append-version="true" />
 </head>
 
 <body>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
     <header>
     </header>
     <div class="container">
         <div id="sceen1">
+            <h1>Search Directors</h1>
             <input type="text" id="nationality" placeholder="nationality">
             <input type="text" id="gender" placeholder="gender">
             <button type="button" onclick="getDirector()">Search</button>
+            <div id="content">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>FullName</td>
+                            <td>Male</td>
+                            <td>Dob</td>
+                            <td>Nationality</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody id="body"></tbody>
+                </table>
+            </div>
+            
         </div>
-        <div></div>
+        <div id="sceen2">
+            
+        </div>
+
     </div>
 
-    <footer >
+    <footer>
     </footer>
 </body>
 <script src="/wwwroot/lib/jquery/dist/jquery.min.js"></script>
-<script src="/wwwroot/js/bootstrap.bundle.min.js"></script>
 <script src="/wwwroot/js/site.js" asp-append-version="true"></script>
 <script src="/wwwroot/js/get.js" asp-append-version="true"></script>
 

@@ -7,17 +7,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 var config = builder.Configuration;
 
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(
-        builder =>
-        {
-            builder.WithOrigins("http://127.0.0.1:5500")
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
-        });
-});
+//builder.Services.AddCors(options =>
+//{
+//    options.AddDefaultPolicy(
+//        builder =>
+//        {
+//            builder.WithOrigins("http://127.0.0.1:5500")
+//            .AllowAnyHeader()
+//            .AllowAnyMethod()
+//            .AllowCredentials();
+//        });
+//});
+
+builder.Services.AddCors();
 
 // db
 builder.Services.AddDbContext<PE_PRN_Fall22B1Context>
@@ -43,10 +45,17 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseCors();
+//app.UseCors();
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin();
+    builder.AllowAnyMethod();
+    builder.AllowAnyHeader();
+});
 
 app.UseAuthorization();
 

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "LeflhS52xlO/WPMgTEZo0zmOrBXYGOMfk3LX3SdpcINzxjK68/sZTPfz2dZUwpb3c0GPStjK9ji3AxBv9e4dGQ==",
+  "success": true,
+  "projectFilePath": "D:\\code\\c-\\Prn231\\Demo\\WebMVC\\WebMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LenoZ\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\refit\\7.0.0\\refit.7.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\refit.newtonsoft.json\\7.0.0\\refit.newtonsoft.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\LenoZ\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
