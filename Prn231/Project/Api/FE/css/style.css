@@ -1,0 +1,111 @@
+
+#header {
+    display: inline-flex;
+    padding: 10px;
+    border: 3px outset white;
+    background-color: white;
+}
+
+#header h2 {
+    margin: 10px;
+    /* Adjust the margin to control the spacing between elements */
+}
+
+#content {
+    margin-top: 20px;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+}
+
+.content_head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 3px inset;
+    border-radius: 10px;
+    margin-left: 50px;
+    background-color: white;
+}
+
+.content_head *{
+    margin-left: 10px;
+}
+
+.progress-container {
+    margin-right: 10px;
+    width: 60%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    /* Change this to set the progress percentage */
+    background-color: #4CAF50;
+    /* Change this to set the progress bar color */
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.content_body {
+    height: 600px;
+    display: flex; /* Use 'flex' instead of 'flexbox' */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 3px inset white;
+    border-radius: 10px;
+    margin: 10px 0 0 50px;
+    background-color: white;
+}
+
+.content_body * {
+    margin-left: 10px;
+}
+
+#submit-button {
+    margin-top: auto;
+}
+#paging{
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.paging{
+    font-size: 16px;
+    cursor: pointer;
+    height: 25px;
+    width: 20px;
+    text-align: center;
+}
+.btn-container {
+   
+}
+
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+}
+#checkboxList{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
