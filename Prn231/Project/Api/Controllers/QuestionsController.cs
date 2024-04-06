@@ -111,7 +111,6 @@ namespace Api.Controllers
                 //    ExamId = item.ExamId,
                 //    RightRightAnswer = item.RightRightAnswer,
                 //};
-
                 if (item.RightRightAnswer == right[index]) total++;
                 index++;
             }
